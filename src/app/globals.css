@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'PoetsenOne';
+  src: url('../assets/font/PoetsenOne-Regular.ttf') format('truetype');
+  font-style: regular;
+  font-weight: 400;
+}
+
+:root {
+  --foreground-rgb: rgb(0, 0, 0);
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+h1,h2,.font-poet{
+  font-weight: 400;
+  font-family: "PoetsenOne";
+}
+body {
+  overflow-x: hidden;
+  color: rgb(var(--foreground-rgb));
+}
+
+.portada-main {
+  height: 84vh;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(../assets/portada-home.jpg) center center/cover no-repeat;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.circle-cat {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(226, 224, 224);
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 150px;
+}
+.circle-cat img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card-product {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border-radius: 20px;
+  width: 200px;
+  padding: 10px 10px;
+}
+.image-product > img,
+.image-product-Mejor > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.image-product {
+  width: 100%;
+  height: 150px;
+}
+.image-product-Mejor {
+  width: 280px;
+  height: 350px;
+}
+.img-cerdo {
+  position: relative;
+  bottom: -45px;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: max-content .5fr 2.5fr 1fr;
+  grid-template-areas: 
+  "logo categoria search cuentas";
+}
+
+.logo-header {
+  grid-area: logo;
+  justify-self: center;
+  align-self: center;
+}
+.categoria {
+  justify-self: center;
+  align-self: center;
+  grid-area: categoria;
+}
+.search-header {
+  grid-area: search;
+  justify-self: center;
+  align-self: center;
+}
+
+.cuenta-header {
+  grid-area: cuentas;
+  justify-self: center;
+  align-self: center;
+}
+
+.mantine-Carousel-container{
+  padding: 20px 15px;
+}
+.mantine-Carousel-indicators{
+  display: flex ;
+  gap: 5px !important;
+}
+.mantine-Carousel-indicators > button{
+ width: 30px;
+ height: 5px;
+ background: red;
+ border-radius: 20px;
+}
+.mantine-Carousel-controls{
+ top: 50% !important;
+ left: 50%;
+}
