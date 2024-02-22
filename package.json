@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
     "@mantine/carousel": "^7.5.3",
     "@mantine/core": "^7.5.3",
     "@mantine/hooks": "^7.5.3",
