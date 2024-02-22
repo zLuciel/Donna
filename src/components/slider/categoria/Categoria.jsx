@@ -4,8 +4,7 @@ import Image from "next/image";
 import "@mantine/carousel/styles.css";
 import { Carousel } from "@mantine/carousel";
 import categoriaMap from "./mapCategoria";
-import { MdOutlineNavigateNext,MdOutlineArrowBackIos } from "react-icons/md";
-
+import { FaChevronRight,FaChevronLeft } from "react-icons/fa";
 const Categoria = () => {
   return (
     <Carousel
@@ -17,8 +16,8 @@ const Categoria = () => {
     height="100%"
     controlsOffset="xs"
     slidesToScroll={7}
-    nextControlIcon={<MdOutlineNavigateNext className="text-xl"/>}
-    previousControlIcon={<MdOutlineArrowBackIos className="text-xl"/>}
+    nextControlIcon={<FaChevronRight  className="text-2xl"/>}
+    previousControlIcon={<FaChevronLeft className="text-2xl"/>}
     >
       {categoriaMap?.map((cate,i) => (
         <Carousel.Slide key={i} >

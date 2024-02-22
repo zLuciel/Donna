@@ -1,10 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @font-face {
-  font-family: 'PoetsenOne';
-  src: url('../assets/font/PoetsenOne-Regular.ttf') format('truetype');
+  font-family: "PoetsenOne";
+  src: url("../assets/font/PoetsenOne-Regular.ttf") format("truetype");
   font-style: regular;
   font-weight: 400;
 }
@@ -14,18 +13,38 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+.title-product{
+  min-height: 40px !important;
+  height: 55px !important;
+}
+/*{
+  font-family: "Nunito Sans";
+  font-weight: 300;
+}*/
 
-h1,h2,.font-poet{
+h1,
+h2,
+.font-poet {
   font-weight: 400;
   font-family: "PoetsenOne";
 }
+.card-product h3{
+  font-weight: 400;
+}
+.card-product p:first-child{
+  font-weight: 800;
+}
+
+/*.prueba{
+  font-weight: 300 !important;
+  font-family: "Nunito Sans";
+}*/
 body {
   overflow-x: hidden;
   color: rgb(var(--foreground-rgb));
 }
 
 .portada-main {
-  height: 84vh;
   background: linear-gradient(
       to right,
       rgba(0, 0, 0, 1) 0%,
@@ -60,7 +79,7 @@ body {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   border-radius: 20px;
-  width: 200px;
+  max-width: 200px;
   padding: 10px 10px;
 }
 .image-product > img,
@@ -84,9 +103,8 @@ body {
 
 .header-grid {
   display: grid;
-  grid-template-columns: max-content .5fr 2.5fr 1fr;
-  grid-template-areas: 
-  "logo categoria search cuentas";
+  grid-template-columns: max-content 0.5fr 2.5fr 1fr;
+  grid-template-areas: "logo categoria search cuentas";
 }
 
 .logo-header {
@@ -103,28 +121,42 @@ body {
   grid-area: search;
   justify-self: center;
   align-self: center;
+  border: 3px solid #e6e6e6;
 }
-
+.bg-slate-gray {
+  background: #e6e6e6;
+}
+.search-header > input::placeholder {
+  font-size: 0.9rem !important;
+}
 .cuenta-header {
   grid-area: cuentas;
   justify-self: center;
   align-self: center;
 }
 
-.mantine-Carousel-container{
+.mantine-Carousel-container {
   padding: 20px 15px;
 }
-.mantine-Carousel-indicators{
-  display: flex ;
+.mantine-Carousel-indicators {
+  display: flex;
   gap: 5px !important;
 }
-.mantine-Carousel-indicators > button{
- width: 30px;
- height: 5px;
- background: red;
- border-radius: 20px;
+.mantine-Carousel-indicators > button {
+  width: 30px;
+  height: 5px;
+  background: red;
+  border-radius: 20px;
 }
-.mantine-Carousel-controls{
- top: 50% !important;
- left: 50%;
+.mantine-Carousel-controls {
+  top: 50% !important;
+  left: 50%;
+}
+.portada > .m-39bc3463 {
+  left: 20px !important;
+  right: 20px !important;
+}
+.m-39bc3463 {
+  left: -38px !important;
+  right: -38px !important;
 }

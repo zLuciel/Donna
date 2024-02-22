@@ -7,23 +7,31 @@ import Card from "@/components/slider/products/Card";
 import categoriaMap from "@/components/slider/categoria/mapCategoria";
 import mejorSemana from "@/data/semana";
 import LoMejor from "@/components/slider/lomejor/Lomejor";
+import homeSlider from "@/data/homeSlider";
 import Cerdo from "@/assets/cerdo.png";
 import Comercial from "@/assets/comercial.png";
-import { MdOutlineNavigateNext,MdOutlineArrowBackIos } from "react-icons/md";
+import { FaChevronRight,FaChevronLeft } from "react-icons/fa";
+import HomePortda from "@/components/slider/homePortada/HomePortda";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col justify-center px-10 align-center portada-main text-white">
-        <div className="lg:container lg:mx-auto p-2">
-          <h1 className="text-6xl ">
-            ¡Merkat es la marca <br /> que merece tu familia!
-          </h1>
-          <p className="">
-            Con una variedad de productos en las categorias más importantes. Te
-            ofrecemos calidad superior al precio del mercado. ¡Te invitamos a
-            conocer su línea!
-          </p>
-        </div>
+      <main className="portada-main text-white h-screen w-screen">
+      <Carousel
+          className="portada"
+          slideSize="100%"
+          slideGap={{ base: 0 }}
+          loop
+          height="100%"
+          slidesToScroll={1}
+          nextControlIcon={<FaChevronRight className="text-3xl"/>}
+          previousControlIcon={<FaChevronLeft className="text-3xl"/>}
+        >
+          {homeSlider?.map((cate, i) => (
+            <Carousel.Slide key={i}>
+              <HomePortda image={cate.image} />
+            </Carousel.Slide>
+          ))}
+        </Carousel>
       </main>
       {/* seccion de categorias */}
       <section className="lg:container mx-auto   py-8 flex flex-col justify-center items-center px-20">
@@ -45,8 +53,8 @@ export default function Home() {
           loop
           height="100%"
           slidesToScroll={4}
-          nextControlIcon={<MdOutlineNavigateNext />}
-          previousControlIcon={<MdOutlineArrowBackIos/>}
+          nextControlIcon={<FaChevronRight className="text-3xl"/>}
+          previousControlIcon={<FaChevronLeft className="text-3xl"/>}
         >
           {mejorSemana?.map((cate, i) => (
             <Carousel.Slide key={i}>
@@ -71,8 +79,8 @@ export default function Home() {
           loop
           height="100%"
           slidesToScroll={5}
-          nextControlIcon={<MdOutlineNavigateNext />}
-          previousControlIcon={<MdOutlineArrowBackIos/>}
+          nextControlIcon={<FaChevronRight  className="text-3xl"/>}
+          previousControlIcon={<FaChevronLeft className="text-3xl"/>}
         >
           {categoriaMap?.map((cate, i) => (
             <Carousel.Slide key={i}>
@@ -97,8 +105,8 @@ export default function Home() {
           loop
           height="100%"
           slidesToScroll={5}
-          nextControlIcon={<MdOutlineNavigateNext />}
-          previousControlIcon={<MdOutlineArrowBackIos/>}
+          nextControlIcon={<FaChevronRight  className="text-3xl"/>}
+          previousControlIcon={<FaChevronLeft className="text-3xl"/>}
         >
           {categoriaMap?.map((cate, i) => (
             <Carousel.Slide key={i}>
@@ -126,8 +134,8 @@ export default function Home() {
           loop
           height="100%"
           slidesToScroll={5}
-          nextControlIcon={<MdOutlineNavigateNext />}
-          previousControlIcon={<MdOutlineArrowBackIos/>}
+          nextControlIcon={<FaChevronRight  className="text-3xl"/>}
+          previousControlIcon={<FaChevronLeft className="text-3xl"/>}
         >
           {categoriaMap?.map((cate, i) => (
             <Carousel.Slide key={i}>

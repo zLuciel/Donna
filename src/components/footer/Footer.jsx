@@ -10,12 +10,13 @@ const Footer = () => {
       <div className="lg:container lg:mx-auto py-10 px-20  grid-flow-col grid gap-20 auto-rows-max">
       <div>
         <Image
+        className="mb-4"
           src="/logo.png"
           alt="Picture of the author"
           width={130}
           height={130}
         />
-        <p className="leading-5 text-sm/[5px]">
+        <p className="leading-7 text-sm/[5px]">
           Nuestra tienda online Ripley.com.pe tiene lo que necesitas de tus
           marcas favoritas. Mira todo nuestro catálogo y encuentra lo que te
           hace falta. Llegamos a todo el Perú.
@@ -24,16 +25,16 @@ const Footer = () => {
       {/* Politicas */}
       <div className="flex flex-col gap-4">
        <div>
-       <h3 className="font-bold">Políticas</h3>
+       <h3 className="font-bold mb-3">Políticas</h3>
         <ul>
-            <li className="leading-5 text-sm/[5px]">Política de envío</li>
-            <li className="leading-5 text-sm/[5px]">Política de privacidad</li>
-            <li className="leading-5 text-sm/[5px]">Política de reembolso</li>
-            <li className="leading-5 text-sm/[5px]">Términos del servicio</li>
+            <li className="leading-7 text-sm/[5px]">Política de envío</li>
+            <li className="leading-7 text-sm/[5px]">Política de privacidad</li>
+            <li className="leading-7 text-sm/[5px]">Política de reembolso</li>
+            <li className="leading-7 text-sm/[5px]">Términos del servicio</li>
         </ul>
        </div>
        <div>
-        <h3 className="font-bold mb-2">Métodos de pago</h3>
+        <h3 className="font-bold mb-3">Métodos de pago</h3>
         <span className="flex gap-4">
         <Image
           src={Yape}
@@ -53,11 +54,11 @@ const Footer = () => {
       {/* Conoceme */}
       <div className="flex gap-3 flex-col">
        <div>
-       <h3 className="font-bold">Conoceme</h3>
+       <h3 className="font-bold mb-3">Conoceme</h3>
         <ul>
-            <li className="leading-5 text-sm/[5px]">Nuestras tiendas</li>
-            <li className="leading-5 text-sm/[5px]">Promociones</li>
-            <li className="leading-5 text-sm/[5px]">Ventas telefonicas</li>
+            <li className="leading-7 text-sm/[5px]">Nuestras tiendas</li>
+            <li className="leading-7 text-sm/[5px]">Promociones</li>
+            <li className="leading-7 text-sm/[5px]">Ventas telefonicas</li>
         </ul>
        </div>
        <div>
@@ -80,10 +81,10 @@ const Footer = () => {
       </div>
       {/* Contactame */}
       <div>
-        <h3 className="font-bold">Contactame</h3>
+        <h3 className="font-bold mb-3">Contactame</h3>
         <ul>
-            <li className="leading-5 text-sm/[5px]">(01) 345 - 4567</li>
-            <li className="leading-5 text-sm/[5px]">informes@bill.com.pe</li>
+            <li className="leading-7 text-sm/[5px]">(01) 345 - 4567</li>
+            <li className="leading-7 text-sm/[5px]">informes@bill.com.pe</li>
         </ul>
       </div>
       </div>
