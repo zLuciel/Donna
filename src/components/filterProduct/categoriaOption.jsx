@@ -6,7 +6,7 @@ const CategoriasOptions = ({name}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="filter-border">
       <button
         className="p-2 rounded w-full flex items-center justify-between   border-b-indigo-500"
         onClick={() => setIsOpen(!isOpen)}
@@ -14,7 +14,7 @@ const CategoriasOptions = ({name}) => {
        {name}  <IoMdArrowDropdown />
       </button>
       <div
-        className={`transition-all duration-500 ease-out ${isOpen ? 'max-h-96' : 'max-h-0'} overflow-hidden`}
+        className={`transition-all duration-500 ease-out ${isOpen ? 'max-h-96' : 'max-h-0'} overflow-hidden overflow-y-auto h-32`}
       >
         <div className="flex items-center p-2">
           <input type="checkbox" id="option1" name="filter" value="Opción 1" className="accent-blue-500" />
