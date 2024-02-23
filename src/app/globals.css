@@ -171,3 +171,18 @@ body {
 .filter-border{
   border-bottom: 1px solid rgba(172, 172, 172, 0.452);
 }
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px; /* Ancho de la scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Fondo de la track de la scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: red; /* Color de la thumb de la scrollbar */
+  border-radius: 6px; /* Radio de borde de la thumb */
+  border: 3px solid transparent; /* Borde de la thumb (opcional) */
+}

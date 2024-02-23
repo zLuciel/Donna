@@ -15,8 +15,8 @@ const Header = () => {
           <span>
             <ul className="flex gap-10">
               <li className="leading-5 text-sm/[5px]">venta telèfonica</li>
-              <li className="leading-5 text-sm/[5px]"><Link href="/promociones">promociones</Link></li>
               <li className="leading-5 text-sm/[5px]"><Link href="/tiendas">tiendas</Link></li>
+              <li className="leading-5 text-sm/[5px]"><Link href="/promociones">promociones</Link></li>
               <li className="leading-5 text-sm/[5px]">centro de ayuda</li>
             </ul>
           </span>

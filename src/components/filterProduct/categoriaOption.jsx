@@ -14,33 +14,33 @@ const CategoriasOptions = ({name}) => {
        {name}  <IoMdArrowDropdown />
       </button>
       <div
-        className={`transition-all duration-500 ease-out ${isOpen ? 'max-h-96' : 'max-h-0'} overflow-hidden overflow-y-auto h-32`}
+        className={`custom-scrollbar transition-all duration-500 ease-out ${isOpen ? 'max-h-96' : 'max-h-0'} overflow-hidden overflow-y-auto h-32`}
       >
-        <div className="flex items-center p-2">
+        <div className="flex text-sm items-center p-2">
           <input type="checkbox" id="option1" name="filter" value="Opción 1" className="accent-blue-500" />
           <label htmlFor="option1" className="ml-2">Opción 1</label>
         </div>
-        <div className="flex items-center p-2">
+        <div className="flex text-sm items-center p-2">
           <input type="checkbox" id="option2" name="filter" value="Opción 2" className="accent-blue-500" />
           <label htmlFor="option2" className="ml-2">Opción 2</label>
         </div>
-        <div className="flex items-center p-2">
+        <div className="flex text-sm items-center p-2">
           <input type="checkbox" id="option2" name="filter" value="Opción 2" className="accent-blue-500" />
           <label htmlFor="option2" className="ml-2">Opción 2</label>
         </div>
-        <div className="flex items-center p-2">
+        <div className="flex text-sm items-center p-2">
           <input type="checkbox" id="option2" name="filter" value="Opción 2" className="accent-blue-500" />
           <label htmlFor="option2" className="ml-2">Opción 2</label>
         </div>
-        <div className="flex items-center p-2">
+        <div className="flex text-sm items-center p-2">
           <input type="checkbox" id="option2" name="filter" value="Opción 2" className="accent-blue-500" />
           <label htmlFor="option2" className="ml-2">Opción 2</label>
         </div>
-        <div className="flex items-center p-2">
+        <div className="flex text-sm items-center p-2">
           <input type="checkbox" id="option2" name="filter" value="Opción 2" className="accent-blue-500" />
           <label htmlFor="option2" className="ml-2">Opción 2</label>
         </div>
-        <div className="flex items-center p-2">
+        <div className="flex text-sm items-center p-2">
           <input type="checkbox" id="option2" name="filter" value="Opción 2" className="accent-blue-500" />
           <label htmlFor="option2" className="ml-2">Opción 2</label>
         </div>
