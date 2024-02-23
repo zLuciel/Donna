@@ -3,6 +3,7 @@ import Image from "next/image";
 import { IoSearch } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaUser,FaShoppingCart } from "react-icons/fa";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -14,8 +15,8 @@ const Header = () => {
           <span>
             <ul className="flex gap-10">
               <li className="leading-5 text-sm/[5px]">venta telèfonica</li>
-              <li className="leading-5 text-sm/[5px]">promociones</li>
-              <li className="leading-5 text-sm/[5px]">tiendas</li>
+              <li className="leading-5 text-sm/[5px]"><Link href="/promociones">promociones</Link></li>
+              <li className="leading-5 text-sm/[5px]"><Link href="/tiendas">tiendas</Link></li>
               <li className="leading-5 text-sm/[5px]">centro de ayuda</li>
             </ul>
           </span>
@@ -23,7 +24,7 @@ const Header = () => {
       </div>
       {/* cabezera principal */}
       <div className="lg:container lg:mx-auto py-4 px-10  header-grid ">
-        <span><Image className="logo-header" src="/logo.png" width={100} height={100} alt="Donna" /></span>
+      <Link href="/"><Image className="logo-header" src="/logo.png" width={100} height={100} alt="Donna" /></Link>
         <div className="categoria">
           <span className="flex gap-2 justify-cent flex gap-2 items-center">Categorias <IoIosArrowDown /></span>
           <nav>

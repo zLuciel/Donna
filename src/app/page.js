@@ -127,7 +127,33 @@ export default function Home() {
         <Image className="w-full" src={Comercial}  alt="Picture of the author"
           sizes="(min-width: 808px) 50vw, 100vw" />
         <Carousel
-          className="py-2 "
+          className="py-2"
+          withIndicators
+          slideSize="20%"
+          slideGap="md"
+          loop
+          height="100%"
+          slidesToScroll={5}
+          nextControlIcon={<FaChevronRight  className="text-3xl"/>}
+          previousControlIcon={<FaChevronLeft className="text-3xl"/>}
+        >
+          {categoriaMap?.map((cate, i) => (
+            <Carousel.Slide key={i}>
+              <Card image={cate.image} />
+            </Carousel.Slide>
+          ))}
+        </Carousel>
+      </section>
+       {/* seeccion de bebidas */}
+       <section className="lg:container lg:mx-auto py-2  px-20">
+        <div className="flex justify-between pr-8">
+          <h2 className="mb-5 text-xl font-extrabold text-red-600">
+            LO MEJOR DE LA BEBIDAS
+          </h2>{" "}
+          <p>Ver Todos</p>
+        </div>
+        <Carousel
+         className="py-2"
           withIndicators
           slideSize="20%"
           slideGap="md"
