@@ -22,7 +22,7 @@ const Header = () => {
           </span>
         </div>
       </div>
-      {/* cabezera principal */}
+
       <div className="lg:container lg:mx-auto py-4 px-10  header-grid ">
       <Link href="/"><Image className="logo-header" src="/logo.png" width={100} height={100} alt="Donna" /></Link>
         <div className="categoria">
