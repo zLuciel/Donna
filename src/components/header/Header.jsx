@@ -23,8 +23,8 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="lg:container lg:mx-auto py-4 px-10  header-grid ">
-      <Link href="/"><Image className="logo-header" src="/logo.png" width={100} height={100} alt="Donna" /></Link>
+      <div className="lg:container lg:mx-auto py-1 px-10  header-grid ">
+      <Link href="/"><Image className="logo-header" src="/LogoDonna.png" width={100} height={100} alt="Donna" /></Link>
         <div className="categoria">
           <span ><Link className="flex gap-2 justify-cent flex gap-2 items-center" href="/productos">Categorias <IoIosArrowDown /></Link></span>
           <nav>
