@@ -6,7 +6,7 @@ import Apple from "@/assets/footer/apple.png"
 import Android from "@/assets/footer/android.png"
 const Footer = () => {
   return (
-    <footer className="container mx-auto ">
+    <footer className="mx-auto ">
       <div className="lg:container mx-auto py-10 px-20  grid-flow-col grid gap-20 auto-rows-max">
       <div>
         <Image

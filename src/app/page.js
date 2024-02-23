@@ -12,6 +12,7 @@ import Cerdo from "@/assets/cerdo.png";
 import Comercial from "@/assets/comercial.png";
 import { FaChevronRight,FaChevronLeft } from "react-icons/fa";
 import HomePortda from "@/components/slider/homePortada/HomePortda";
+import Link from 'next/link'
 export default function Home() {
   return (
     <>
@@ -68,11 +69,11 @@ export default function Home() {
         <div className="flex justify-between pr-8">
           <h2 className="mb-5 text-xl font-extrabold text-red-600">
             LO MEJOR DE LA BEBIDAS
-          </h2>{" "}
-          <p>Ver Todos</p>
+          </h2>
+          <p><Link className="text-sm border-b border-black" href="/productos">VER TODOS</Link></p>
         </div>
         <Carousel
-        className="py-2"
+          className="py-2"
           withIndicators
           slideSize="20%"
           slideGap="md"
@@ -95,7 +96,7 @@ export default function Home() {
           <h2 className="mb-5 text-xl font-extrabold text-red-600">
             LO MEJOR DE LA BEBIDAS
           </h2>{" "}
-          <p>Ver Todos</p>
+          <p><Link className="text-sm border-b border-black" href="/productos">VER TODOS</Link></p>
         </div>
         <Carousel
          className="py-2"
@@ -122,7 +123,7 @@ export default function Home() {
           <h2 className="mb-5 text-xl font-extrabold text-red-600">
             LO MEJOR DE LA BEBIDAS
           </h2>
-          <p>Ver Todos</p>
+          <p><Link className="text-sm border-b border-black" href="/productos">VER TODOS</Link></p>
         </div>
         <Image className="w-full" src={Comercial}  alt="Picture of the author"
           sizes="(min-width: 808px) 50vw, 100vw" />
@@ -145,12 +146,12 @@ export default function Home() {
         </Carousel>
       </section>
        {/* seeccion de bebidas */}
-       <section className="lg:container lg:mx-auto py-2  px-20">
+      <section className="lg:container lg:mx-auto py-2  px-20">
         <div className="flex justify-between pr-8">
           <h2 className="mb-5 text-xl font-extrabold text-red-600">
             LO MEJOR DE LA BEBIDAS
           </h2>{" "}
-          <p>Ver Todos</p>
+            <p><Link className="text-sm border-b border-black" href="/productos">VER TODOS</Link></p>
         </div>
         <Carousel
          className="py-2"
