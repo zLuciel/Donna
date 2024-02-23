@@ -7,7 +7,7 @@ import homeSlider from "@/data/homeSlider";
 import "@mantine/carousel/styles.css";
 import Example from "@/components/filterProduct/Example";
 import UbicacionesCard from "@/components/map/UbicacionesCard";
-import RenderMap from "@/components/map/renderMap";
+import RenderMap from "@/components/map/RenderMap";
 const page = () => {
   return (
     <>
