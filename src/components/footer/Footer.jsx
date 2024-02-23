@@ -6,8 +6,8 @@ import Apple from "@/assets/footer/apple.png"
 import Android from "@/assets/footer/android.png"
 const Footer = () => {
   return (
-    <footer className="container">
-      <div className="lg:container lg:mx-auto py-10 px-20  grid-flow-col grid gap-20 auto-rows-max">
+    <footer className="container mx-auto ">
+      <div className="lg:container mx-auto py-10 px-20  grid-flow-col grid gap-20 auto-rows-max">
       <div>
         <Image
         className="mb-4"
@@ -88,7 +88,7 @@ const Footer = () => {
         </ul>
       </div>
       </div>
-      <span className="bg-black w-screen text-white flex justify-center  py-3 px-20">Copyright 2024 - Bill. Todos los derechos reservados.</span>
+      <span className="bg-black w-full text-white flex justify-center  py-3 px-20">Copyright 2024 - Bill. Todos los derechos reservados.</span>
     </footer>
   );
 };
