@@ -35,10 +35,10 @@ export default function Home() {
           ))}
         </Carousel>
       </main>
-      {/* seccion de categorias */}
-      <section className="lg:container mx-auto   py-8 flex flex-col justify-center items-center px-20">
-        <h2 className="text-center mb-5 text-xl font-extrabold text-red-600">
-          COMPRA POR CATEGORIAS
+      {/* seccion de categorias flex flex-col justify-center items-center*/}
+      <section className="lg:container mx-auto  py-8 px-20">
+        <h2 className="mb-1 text-xl font-extrabold ">
+        ¡ TODO LO ENCUENTRAS EN DOONA !
         </h2>
         <Categoria />
       </section>
@@ -49,6 +49,8 @@ export default function Home() {
         </h2>
         <SliderMejor renderjson={mejorSemana} />
       </section>
+
+      
       {/* seeccion de bebidas */}
        <SectionSlider renderjson={categoriaMap}/>
       {/* seeccion de bebidas */}

@@ -41,7 +41,27 @@ const categoriaMap = [
         image:vino,
         name:"Vino",
     },
+    {
+        image:vino,
+        name:"Vino",
+    },
+    {
+        image:carne,
+        name:"Carne",
+    },
+    {
+        image:vino,
+        name:"Carne",
+    },
+    {
+        image:vino,
+        name:"Vino",
+    },
  
+    {
+        image:vino,
+        name:"Vino",
+    },
  
 ]
 export default categoriaMap

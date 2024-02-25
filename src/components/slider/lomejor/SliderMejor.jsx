@@ -1,29 +1,26 @@
 "use client";
 import React from 'react'
 import LoMejor from './Lomejor'
-import { Carousel } from "@mantine/carousel";
-import "@mantine/carousel/styles.css";
-import { FaChevronRight,FaChevronLeft } from "react-icons/fa";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css';
 const SliderMejor = ({renderjson}) => {
   return (
-    <Carousel
-    className="py-2"
-     withIndicators
-    
-     slideSize={{base:"100%", sm: '50%', md: '25%' }}
-     slideGap="md"
-     loop
-     height="100%"
-     slidesToScroll={4}
-     nextControlIcon={<FaChevronRight className="text-3xl"/>}
-     previousControlIcon={<FaChevronLeft className="text-3xl"/>}
+    <Swiper
+    modules={[Navigation, Pagination]}
+    navigation
+    pagination={{ clickable: true }}
+    spaceBetween={10}
+    slidesPerView={4.2}
    >
      {renderjson?.map((cate, i) => (
-       <Carousel.Slide key={i}>
+       <SwiperSlide  key={i}>
          <LoMejor image={cate.image} />
-       </Carousel.Slide>
+       </SwiperSlide>
      ))}
-   </Carousel>
+   </Swiper>
   )
 }
 

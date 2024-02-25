@@ -1,28 +1,50 @@
 "use client";
 import React from 'react'
-import { Carousel } from "@mantine/carousel";
-import "@mantine/carousel/styles.css";
-import { FaChevronRight,FaChevronLeft } from "react-icons/fa";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css';
 import Card from './Card';
+
 const SliderCard = ({renderjson}) => {
   return (
-    <Carousel
-    className="py-2"
-    withIndicators
-    slideSize={{ base: '100%', sm: '50%', md: "33%"  ,lg:"20%"}}
-    slideGap="md"
-    loop
-    height="100%"
-    slidesToScroll={5}
-    nextControlIcon={<FaChevronRight  className="text-3xl"/>}
-    previousControlIcon={<FaChevronLeft className="text-3xl"/>}
+    <Swiper
+    style={{padding:"40px 0"}}
+    modules={[Navigation, Pagination]}
+    navigation
+    pagination={{ clickable: true }}
+    spaceBetween={10}
+    slidesPerGroup={1}
+    breakpoints={{
+      // cuando el ancho es >= 640px
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        slidesPerGroup: 2,
+      },
+      // cuando el ancho es >= 768px
+      888: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1000: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        slidesPerGroup: 4,
+      },
+    }}
   >
     {renderjson?.map((cate, i) => (
-      <Carousel.Slide key={i}>
+      <SwiperSlide  key={i}>
         <Card image={cate.image} />
-      </Carousel.Slide>
+      </SwiperSlide>
     ))}
-  </Carousel>
+  </Swiper>
   )
 }
 

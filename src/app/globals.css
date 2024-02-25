@@ -36,9 +36,9 @@ h2,
   font-weight: 800;
 }
 
-.m-fcd81474{
+/*.m-fcd81474{
   gap: 5px;
-}
+}*/
 /*.prueba{
   font-weight: 300 !important;
   font-family: "Nunito Sans";
@@ -97,8 +97,7 @@ body {
   height: 180px;
 }
 .image-product-Mejor {
-  max-width: 250px;
-  height: auto;
+  height: 450px;
 }
 .img-cerdo {
   position: relative;
