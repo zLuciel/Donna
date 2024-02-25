@@ -25,7 +25,9 @@ export default function Home() {
         <h2 className="mb-1 text-xl font-extrabold ">
         ¡ TODO LO ENCUENTRAS EN DOONA !
         </h2>
+        <div className="relative">
         <Categoria />
+        </div>
       </section>
       {/* section promociones */}
       <section className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-10">

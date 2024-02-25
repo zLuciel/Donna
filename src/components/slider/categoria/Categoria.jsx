@@ -7,12 +7,17 @@ import categoriaMap from "./mapCategoria";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 const Categoria = () => {
   return (
+    <>
     <Swiper
     style={{padding:"40px 0"}}
     modules={[Navigation, Pagination]}
-    navigation
+    navigation={{
+      prevEl: `#icoCategoriaPreS`,
+      nextEl: `#icoCategoriaNextS`,
+    }}
     pagination={{ clickable: true }}
     spaceBetween={10}
     slidesPerGroup={1}
@@ -66,6 +71,9 @@ const Categoria = () => {
         </SwiperSlide>
       ))}
     </Swiper>
+    <button id="icoCategoriaPreS" ><FaChevronLeft /></button>
+    <button id="icoCategoriaNextS" ><FaChevronRight /></button>
+    </>
   );
 };
 
