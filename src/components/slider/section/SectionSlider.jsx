@@ -2,8 +2,7 @@ import Link from "next/link";
 import React from "react";
 import SliderCard from "../products/SliderCard";
 import Image from "next/image";
-
-const SectionSlider = ({ renderjson, image , title,icon}) => {
+const SectionSlider = ({ renderjson, image , title,icon,pretIcoID,nextIcoID}) => {
   return (
     <section className="lg:container  mx-auto py-5  sm:px-10 lg:px-20 px-10" >
       <div className="flex justify-between pr-8">
@@ -27,7 +26,9 @@ const SectionSlider = ({ renderjson, image , title,icon}) => {
           sizes="(min-width: 808px) 50vw, 100vw"
         />
       )}
-      <SliderCard renderjson={renderjson} />
+      <div className="relative">
+        <SliderCard renderjson={renderjson} idBtnNex={nextIcoID} idBtnPre={pretIcoID}/>
+      </div>
     </section>
   );
 };

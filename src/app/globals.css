@@ -167,3 +167,25 @@ body {
   grid-gap: 20px; /* Espacio entre tarjetas */
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
+[id^="ico"]{
+ position: absolute;
+ top: 50%;
+ z-index: 50;
+ font-size: 2rem;
+}
+[id$="PreS"]{
+z-index: 50;
+left: -50px;
+}
+[id$="NextS"]{
+  right: -50px;
+}
+
+.swiper-pagination-bullet{
+  border-radius: 5px !important;
+  width: 15px !important;
+  height: 5px !important;
+}
+.swiper-pagination-bullet-active{
+  background: red !important;
+}

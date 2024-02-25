@@ -40,10 +40,10 @@ export default function Home() {
 
 
       {/* seeccion de bebidas */}
-      <SectionSlider title="LO MEJOR DE LA BEBIDAS" renderjson={categoriaMap} icon={<FaBottleDroplet/>} />
-      <SectionSlider title="LO MEJOR EN FRESCOS" renderjson={categoriaMap} icon={<FaBottleDroplet/>}/>
-      <SectionSlider title="LO MEJOR EN LICORES" renderjson={categoriaMap} image={Comercial} icon={<FaCartShopping/>}/>
-      <SectionSlider title="LO MEJOR EN FRESCOS" renderjson={categoriaMap} icon={<FaCartShopping/>}/>
+      <SectionSlider title="LO MEJOR DE LA BEBIDAS" pretIcoID={"icoBebidaPreS"} nextIcoID={"icoBebidaNextS"} renderjson={categoriaMap} icon={<FaBottleDroplet/>} />
+      <SectionSlider title="LO MEJOR EN FRESCOS" pretIcoID={"icoFrescosPreS"} nextIcoID={"icoFrescosNextS"} renderjson={categoriaMap} icon={<FaBottleDroplet/>}/>
+      <SectionSlider title="LO MEJOR EN LICORES" pretIcoID={"icoLicoresPreS"} nextIcoID={"icoLicoresNextS"} renderjson={categoriaMap} image={Comercial} icon={<FaCartShopping/>}/>
+      <SectionSlider title="LO MEJOR EN FRESCOS"pretIcoID={"icoNuevoPreS"} nextIcoID={"icoNuevoNextS"}  renderjson={categoriaMap} icon={<FaCartShopping/>}/>
       {/* section comercial */}
       <section className="mt-8 py-5 bg-red-600 flex gap-3 text-white justify-center items-center">
         <Image
