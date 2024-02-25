@@ -10,8 +10,6 @@ import Cerdo from "@/assets/cerdo.png";
 import Comercial from "@/assets/comercial.png";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import HomePortda from "@/components/slider/homePortada/HomePortda";
-import Link from "next/link";
-import SliderCard from "@/components/slider/products/SliderCard";
 import SliderMejor from "@/components/slider/lomejor/SliderMejor";
 import SectionSlider from "@/components/slider/section/SectionSlider";
 export default function Home() {
@@ -36,14 +34,14 @@ export default function Home() {
         </Carousel>
       </main>
       {/* seccion de categorias flex flex-col justify-center items-center*/}
-      <section className="lg:container mx-auto  py-8 px-20">
+      <section className="lg:container mx-auto  py-8 sm:px-10 lg:px-20 px-10">
         <h2 className="mb-1 text-xl font-extrabold ">
         ¡ TODO LO ENCUENTRAS EN DOONA !
         </h2>
         <Categoria />
       </section>
       {/* section promociones */}
-      <section className="md:container mx-auto p-2 px-20">
+      <section className="md:container mx-auto p-2 sm:px-10 lg:px-20 px-10">
         <h2 className="mb-5 text-xl font-extrabold text-red-600">
           LO MEJOR DE LA SEMANA
         </h2>
@@ -53,7 +51,7 @@ export default function Home() {
 
       {/* seeccion de bebidas */}
   
-         <SectionSlider renderjson={categoriaMap}/>
+      <SectionSlider renderjson={categoriaMap}/>
       {/* seeccion de bebidas */}
       <SectionSlider renderjson={categoriaMap}/>
       {/* seeccion de bebidas */}
