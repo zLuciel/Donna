@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const SectionSlider = ({ renderjson, image }) => {
   return (
-    <section className="lg:container mx-auto py-5  px-20">
+    <section className="lg:container  mx-auto py-5  sm:px-10 lg:px-20 px-10" >
       <div className="flex justify-between pr-8">
         <h2 className="mb-5 text-xl font-extrabold text-red-600">
           LO MEJOR DE LA BEBIDAS

@@ -7,7 +7,7 @@ import Android from "@/assets/footer/android.png"
 const Footer = () => {
   return (
     <footer className="mx-auto ">
-      <div className="lg:container mx-auto py-10 px-20  grid-flow-col grid gap-20 auto-rows-max">
+      <div className="lg:container mx-auto py-10 px-20   grid gap-20 md:grid-cols-3 lg:grid-cols-4 " >
       <div>
         <Image
         className="mb-4"
