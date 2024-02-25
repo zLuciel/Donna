@@ -61,7 +61,7 @@ const Categoria = () => {
         <Image src={cate.image}  sizes="(min-width: 808px) 50vw, 100vw"
            alt="Donna" />
         </span>
-          <h5 className="bg-red-600 text-white py-1 px-3 rounded-3xl text-center font-poet font-semibold">{cate?.name}</h5>
+          <h5 className="relative bottom-3 bg-red-600 text-white py-1 px-3 rounded-3xl text-center font-poet font-semibold">{cate?.name}</h5>
         </div>
         </SwiperSlide>
       ))}

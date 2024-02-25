@@ -1,37 +1,24 @@
 "use client";
 import Categoria from "@/components/slider/categoria/Categoria";
 import Image from "next/image";
-import "@mantine/carousel/styles.css";
-import { Carousel } from "@mantine/carousel";
+
 import categoriaMap from "@/components/slider/categoria/mapCategoria";
 import mejorSemana from "@/data/semana";
 import homeSlider from "@/data/homeSlider";
 import Cerdo from "@/assets/cerdo.png";
 import Comercial from "@/assets/comercial.png";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+
 import HomePortda from "@/components/slider/homePortada/HomePortda";
 import SliderMejor from "@/components/slider/lomejor/SliderMejor";
 import SectionSlider from "@/components/slider/section/SectionSlider";
+/*ICONS */
+import { FaBottleDroplet,FaCartShopping } from "react-icons/fa6";
+
 export default function Home() {
   return (
     <>
       <main className="portada-main text-white h-screen w-screen">
-        <Carousel
-          className="portada"
-          slideSize="100%"
-          slideGap={{ base: 0 }}
-          loop
-          height="100%"
-          slidesToScroll={1}
-          nextControlIcon={<FaChevronRight className="text-3xl" />}
-          previousControlIcon={<FaChevronLeft className="text-3xl" />}
-        >
-          {homeSlider?.map((cate, i) => (
-            <Carousel.Slide key={i}>
-              <HomePortda image={cate.image} />
-            </Carousel.Slide>
-          ))}
-        </Carousel>
+       <HomePortda renderjson={homeSlider} />
       </main>
       {/* seccion de categorias flex flex-col justify-center items-center*/}
       <section className="lg:container mx-auto  py-8 sm:px-10 lg:px-20 px-10">
@@ -41,23 +28,22 @@ export default function Home() {
         <Categoria />
       </section>
       {/* section promociones */}
-      <section className="md:container mx-auto p-2 sm:px-10 lg:px-20 px-10">
-        <h2 className="mb-5 text-xl font-extrabold text-red-600">
+      <section className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-10">
+         <span className="mb-5 text-xl font-extrabold flex items-center gap-3">
+          <p className="bg-red-600 text-white px-4 py-1 text-lg rounded-2xl"><FaBottleDroplet/></p>
+          <h2 >
           LO MEJOR DE LA SEMANA
         </h2>
+        </span>
         <SliderMejor renderjson={mejorSemana} />
       </section>
 
 
       {/* seeccion de bebidas */}
-  
-      <SectionSlider renderjson={categoriaMap}/>
-      {/* seeccion de bebidas */}
-      <SectionSlider renderjson={categoriaMap}/>
-      {/* seeccion de bebidas */}
-      <SectionSlider renderjson={categoriaMap} image={Comercial}/>
-      {/* seeccion de bebidas */}
-      <SectionSlider renderjson={categoriaMap}/>
+      <SectionSlider title="LO MEJOR DE LA BEBIDAS" renderjson={categoriaMap} icon={<FaBottleDroplet/>} />
+      <SectionSlider title="LO MEJOR EN FRESCOS" renderjson={categoriaMap} icon={<FaBottleDroplet/>}/>
+      <SectionSlider title="LO MEJOR EN LICORES" renderjson={categoriaMap} image={Comercial} icon={<FaCartShopping/>}/>
+      <SectionSlider title="LO MEJOR EN FRESCOS" renderjson={categoriaMap} icon={<FaCartShopping/>}/>
       {/* section comercial */}
       <section className="mt-8 py-5 bg-red-600 flex gap-3 text-white justify-center items-center">
         <Image

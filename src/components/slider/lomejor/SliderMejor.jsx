@@ -13,7 +13,30 @@ const SliderMejor = ({renderjson}) => {
     navigation
     pagination={{ clickable: true }}
     spaceBetween={10}
-    slidesPerView={4.2}
+    slidesPerView={2}
+    slidesPerGroup={1}
+    breakpoints={{
+      // cuando el ancho es >= 640px
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesPerGroup: 2,
+      },
+      // cuando el ancho es >= 768px
+      888: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1000: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        slidesPerGroup: 4,
+      },
+    }}
    >
      {renderjson?.map((cate, i) => (
        <SwiperSlide  key={i}>
