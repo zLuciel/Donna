@@ -50,9 +50,10 @@ export default function Home() {
         <SliderMejor renderjson={mejorSemana} />
       </section>
 
-      
+
       {/* seeccion de bebidas */}
-       <SectionSlider renderjson={categoriaMap}/>
+  
+         <SectionSlider renderjson={categoriaMap}/>
       {/* seeccion de bebidas */}
       <SectionSlider renderjson={categoriaMap}/>
       {/* seeccion de bebidas */}
