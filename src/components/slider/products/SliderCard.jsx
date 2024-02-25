@@ -9,7 +9,7 @@ const SliderCard = ({renderjson}) => {
     <Carousel
     className="py-2"
     withIndicators
-    slideSize={{ base: '50%', sm: '40%', md: "33%"  ,lg:"20%"}}
+    slideSize={{ base: '100%', sm: '50%', md: "33%"  ,lg:"20%"}}
     slideGap="md"
     loop
     height="100%"
