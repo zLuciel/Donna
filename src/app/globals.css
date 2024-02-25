@@ -162,3 +162,8 @@ body {
   border-radius: 6px; /* Radio de borde de la thumb */
   border: 3px solid transparent; /* Borde de la thumb (opcional) */
 }
+.auto-product-grid{
+  display: grid;
+  grid-gap: 20px; /* Espacio entre tarjetas */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
