@@ -37,7 +37,9 @@ export default function Home() {
           LO MEJOR DE LA SEMANA
         </h2>
         </span>
-        <SliderMejor renderjson={mejorSemana} />
+        <div className="relative">
+        <SliderMejor renderjson={mejorSemana} viewPagi={true} />
+        </div>
       </section>
 
 

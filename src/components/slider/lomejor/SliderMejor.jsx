@@ -6,12 +6,19 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
-const SliderMejor = ({renderjson}) => {
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+
+const SliderMejor = ({renderjson,viewPagi}) => {
   return (
+    <>
     <Swiper
     modules={[Navigation, Pagination]}
-    navigation
-    pagination={{ clickable: true }}
+    navigation={{
+      prevEl: `#icoPromoPreS`,
+      nextEl: `#icoPromoNextS`,
+    }}
+    loop
+    pagination={viewPagi && { clickable: true }}
     spaceBetween={10}
     slidesPerView={2}
     slidesPerGroup={1}
@@ -44,6 +51,9 @@ const SliderMejor = ({renderjson}) => {
        </SwiperSlide>
      ))}
    </Swiper>
+   <button id="icoPromoPreS" ><FaChevronLeft  className='text-3xl'/></button>
+  <button id="icoPromoNextS" ><FaChevronRight  className='text-3xl'/></button>
+   </>
   )
 }
 
