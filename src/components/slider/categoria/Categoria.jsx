@@ -18,6 +18,7 @@ const Categoria = () => {
       prevEl: `#icoCategoriaPreS`,
       nextEl: `#icoCategoriaNextS`,
     }}
+    slidesPerView={2}
     pagination={{ clickable: true }}
     spaceBetween={10}
     slidesPerGroup={1}
