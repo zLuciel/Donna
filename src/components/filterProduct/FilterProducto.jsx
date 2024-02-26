@@ -2,7 +2,7 @@ import React from "react";
 import CategoriasOptions from "./categoriaOption";
 const FilterProducto = () => {
   return (
-    <div>
+    <div className="hidden  lg:block md:block ">
      <div className="sticky top-20">
      <h1 className="text-2xl mb-3">Abarrotes</h1>
       <h2 className="mb-3">Filtros aplicados</h2>
