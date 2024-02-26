@@ -13,6 +13,7 @@ import SliderMejor from "@/components/slider/lomejor/SliderMejor";
 import SectionSlider from "@/components/slider/section/SectionSlider";
 /*ICONS */
 import { FaBottleDroplet,FaCartShopping } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,9 +23,16 @@ export default function Home() {
       </main>
       {/* seccion de categorias flex flex-col justify-center items-center*/}
       <section className="lg:container mx-auto  py-8 sm:px-10 md:px-10 lg:px-20 px-10">
-        <h2 className="mb-1 text-xl font-extrabold ">
+        <div className="flex justify-between pr-8 ">
+          <h2 className="mb-1 text-xl font-extrabold ">
         ¡ TODO LO ENCUENTRAS EN DOONA !
-        </h2>
+         </h2>
+         <p>
+          <Link className="text-sm border-b border-black text-red-600" href="/productos">
+            VER TODOS
+          </Link>
+        </p>
+        </div>
         <div className="relative">
         <Categoria />
         </div>
