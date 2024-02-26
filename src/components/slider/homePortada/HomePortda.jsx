@@ -1,18 +1,28 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import {Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
-const HomePortda = ({renderjson}) => {
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
   return (
+    <>
     <Swiper
-    modules={[Navigation, Pagination]}
-    navigation
+    modules={[Autoplay,Navigation, Pagination]}
+    loop={true}
+    navigation={{
+      prevEl: `#${idBtnPre}`,
+      nextEl: `#${idBtnNex}`,
+    }}
     pagination={{ clickable: true }}
     spaceBetween={0}
     slidesPerView={1}
     slidesPerGroup={1}
+    autoplay={{ 
+      delay: 4000, 
+      disableOnInteraction: false,
+    }}
     >
       {renderjson?.map((cate, i) => (
         <SwiperSlide key={i}>
@@ -29,6 +39,9 @@ const HomePortda = ({renderjson}) => {
         </SwiperSlide>
       ))}
     </Swiper>
+    <button id={idBtnPre} ><FaChevronLeft  className='text-3xl'/></button>
+    <button id={idBtnNex} ><FaChevronRight  className='text-3xl'/></button>
+    </>
   );
 };
 

@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="w-screen bg-white sticky top-0 z-10 ">
       {/* sub cabecera */}
-      <div className=" bg-zinc-950 px-10">
+      <div className=" bg-zinc-950 px-10 hidden  lg:block md:block ">
         <div className="lg:container lg:mx-auto flex justify-between text-white p-2">
           <h4 className="leading-5 text-sm/[5px]">Atenciòn al cliente: (01) 345 - 234</h4>
           <span>

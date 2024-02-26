@@ -17,8 +17,8 @@ import { FaBottleDroplet,FaCartShopping } from "react-icons/fa6";
 export default function Home() {
   return (
     <>
-      <main className="portada-main text-white h-screen w-screen">
-       <HomePortda renderjson={homeSlider} />
+      <main className="relative portada-main text-white h-screen w-screen">
+       <HomePortda renderjson={homeSlider} idBtnNex={"icoMainNextSH"} idBtnPre={"icoMainPreSH"} />
       </main>
       {/* seccion de categorias flex flex-col justify-center items-center*/}
       <section className="lg:container mx-auto  py-8 sm:px-10 lg:px-20 px-10">

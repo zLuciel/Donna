@@ -19,6 +19,8 @@ const SliderCard = ({renderjson,idBtnNex,idBtnPre}) => {
     }}
     pagination={{ clickable: true }}
     spaceBetween={10}
+    loop={true}
+    slidesPerView={2}
     slidesPerGroup={1}
     breakpoints={{
       // cuando el ancho es >= 640px
