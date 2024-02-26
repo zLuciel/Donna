@@ -28,7 +28,7 @@ export default function Home() {
         ¡ TODO LO ENCUENTRAS EN DOONA !
          </h2>
          <p>
-          <Link className="text-sm border-b border-black text-red-600" href="/productos">
+          <Link className="text-sm border-b border-red-500 text-red-600" href="/productos">
             VER TODOS
           </Link>
         </p>
