@@ -35,7 +35,7 @@ function CategoriaHeader({icon,setOpenSub}) {
       active={index === active}
       label={item.label}
       rightSection={icon && item.rightSection}
-      onClick={() => handleActive(index,true,item.label)}
+      onMouseEnter={() => handleActive(index,true,item.label)}
       color="red"
       variant="filled"
     />
