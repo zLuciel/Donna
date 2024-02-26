@@ -167,7 +167,7 @@ body {
 [id^="ico"] {
   position: absolute;
   top: 50%;
-  z-index: 50;
+  z-index: 3;
 }
 [id$="PreS"] {
   left: -50px;
@@ -202,7 +202,14 @@ body {
   }
   
 }
-
+@media (max-width: 1024px) {
+  [id$="PreS"] {
+    left: -10px;
+  }
+  [id$="NextS"] {
+    right: -10px;
+  }
+}
 @media (max-width: 866px) {
   .header-grid {
     gap: 10px;

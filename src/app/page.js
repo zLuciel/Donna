@@ -21,7 +21,7 @@ export default function Home() {
        <HomePortda renderjson={homeSlider} idBtnNex={"icoMainNextSH"} idBtnPre={"icoMainPreSH"} />
       </main>
       {/* seccion de categorias flex flex-col justify-center items-center*/}
-      <section className="lg:container mx-auto  py-8 sm:px-10 lg:px-20 px-10">
+      <section className="lg:container mx-auto  py-8 sm:px-10 md:px-10 lg:px-20 px-10">
         <h2 className="mb-1 text-xl font-extrabold ">
         ¡ TODO LO ENCUENTRAS EN DOONA !
         </h2>
