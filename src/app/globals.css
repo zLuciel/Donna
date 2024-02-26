@@ -99,6 +99,7 @@ body {
 }
 
 .header-grid {
+  gap: 10px;
   display: grid;
   grid-template-columns: max-content 0.5fr 2.5fr 1fr;
   grid-template-areas: "logo categoria search cuentas";
@@ -132,14 +133,14 @@ body {
   align-self: center;
 }
 
-.portada > .m-39bc3463 {
+/*.portada > .m-39bc3463 {
   left: 20px !important;
   right: 20px !important;
 }
 .m-39bc3463 {
   left: -38px !important;
   right: -38px !important;
-}
+}*/
 
 .filter-border {
   border-bottom: 1px solid rgba(172, 172, 172, 0.452);
@@ -191,6 +192,39 @@ body {
   background: red !important;
 }
 
+
+@media (max-width: 1280px) {
+  .header-grid {
+    gap: 10px;
+    display: grid;
+    grid-template-columns: max-content 0.5fr 2fr 1fr;
+    grid-template-areas: "logo categoria search cuentas";
+  }
+  
+}
+
+@media (max-width: 866px) {
+  .header-grid {
+    gap: 10px;
+    display: grid;
+    grid-template-columns: max-content 0.5fr 1.5fr 1fr;
+    grid-template-areas: "logo categoria search cuentas";
+  }
+  
+}
+@media (max-width: 774px) {
+  .header-grid {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: max-content 1fr  1fr;
+    grid-template-areas: 
+    "logo search cuentas"
+    ;
+  }
+  .categoria {
+    display: none;
+  }
+}
 @media (max-width: 407px) {
   .swiper-pagination {
     display: none;

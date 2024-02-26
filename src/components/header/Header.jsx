@@ -23,7 +23,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="lg:container lg:mx-auto py-1 sm:px-10 lg:px-20 px-10  header-grid ">
+      <div className="lg:container  mx-auto py-1 sm:px-10 md:px-10 lg:px-20 px-5  header-grid ">
       <Link href="/"><Image className="logo-header" src="/LogoDonna.png" width={100} height={100} alt="Donna" /></Link>
         <div className="categoria">
           <span ><Link className="flex gap-2 justify-cent flex gap-2 items-center" href="/productos">Categorias <IoIosArrowDown /></Link></span>
@@ -33,7 +33,7 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <span className="search-header flex w-full rounded-3xl overflow-hidden">
+        <span className="search-header flex w-full  rounded-3xl overflow-hidden">
           <input
             className="w-full outline-none px-3 py-1 "
             type="text"
