@@ -12,8 +12,12 @@ import HomePortda from "@/components/slider/homePortada/HomePortda";
 import SliderMejor from "@/components/slider/lomejor/SliderMejor";
 import SectionSlider from "@/components/slider/section/SectionSlider";
 /*ICONS */
-import { FaBottleDroplet,FaCartShopping } from "react-icons/fa6";
+import { FaBottleDroplet,FaCartShopping,FaCalendarCheck,FaFishFins } from "react-icons/fa6";
+import { MdLiquor } from "react-icons/md";
+import { GiBroccoli } from "react-icons/gi";
+
 import Link from "next/link";
+import CategoriaHeader from "@/components/header/Categoria";
 
 export default function Home() {
   return (
@@ -40,7 +44,7 @@ export default function Home() {
       {/* section promociones */}
       <section className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-10">
          <span className="mb-5 text-xl font-extrabold flex items-center gap-3">
-          <p className="bg-red-600 text-white px-4 py-1 text-lg rounded-2xl"><FaBottleDroplet/></p>
+          <p className="bg-red-600 text-white px-4 py-1 text-lg rounded-2xl"><FaCalendarCheck/></p>
           <h2 >
           LO MEJOR DE LA SEMANA
         </h2>
@@ -53,22 +57,9 @@ export default function Home() {
 
       {/* seeccion de bebidas */}
       <SectionSlider title="LO MEJOR DE LA BEBIDAS" pretIcoID={"icoBebidaPreS"} nextIcoID={"icoBebidaNextS"} renderjson={categoriaMap} icon={<FaBottleDroplet/>} />
-      <SectionSlider title="LO MEJOR EN FRESCOS" pretIcoID={"icoFrescosPreS"} nextIcoID={"icoFrescosNextS"} renderjson={categoriaMap} icon={<FaBottleDroplet/>}/>
-      <SectionSlider title="LO MEJOR EN LICORES" pretIcoID={"icoLicoresPreS"} nextIcoID={"icoLicoresNextS"} renderjson={categoriaMap} image={Comercial} icon={<FaCartShopping/>}/>
-      <SectionSlider title="LO MEJOR EN FRESCOS"pretIcoID={"icoNuevoPreS"} nextIcoID={"icoNuevoNextS"}  renderjson={categoriaMap} icon={<FaCartShopping/>}/>
-      {/* section comercial */}
-      <section className="mt-8 py-5 bg-red-600 flex gap-3 text-white justify-center items-center">
-        <Image
-          className="img-cerdo"
-          src={Cerdo}
-          alt="Picture of the author"
-          width={230}
-          height={230}
-        />
-        <h2 className="font-bold text-3xl text-xl">
-          ¡ DONDE COMPRAR ES AHORRAR !
-        </h2>
-      </section>
+      <SectionSlider title="LO MEJOR EN FRESCOS" pretIcoID={"icoFrescosPreS"} nextIcoID={"icoFrescosNextS"} renderjson={categoriaMap} icon={<FaFishFins/>}/>
+      <SectionSlider title="LO MEJOR EN LICORES" pretIcoID={"icoLicoresPreS"} nextIcoID={"icoLicoresNextS"} renderjson={categoriaMap} image={Comercial} icon={<MdLiquor/>}/>
+      <SectionSlider title="LO MEJOR EN VERDURAS"pretIcoID={"icoNuevoPreS"} nextIcoID={"icoNuevoNextS"}  renderjson={categoriaMap} icon={<GiBroccoli/>}/>
     </>
   );
 }

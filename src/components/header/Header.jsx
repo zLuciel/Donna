@@ -1,11 +1,14 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import { IoSearch } from "react-icons/io5";
-import { IoIosArrowDown } from "react-icons/io";
 import { FaUser,FaShoppingCart } from "react-icons/fa";
 import Link from "next/link";
+import { IoIosArrowDown } from "react-icons/io";
+import ModalCategoria from "./ModalCategoria";
 
 const Header = () => {
+  const [view, setView] = useState(false);
   return (
     <header className="w-screen bg-white sticky top-0 z-10 ">
       {/* sub cabecera */}
@@ -15,8 +18,9 @@ const Header = () => {
           <span>
             <ul className="flex gap-10">
               <li className="leading-5 text-sm/[5px]">venta telèfonica</li>
-              <li className="leading-5 text-sm/[5px]"><Link href="/tiendas">tiendas</Link></li>
+              <li className="leading-5 text-sm/[5px]"><Link href="/productos">productos</Link></li>
               <li className="leading-5 text-sm/[5px]"><Link href="/promociones">promociones</Link></li>
+              <li className="leading-5 text-sm/[5px]"><Link href="/tiendas">tiendas</Link></li>  
               <li className="leading-5 text-sm/[5px]">centro de ayuda</li>
             </ul>
           </span>
@@ -26,12 +30,8 @@ const Header = () => {
       <div className="lg:container  mx-auto py-1 sm:px-10 md:px-10 lg:px-20 px-5  header-grid ">
       <Link href="/"><Image className="logo-header" src="/LogoDonna.png" width={100} height={100} alt="Donna" /></Link>
         <div className="categoria">
-          <span ><Link className="flex gap-2 justify-cent flex gap-2 items-center" href="/productos">Categorias <IoIosArrowDown /></Link></span>
-          <nav>
-            <ul>
-              <li></li>
-            </ul>
-          </nav>
+         <button className="flex gap-2 justify-cent flex gap-2 items-center" onClick={()=> setView(true)}>Categorias <IoIosArrowDown /></button>
+         <ModalCategoria view={view} setView={setView} />
         </div>
         <span className="search-header flex w-full  rounded-3xl overflow-hidden">
           <input

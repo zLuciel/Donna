@@ -193,6 +193,33 @@ body {
   background: red !important;
 }
 
+.topScroll{
+  cursor: pointer;
+  width: max-content;
+  right: 30px;
+  bottom: 25px;
+  z-index: 4;
+}
+.close-modal-header{
+  right: 16px;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+}
+.modal-bg{
+   padding: 10px;
+   background: white;
+   width: max-content;
+   min-height: 100vh;
+}
+.modal-header{
+  background: rgba(0, 0, 0, 0.164);
+  backdrop-filter: blur(3px);
+  width: 100%;
+  min-height: 100vh;
+  left: 0;
+  top: 0;
+}
 
 @media (max-width: 1280px) {
   .header-grid {
