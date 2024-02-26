@@ -49,8 +49,8 @@ const SliderCard = ({renderjson,idBtnNex,idBtnPre}) => {
       </SwiperSlide>
     ))}
   </Swiper>
-  <button id={idBtnPre} ><FaChevronLeft /></button>
-  <button id={idBtnNex} ><FaChevronRight /></button>
+  <button id={idBtnPre} ><FaChevronLeft  className='text-3xl'/></button>
+  <button id={idBtnNex} ><FaChevronRight  className='text-3xl'/></button>
   </>
   )
 }

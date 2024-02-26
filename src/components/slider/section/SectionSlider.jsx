@@ -4,7 +4,7 @@ import SliderCard from "../products/SliderCard";
 import Image from "next/image";
 const SectionSlider = ({ renderjson, image , title,icon,pretIcoID,nextIcoID}) => {
   return (
-    <section className="lg:container  mx-auto py-5  sm:px-10 lg:px-20 px-10" >
+    <section className="lg:container  mx-auto py-5  sm:px-20 md:px-20 lg:px-20 px-20" >
       <div className="flex justify-between pr-8">
         <span className="mb-5 text-xl font-extrabold flex items-center gap-3">
           <p className="bg-red-600 text-white px-4 py-1 text-lg rounded-2xl">{icon}</p>

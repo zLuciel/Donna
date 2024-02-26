@@ -171,7 +171,6 @@ body {
  position: absolute;
  top: 50%;
  z-index: 50;
- font-size: 2rem;
 }
 [id$="PreS"]{
 z-index: 50;

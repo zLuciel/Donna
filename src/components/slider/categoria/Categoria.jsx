@@ -71,8 +71,8 @@ const Categoria = () => {
         </SwiperSlide>
       ))}
     </Swiper>
-    <button id="icoCategoriaPreS" ><FaChevronLeft /></button>
-    <button id="icoCategoriaNextS" ><FaChevronRight /></button>
+    <button id="icoCategoriaPreS" ><FaChevronLeft className='text-3xl' /></button>
+    <button id="icoCategoriaNextS" ><FaChevronRight className='text-3xl' /></button>
     </>
   );
 };
