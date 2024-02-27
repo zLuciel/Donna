@@ -28,7 +28,7 @@ const Header = () => {
       </div>
 
       <div className="lg:container  mx-auto py-1 sm:px-10 md:px-10 lg:px-20 px-5  header-grid ">
-      <Link href="/"><Image className="logo-header" src="/LogoDonna.png" width={100} height={100} alt="Donna" /></Link>
+      <Link href="/"><Image className="logo-header" src="/LogoDonna.png" width={90} height={90} alt="Donna" /></Link>
         <div className="categoria">
          <button className="flex gap-2 justify-cent flex gap-2 items-center" onClick={()=> setView(true)}>Categorias <IoIosArrowDown /></button>
          <ModalCategoria view={view} setView={setView} />

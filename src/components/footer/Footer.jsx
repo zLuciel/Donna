@@ -17,7 +17,7 @@ const Footer = () => {
           width={130}
           height={130}
         />
-        <p className="leading-7 text-sm/[5px]">
+        <p className="leading-7 text-xs">
           Nuestra tienda online Ripley.com.pe tiene lo que necesitas de tus
           marcas favoritas. Mira todo nuestro catálogo y encuentra lo que te
           hace falta. Llegamos a todo el Perú.
@@ -28,10 +28,10 @@ const Footer = () => {
        <div>
        <h3 className="font-bold mb-3">Políticas</h3>
         <ul>
-            <li className="leading-7 text-sm/[5px]"><Link href="/politicas">Política de envío</Link></li>
-            <li className="leading-7 text-sm/[5px]"><Link href="/politicas">Política de privacidad</Link></li>
-            <li className="leading-7 text-sm/[5px]"><Link href="/politicas">Política de reembolso</Link></li>
-            <li className="leading-7 text-sm/[5px]"><Link href="/politicas">Términos del servicio</Link></li>
+            <li className="leading-7 text-xs"><Link href="/politicas">Política de envío</Link></li>
+            <li className="leading-7 text-xs"><Link href="/politicas">Política de privacidad</Link></li>
+            <li className="leading-7 text-xs"><Link href="/politicas">Política de reembolso</Link></li>
+            <li className="leading-7 text-xs"><Link href="/politicas">Términos del servicio</Link></li>
         </ul>
        </div>
        <div>
@@ -57,9 +57,9 @@ const Footer = () => {
        <div>
        <h3 className="font-bold mb-3">Conoceme</h3>
         <ul>
-            <li className="leading-7 text-sm/[5px]">Nuestras tiendas</li>
-            <li className="leading-7 text-sm/[5px]">Promociones</li>
-            <li className="leading-7 text-sm/[5px]">Ventas telefonicas</li>
+            <li className="leading-7 text-xs">Nuestras tiendas</li>
+            <li className="leading-7 text-xs">Promociones</li>
+            <li className="leading-7 text-xs">Ventas telefonicas</li>
         </ul>
        </div>
        <div>
@@ -84,8 +84,8 @@ const Footer = () => {
       <div>
         <h3 className="font-bold mb-3">Contactame</h3>
         <ul>
-            <li className="leading-7 text-sm/[5px]">(01) 345 - 4567</li>
-            <li className="leading-7 text-sm/[5px]">informes@bill.com.pe</li>
+            <li className="leading-7 text-xs">(01) 345 - 4567</li>
+            <li className="leading-7 text-xs">informes@bill.com.pe</li>
         </ul>
       </div>
       </div>
