@@ -17,7 +17,7 @@ const Header = () => {
           <h4 className="leading-5 text-xs">Atenciòn al cliente: (01) 345 - 234</h4>
           <span>
             <ul className="flex gap-10">
-              <li className="leading-5 text-xs">venta telèfonica</li>
+              <li className="leading-5 text-xs">venta telefónica</li>
               <li className="leading-5 text-xs"><Link href="/productos">productos</Link></li>
               <li className="leading-5 text-xs"><Link href="/promociones">promociones</Link></li>
               <li className="leading-5 text-xs"><Link href="/tiendas">tiendas</Link></li>  

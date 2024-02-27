@@ -11,14 +11,14 @@ const SliderCard = ({renderjson,idBtnNex,idBtnPre}) => {
   return (
     <>
     <Swiper
-    style={{padding:"40px 0px"}}
+    style={{padding:"40px 10px"}}
     modules={[Navigation, Pagination]}
     navigation={{
       prevEl: `#${idBtnPre}`,
       nextEl: `#${idBtnNex}`,
     }}
     pagination={{ clickable: true }}
-    spaceBetween={10}
+    spaceBetween={5}
     loop={true}
     slidesPerView={2}
     slidesPerGroup={1}
@@ -40,7 +40,7 @@ const SliderCard = ({renderjson,idBtnNex,idBtnPre}) => {
       },
       1200: {
         slidesPerView: 5,
-        spaceBetween: 20,
+        spaceBetween: 10,
         slidesPerGroup: 4,
       },
     }}

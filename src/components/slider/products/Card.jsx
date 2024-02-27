@@ -5,6 +5,7 @@ const Card = ({ image }) => {
   return (
     <div className="card-product flex flex-col justify-start ">
       <div className="image-product mb-4">
+        <span className=" rounded-tr-xl text-xs py-1 rounded-br-xl absolute bg-red-600 text-white font-semibold px-3 left-0"> - 8%</span>
         <Image src={image} sizes="(min-width: 808px) 50vw, 100vw" alt="Donna" />
       </div>
 

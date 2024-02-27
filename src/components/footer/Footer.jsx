@@ -4,6 +4,7 @@ import Yape from "@/assets/footer/yape.png"
 import Plin from "@/assets/footer/plin.png"
 import Apple from "@/assets/footer/apple.png"
 import Android from "@/assets/footer/android.png"
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="mx-auto ">
@@ -27,10 +28,10 @@ const Footer = () => {
        <div>
        <h3 className="font-bold mb-3">Políticas</h3>
         <ul>
-            <li className="leading-7 text-sm/[5px]">Política de envío</li>
-            <li className="leading-7 text-sm/[5px]">Política de privacidad</li>
-            <li className="leading-7 text-sm/[5px]">Política de reembolso</li>
-            <li className="leading-7 text-sm/[5px]">Términos del servicio</li>
+            <li className="leading-7 text-sm/[5px]"><Link href="/politicas">Política de envío</Link></li>
+            <li className="leading-7 text-sm/[5px]"><Link href="/politicas">Política de privacidad</Link></li>
+            <li className="leading-7 text-sm/[5px]"><Link href="/politicas">Política de reembolso</Link></li>
+            <li className="leading-7 text-sm/[5px]"><Link href="/politicas">Términos del servicio</Link></li>
         </ul>
        </div>
        <div>
