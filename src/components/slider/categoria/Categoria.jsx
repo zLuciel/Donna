@@ -18,6 +18,7 @@ const Categoria = () => {
       prevEl: `#icoCategoriaPreS`,
       nextEl: `#icoCategoriaNextS`,
     }}
+    loop
     slidesPerView={2}
     pagination={{ clickable: true }}
     spaceBetween={10}
@@ -72,8 +73,8 @@ const Categoria = () => {
         </SwiperSlide>
       ))}
     </Swiper>
-    <button id="icoCategoriaPreS" ><FaChevronLeft className='text-3xl' /></button>
-    <button id="icoCategoriaNextS" ><FaChevronRight className='text-3xl' /></button>
+    <button id="icoCategoriaPreS"  className="cateBtnSwiper flex justify-center items-center" ><FaChevronLeft className='text-1xl text-red-500' /></button>
+    <button id="icoCategoriaNextS" className="cateBtnSwiper flex justify-center items-center"  ><FaChevronRight className='text-1xl text-red-500' /></button>
     </>
   );
 };

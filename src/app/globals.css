@@ -74,7 +74,8 @@ body {
   object-fit: contain;
 }
 .card-product {
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.096), -2px 0px 2px rgba(0, 0, 0, 0.055) ;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.096),
+    -2px 0px 2px rgba(0, 0, 0, 0.055);
   overflow: hidden;
   border-radius: 20px;
   padding: 10px 10px;
@@ -192,26 +193,26 @@ body {
   background: red !important;
 }
 
-.topScroll{
+.topScroll {
   cursor: pointer;
   width: max-content;
   right: 30px;
   bottom: 25px;
   z-index: 4;
 }
-.close-modal-header{
+.close-modal-header {
   right: 16px;
   border-radius: 50px;
   width: 30px;
   height: 30px;
 }
-.modal-bg{
-   padding: 10px;
-   background: white;
-   width: max-content;
-   min-height: 100vh;
+.modal-bg {
+  padding: 10px;
+  background: white;
+  width: max-content;
+  min-height: 100vh;
 }
-.modal-header{
+.modal-header {
   background: rgba(0, 0, 0, 0.164);
   backdrop-filter: blur(3px);
   width: 100%;
@@ -227,7 +228,6 @@ body {
     grid-template-columns: max-content 0.5fr 2fr 1fr;
     grid-template-areas: "logo categoria search cuentas";
   }
-  
 }
 @media (max-width: 1024px) {
   [id$="PreS"] {
@@ -244,16 +244,13 @@ body {
     grid-template-columns: max-content 0.5fr 1.5fr 1fr;
     grid-template-areas: "logo categoria search cuentas";
   }
-  
 }
 @media (max-width: 774px) {
   .header-grid {
     gap: 20px;
     display: grid;
-    grid-template-columns: max-content 1fr  1fr;
-    grid-template-areas: 
-    "logo search cuentas"
-    ;
+    grid-template-columns: max-content 1fr 1fr;
+    grid-template-areas: "logo search cuentas";
   }
   .categoria {
     display: none;
@@ -265,13 +262,21 @@ body {
   }
 }
 
-.icon-shadow{
+.icon-shadow {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-    background: #fff;
-    box-shadow: 0 0 4px rgba(0,0,0,.25) !important;
-    width: 40px !important;
-    height: 40px !important;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25) !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.cateBtnSwiper {
+  z-index: 4;
+  background: #ffe0e0;
+  border-radius: 50px;
+  width: 28px;
+  height: 28px;
 }
