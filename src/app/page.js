@@ -59,8 +59,8 @@ export default function Home() {
       {/* section promociones */}
       <section className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-10">
         <span className="mb-5 text-xl font-extrabold flex items-center gap-3">
-          <p className="bg-red-600 text-white px-4 py-1 text-lg rounded-2xl">
-            <FaCalendarCheck />
+          <p className="icon-shadow shadow shadow-2xl text-white p-2 text-sm sm:text-sm md:text-lg lg:text-3xl rounded-2xl">
+            <Verdura />
           </p>
           <h2>LO MEJOR DE LA SEMANA</h2>
         </span>
