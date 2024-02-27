@@ -7,6 +7,9 @@ import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
 import ModalCategoria from "./ModalCategoria";
 import { FaClipboardList } from "react-icons/fa6";
+import Cart from "../svg/Cart";
+import List from "../svg/List";
+import User from "../svg/User";
 const Header = () => {
   const [view, setView] = useState(false);
   return (
@@ -42,9 +45,9 @@ const Header = () => {
          <span className="bg-slate-gray px-4 flex justify-center items-center"><IoSearch /></span>
         </span>
         <div className="cuenta-header flex gap-7 items-center ">
-        <span className="flex gap-2 flex-col justify-center items-center"><FaClipboardList className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi Lista</p></span>
-          <span className="flex gap-2 flex-col justify-center items-center "><FaUser className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi cuenta</p></span>
-          <span className="flex gap-2 flex-col justify-center items-center"><FaShoppingCart className="text-xl"/> <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">S/40.00</p></span>
+        <span className="flex gap-2 flex-col justify-center items-center"><List className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi Lista</p></span>
+          <span className="flex gap-2 flex-col justify-center items-center "><User className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi cuenta</p></span>
+          <span className="flex gap-2 flex-col justify-center items-center"><Cart/> <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">S/40.00</p></span>
         </div>
       </div>
     </header>
