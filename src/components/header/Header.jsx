@@ -42,9 +42,9 @@ const Header = () => {
          <span className="bg-slate-gray px-4 flex justify-center items-center"><IoSearch /></span>
         </span>
         <div className="cuenta-header flex gap-7 items-center ">
-        <span className="flex gap-2 flex-col justify-center items-center"><FaClipboardList className="text-xl" /> <p className="prueba text-sm mt-1 leading-3">Mi Lista</p></span>
-          <span className="flex gap-2 flex-col justify-center items-center "><FaUser className="text-xl" /> <p className="prueba text-sm mt-1 leading-3">Mi cuenta</p></span>
-          <span className="flex gap-2 flex-col justify-center items-center"><FaShoppingCart className="text-xl"/> <p className="text-sm mt-1 font-bold leading-3">S/40.00</p></span>
+        <span className="flex gap-2 flex-col justify-center items-center"><FaClipboardList className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi Lista</p></span>
+          <span className="flex gap-2 flex-col justify-center items-center "><FaUser className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi cuenta</p></span>
+          <span className="flex gap-2 flex-col justify-center items-center"><FaShoppingCart className="text-xl"/> <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">S/40.00</p></span>
         </div>
       </div>
     </header>
