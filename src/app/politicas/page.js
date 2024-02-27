@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-10">
+    <div className="h-screen lg:container mx-auto p-2 sm:px-10 lg:px-20 px-10 ">
       <h1>Where does it come from?</h1>
       <p>
         Where does it come from? Contrary to popular belief, Lorem Ipsum is not
