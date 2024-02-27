@@ -51,8 +51,8 @@ const SliderMejor = ({renderjson,viewPagi}) => {
        </SwiperSlide>
      ))}
    </Swiper>
-   <button id="icoPromoPreS" ><FaChevronLeft  className='text-3xl'/></button>
-  <button id="icoPromoNextS" ><FaChevronRight  className='text-3xl'/></button>
+   <button id="icoPromoPreS" className="cateBtnSwiper flex justify-center items-center" ><FaChevronLeft  className='text-1xl text-red-500'/></button>
+  <button id="icoPromoNextS" className="cateBtnSwiper flex justify-center items-center" ><FaChevronRight  className='text-1xl text-red-500'/></button>
    </>
   )
 }
