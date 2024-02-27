@@ -134,14 +134,7 @@ body {
   align-self: center;
 }
 
-/*.portada > .m-39bc3463 {
-  left: 20px !important;
-  right: 20px !important;
-}
-.m-39bc3463 {
-  left: -38px !important;
-  right: -38px !important;
-}*/
+
 
 .filter-border {
   border-bottom: 1px solid rgba(172, 172, 172, 0.452);
@@ -282,4 +275,7 @@ body {
 
 footer{
   background: #F9F9F9;
+}
+.prueba{
+  border-bottom: 1px solid black;
 }
