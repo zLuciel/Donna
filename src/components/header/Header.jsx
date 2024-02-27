@@ -13,15 +13,15 @@ const Header = () => {
     <header className="w-screen bg-white sticky top-0 z-10 ">
       {/* sub cabecera */}
       <div className=" bg-zinc-950 px-10 hidden  lg:block md:block ">
-        <div className="lg:container lg:mx-auto flex justify-between text-white p-2">
-          <h4 className="leading-5 text-sm/[5px]">Atenciòn al cliente: (01) 345 - 234</h4>
+        <div className="lg:container lg:mx-auto flex justify-between text-white  p-2">
+          <h4 className="leading-5 text-xs">Atenciòn al cliente: (01) 345 - 234</h4>
           <span>
             <ul className="flex gap-10">
-              <li className="leading-5 text-sm/[5px]">venta telèfonica</li>
-              <li className="leading-5 text-sm/[5px]"><Link href="/productos">productos</Link></li>
-              <li className="leading-5 text-sm/[5px]"><Link href="/promociones">promociones</Link></li>
-              <li className="leading-5 text-sm/[5px]"><Link href="/tiendas">tiendas</Link></li>  
-              <li className="leading-5 text-sm/[5px]">centro de ayuda</li>
+              <li className="leading-5 text-xs">venta telèfonica</li>
+              <li className="leading-5 text-xs"><Link href="/productos">productos</Link></li>
+              <li className="leading-5 text-xs"><Link href="/promociones">promociones</Link></li>
+              <li className="leading-5 text-xs"><Link href="/tiendas">tiendas</Link></li>  
+              <li className="leading-5 text-xs">centro de ayuda</li>
             </ul>
           </span>
         </div>

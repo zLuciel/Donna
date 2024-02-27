@@ -5,7 +5,7 @@ import '@mantine/core/styles.css';
 export function Providers({ children }) {
 
   return (
-      <MantineProvider withNormalizeCSS>
+      <MantineProvider defaultColorScheme='light' withNormalizeCSS>
         {children}
       </MantineProvider>
   );
