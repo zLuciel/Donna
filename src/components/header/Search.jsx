@@ -1,5 +1,6 @@
 import { rem, Button } from '@mantine/core';
 import { Spotlight, SpotlightActionData, spotlight } from '@mantine/spotlight';
+import { IoSearch } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import '@mantine/spotlight/styles.css';
 const actions = [
@@ -29,7 +30,7 @@ const actions = [
 function Search() {
   return (
     <>
-      <Button onClick={spotlight.open}>Open spotlight</Button>
+      <div onClick={spotlight.open}><IoSearch /></div>
       <Spotlight
         actions={actions}
         nothingFound="Nothing found..."
