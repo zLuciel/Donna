@@ -213,6 +213,7 @@ body {
   left: 0;
   top: 0;
 }
+
 .text-xss{
   font-size: 0.7rem;
 }
@@ -247,7 +248,8 @@ body {
 }
 
 @media (max-width: 407px) {
-  .swiper-pagination {
+
+  .swiper-pagination,.verCategoria {
     display: none;
   }
 }

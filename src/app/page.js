@@ -43,7 +43,7 @@ export default function Home() {
           <h2 className="mb-1 text-sm  sm:text-base md:text-lg lg:text-1xl ">
             ¡ TODO LO ENCUENTRAS EN DOONA !
           </h2>
-          <p>
+          <p className="verCategoria">
             <Link
               className="text-xs lg:text-sm border-b border-red-500 text-red-600"
               href="/productos"
@@ -58,7 +58,7 @@ export default function Home() {
       </section>
       {/* section promociones */}
       <section className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-4">
-        <span className="mb-5 text-xl font-extrabold flex items-center gap-3">
+        <span className="text-xl font-extrabold flex items-center gap-3">
           <p className="icon-shadow shadow shadow-2xl text-white p-2 text-sm sm:text-sm md:text-lg lg:text-3xl rounded-2xl">
             <Verdura />
           </p>

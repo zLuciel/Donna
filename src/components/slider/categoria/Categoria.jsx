@@ -12,7 +12,7 @@ const Categoria = () => {
   return (
     <>
     <Swiper
-    style={{padding:"40px 0"}}
+    style={{padding:"20px 0"}}
     modules={[Navigation, Pagination]}
     navigation={{
       prevEl: `#icoCategoriaPreS`,
