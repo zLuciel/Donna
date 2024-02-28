@@ -15,7 +15,7 @@ import User from "../svg/User";
 const HeaderMovil = ({ view, setView }) => {
 
   return (
-    <div className="lg:container  mx-auto py-3  px-10  header-movil ">
+    <div className="lg:container  mx-auto py-3  px-6  header-movil ">
       <div className="flex justify-between">
         {/* cuenta y categoria */}
         <div className="flex items-center gap-2">
