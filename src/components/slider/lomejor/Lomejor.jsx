@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import "@mantine/carousel/styles.css";
 
 const LoMejor = ({image}) => {
   return (   
