@@ -55,7 +55,7 @@ const Categoria = () => {
         slidesPerGroup: 4,
       },
       1534: {
-        slidesPerView: 9,
+        slidesPerView: 8,
         spaceBetween: 20,
         slidesPerGroup: 4,
       },
