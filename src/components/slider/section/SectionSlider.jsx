@@ -5,8 +5,8 @@ import Image from "next/image";
 const SectionSlider = ({ renderjson, image , title,icon,pretIcoID,nextIcoID}) => {
   return (
     <section className="lg:container  mx-auto py-5  sm:px-20 md:px-20 lg:px-20 px-2" >
-      <div className="flex justify-between pr-8">
-        <span className="mb-5 text-xl font-extrabold flex items-center gap-3">
+      <div className="flex justify-between items-center pr-8">
+        <span className="text-xl font-extrabold flex items-center gap-3">
           <p className="icon-shadow shadow shadow-2xl text-white p-2 text-sm sm:text-sm md:text-lg lg:text-3xl rounded-2xl">{icon}</p>
           <h2 style={{color:"#0B0B0B"}} className=" text-sm  sm:text-base md:text-lg lg:text-1xl">
           {title}
@@ -20,7 +20,7 @@ const SectionSlider = ({ renderjson, image , title,icon,pretIcoID,nextIcoID}) =>
       </div>
       {image && (
         <Image
-          className="w-full"
+          className="w-full mt-4"
           src={image}
           alt="Picture of the author"
           sizes="(min-width: 808px) 50vw, 100vw"

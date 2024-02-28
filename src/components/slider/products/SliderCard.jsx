@@ -11,7 +11,7 @@ const SliderCard = ({renderjson,idBtnNex,idBtnPre}) => {
   return (
     <>
     <Swiper
-    style={{padding:"40px 10px"}}
+    style={{padding:"30px 10px"}}
     modules={[Navigation, Pagination]}
     navigation={{
       prevEl: `#${idBtnPre}`,

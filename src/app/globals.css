@@ -232,7 +232,10 @@ body {
 }
 
 @media (max-width: 917px) {
- 
+  .circle-cat {
+   width: 100px;
+   height: 100px;
+  }
 }
 
 @media (max-width: 499px){
