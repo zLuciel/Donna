@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import { useMediaQuery } from '@mantine/hooks';
 import Image from "next/image";
 import { IoSearch } from "react-icons/io5";
 import { FaUser,FaShoppingCart } from "react-icons/fa";
@@ -13,6 +14,7 @@ import User from "../svg/User";
 import HeaderMovil from "./HeaderMovil";
 const Header = () => {
   const [view, setView] = useState(false);
+  const matches = useMediaQuery('(min-width: 917px)');
   return (
     <header className="w-screen bg-white sticky top-0 z-10 ">
       {/* sub cabecera */}
@@ -30,8 +32,8 @@ const Header = () => {
           </span>
         </div>
       </div>
-
-      <div className="lg:container  mx-auto py-1 sm:px-10 md:px-10 lg:px-20 px-5  header-grid ">
+       
+      {matches && <div className="lg:container  mx-auto py-1 sm:px-10 md:px-10 lg:px-20 px-5  header-grid ">
       <Link href="/"><Image className="logo-header" src="/LogoDonna.png" width={90} height={90} alt="Donna" /></Link>
         <div className="categoria">
          <button className="flex gap-2 text-sm justify-cent flex gap-2 items-center" onClick={()=> setView(true)}>Categorias <IoIosArrowDown /></button>
@@ -50,8 +52,8 @@ const Header = () => {
           <span className="flex gap-2 flex-col justify-center items-center "><User className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi cuenta</p></span>
           <span className="flex gap-2 flex-col justify-center items-center"><Cart/> <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">S/40.00</p></span>
         </div>
-      </div>
-      <HeaderMovil view={view} setView={setView}/>
+      </div>}
+      {!matches && <HeaderMovil view={view} setView={setView}/>}
     </header>
   );
 };
