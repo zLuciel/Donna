@@ -3,7 +3,6 @@ import React from "react";
 import HomePortda from "@/components/slider/homePortada/HomePortda";
 import homeSlider from "@/data/homeSlider";
 import mejorSemana from "@/data/semana";
-import "@mantine/carousel/styles.css";
 import SliderMejor from "@/components/slider/lomejor/SliderMejor";
 
 const page = () => {
