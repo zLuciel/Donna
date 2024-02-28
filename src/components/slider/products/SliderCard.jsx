@@ -18,17 +18,18 @@ const SliderCard = ({renderjson,idBtnNex,idBtnPre}) => {
       nextEl: `#${idBtnNex}`,
     }}
     pagination={{ clickable: true }}
-    spaceBetween={5}
+    spaceBetween={10}
     loop={true}
-    slidesPerView={2}
+    slidesPerView={1.4}
     slidesPerGroup={1}
     breakpoints={{
       // cuando el ancho es >= 640px
-      640: {
-        slidesPerView: 2,
+      500: {
+        slidesPerView: 2.5,
         spaceBetween: 20,
         slidesPerGroup: 2,
       },
+    
       // cuando el ancho es >= 768px
       888: {
         slidesPerView: 3,
