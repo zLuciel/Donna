@@ -33,7 +33,7 @@ const HeaderMovil = ({ view, setView }) => {
         <Link href="/">
           <Image
             className="logo-header"
-            src="/LogoDonna.png"
+            src="/DonnaMovil.png"
             width={90}
             height={90}
             alt="Donna"
