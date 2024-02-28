@@ -19,8 +19,8 @@ const SliderMejor = ({renderjson,viewPagi}) => {
     }}
     loop
     pagination={viewPagi && { clickable: true }}
-    spaceBetween={10}
-    slidesPerView={2}
+    spaceBetween={5}
+    slidesPerView={1.5}
     slidesPerGroup={1}
     breakpoints={{
       // cuando el ancho es >= 640px
