@@ -19,14 +19,14 @@ const Categoria = () => {
       nextEl: `#icoCategoriaNextS`,
     }}
     loop
-    slidesPerView={2}
+    slidesPerView={2.5}
     pagination={{ clickable: true }}
-    spaceBetween={10}
-    slidesPerGroup={1}
+    spaceBetween={1}
+    slidesPerGroup={2}
     breakpoints={{
       // cuando el ancho es >= 640px
-      400: {
-        slidesPerView: 3,
+      449: {
+        slidesPerView: 3.5,
         spaceBetween: 20,
         slidesPerGroup: 2,
       },

@@ -38,14 +38,14 @@ export default function Home() {
         />
       </main>
       {/* seccion de categorias flex flex-col justify-center items-center*/}
-      <section className="lg:container mx-auto  py-8 sm:px-10 md:px-10 lg:px-20 px-10">
+      <section className="lg:container mx-auto  py-8 sm:px-10 md:px-10 lg:px-20 px-5">
         <div className="flex justify-between pr-8 ">
-          <h2 className="mb-1 text-xl font-extrabold ">
+          <h2 className="mb-1 text-sm  sm:text-base md:text-lg lg:text-1xl ">
             ¡ TODO LO ENCUENTRAS EN DOONA !
           </h2>
           <p>
             <Link
-              className="text-sm border-b border-red-500 text-red-600"
+              className="text-xs lg:text-sm border-b border-red-500 text-red-600"
               href="/productos"
             >
               VER TODOS
@@ -57,12 +57,12 @@ export default function Home() {
         </div>
       </section>
       {/* section promociones */}
-      <section className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-10">
+      <section className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-4">
         <span className="mb-5 text-xl font-extrabold flex items-center gap-3">
           <p className="icon-shadow shadow shadow-2xl text-white p-2 text-sm sm:text-sm md:text-lg lg:text-3xl rounded-2xl">
             <Verdura />
           </p>
-          <h2>LO MEJOR DE LA SEMANA</h2>
+          <h2 className="text-sm  sm:text-base md:text-lg lg:text-1xl">LO MEJOR DE LA SEMANA</h2>
         </span>
         <div className="relative">
           <SliderMejor renderjson={mejorSemana} viewPagi={true} />

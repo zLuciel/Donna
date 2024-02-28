@@ -10,6 +10,7 @@ import { FaClipboardList } from "react-icons/fa6";
 import Cart from "../svg/Cart";
 import List from "../svg/List";
 import User from "../svg/User";
+import HeaderMovil from "./HeaderMovil";
 const Header = () => {
   const [view, setView] = useState(false);
   return (
@@ -50,6 +51,7 @@ const Header = () => {
           <span className="flex gap-2 flex-col justify-center items-center"><Cart/> <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">S/40.00</p></span>
         </div>
       </div>
+      <HeaderMovil view={view} setView={setView}/>
     </header>
   );
 };

@@ -230,30 +230,19 @@ body {
     right: -10px;
   }
 }
-@media (max-width: 866px) {
+
+@media (max-width: 917px) {
   .header-grid {
-    gap: 10px;
-    display: grid;
-    grid-template-columns: max-content 0.5fr 1.5fr 1fr;
-    grid-template-areas: "logo categoria search cuentas";
-  }
-}
-@media (max-width: 774px) {
-  .header-grid {
-    gap: 20px;
-    display: grid;
-    grid-template-columns: max-content 1fr 1fr;
-    grid-template-areas: "logo search cuentas";
-  }
-  .categoria {
     display: none;
   }
 }
+
 @media (max-width: 499px){
   .image-product-Mejor{
     height: auto;
   }
 }
+
 @media (max-width: 407px) {
   .swiper-pagination {
     display: none;
