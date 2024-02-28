@@ -89,7 +89,7 @@ const Footer = () => {
         </ul>
       </div>
       </div>
-      <span className="bg-black w-full text-white flex justify-center  py-3 px-20">Copyright 2024 - Bill. Todos los derechos reservados.</span>
+      <span className="bg-black w-full text-white flex justify-center text-xs py-3 px-20">Copyright 2024 - Bill. Todos los derechos reservados.</span>
     </footer>
   );
 };

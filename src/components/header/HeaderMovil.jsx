@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import ModalCategoria from "./ModalCategoria";
 import Image from "next/image";
-
+import { PiUserCircleLight } from "react-icons/pi";
 import { Burger } from '@mantine/core';
 import { IoIosArrowDown } from "react-icons/io";
 import { FaUser,FaShoppingCart } from "react-icons/fa";
@@ -17,7 +17,7 @@ const HeaderMovil = ({ view, setView }) => {
         {/* cuenta y categoria */}
         <div className="flex items-center gap-2">
           <span className="flex gap-2 flex-col justify-center items-center ">
-            <FaUser className="text-xl" />
+            <PiUserCircleLight className="text-3xl" />
           </span>
           <div className="categoria">
               <Burger size="sm"  onClick={() => setView(true)} aria-label="Toggle navigation" />
