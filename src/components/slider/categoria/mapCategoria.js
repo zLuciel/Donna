@@ -6,16 +6,16 @@ import vino from "@/assets/categoria/vino.png"
 const categoriaMap = [
     {
         image:carne,
-        name:"Verdura",
+        name:"Abarrotes",
     },
     {
         image:carne,
-        name:"Verdura",
+        name:"Bebidas",
     },
  
     {
         image:pan,
-        name:"Bebidas",
+        name:"Licores",
     },
     {
         image:pescado,
@@ -23,15 +23,15 @@ const categoriaMap = [
     },
     {
         image:vino,
-        name:"Vino",
+        name:"Limpieza",
     },
     {
         image:vino,
-        name:"Vino",
+        name:"C.personal",
     },
     {
         image:carne,
-        name:"Verdura",
+        name:"Confiteria",
     },
     {
         image:vino,
