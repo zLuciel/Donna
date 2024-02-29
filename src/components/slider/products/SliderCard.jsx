@@ -21,7 +21,7 @@ const SliderCard = ({renderjson,idBtnNex,idBtnPre}) => {
     spaceBetween={10}
     loop={true}
     slidesPerView={1.4}
-    slidesPerGroup={1}
+    slidesPerGroup={3}
     breakpoints={{
       // cuando el ancho es >= 640px
       500: {

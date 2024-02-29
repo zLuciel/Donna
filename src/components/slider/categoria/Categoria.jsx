@@ -22,7 +22,7 @@ const Categoria = () => {
     slidesPerView={2.5}
     pagination={{ clickable: true }}
     spaceBetween={1}
-    slidesPerGroup={2}
+    slidesPerGroup={3}
     breakpoints={{
       // cuando el ancho es >= 640px
       449: {
