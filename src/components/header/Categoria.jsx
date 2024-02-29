@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import { Box, NavLink } from '@mantine/core';
 import Pez from "../svgHeader/Pez";
-import Verdura from "../svgHeader/verdura";
+import Verdura from "../svgHeader/Verdura";
 import MiIconoSVG from "../svgHeader/MiIconoSVG";
 import Licor from "../svgHeader/Licor";
 import Desayuno from "../svgHeader/Desayuno";

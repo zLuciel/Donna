@@ -1,4 +1,4 @@
-import carne from "@/assets/categoria/Verdura.png"
+import carne from "@/assets/categoria/verdura.png"
 import pescado from "@/assets/categoria/Lacteos.png"
 import pan from "@/assets/categoria/Bebidas.png"
 import vino from "@/assets/categoria/vino.png"
