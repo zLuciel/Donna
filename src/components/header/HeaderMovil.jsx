@@ -2,15 +2,11 @@ import Link from "next/link";
 import React from "react";
 import ModalCategoria from "./ModalCategoria";
 import Image from "next/image";
-import { PiUserCircleLight } from "react-icons/pi";
-import { Burger } from '@mantine/core';
-import { IoIosArrowDown } from "react-icons/io";
-import { FaUser,FaShoppingCart } from "react-icons/fa";
-import { FaClipboardList } from "react-icons/fa6";
 import Search from "./Search";
 import Cart from "../svg/Cart";
 import List from "../svg/List";
 import User from "../svg/User";
+import Hamburger from "../svg/Hamburger";
 
 const HeaderMovil = ({ view, setView }) => {
 
@@ -23,7 +19,7 @@ const HeaderMovil = ({ view, setView }) => {
             <User className="text-3xl" />
           </span>
           <div className="categoria">
-              <Burger size="sm"  onClick={() => setView(true)} aria-label="Toggle navigation" />
+            <Hamburger onClick={() => setView(true)}/>
     
             <ModalCategoria view={view} setView={setView} />
           </div>
