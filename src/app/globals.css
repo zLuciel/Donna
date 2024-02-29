@@ -67,6 +67,7 @@ body {
   padding: 15px;
   overflow: hidden;
   border-radius: 150px;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.02);
 }
 .circle-cat img {
   width: 100%;
@@ -183,7 +184,7 @@ body {
   height: 5px !important;
 }
 .swiper-pagination-bullet-active {
-  background: red !important;
+  background: #FF4D00 !important;
 }
 
 .topScroll {
@@ -213,7 +214,9 @@ body {
   left: 0;
   top: 0;
 }
-
+.text-orange{
+  color: #FF4D00;
+}
 .text-xss{
   font-size: 0.7rem;
 }
@@ -265,7 +268,7 @@ body {
 }
 
 .cateBtnSwiper {
-  background: #ffe0e0;
+  background: rgba(248, 248, 248, 0.47); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
   border-radius: 50px;
   width: 28px;
   height: 28px;
@@ -277,4 +280,12 @@ footer{
 .prueba{
   color: #2E2E2E;
   border-bottom: 1px solid #2e2e2e4b;
+}
+.btn-agre{
+  background: linear-gradient(90deg, #FF4D00 0%, #FD1111 100%) !important; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.des-gradient{
+  background: linear-gradient(90deg, #FF4D00 0%, #FD1111 100%) !important; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
 }

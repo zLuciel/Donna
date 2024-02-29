@@ -13,7 +13,7 @@ const SectionSlider = ({ renderjson, image , title,icon,pretIcoID,nextIcoID}) =>
         </h2>
         </span>
         <p>
-          <Link className="text-xss  lg:text-sm border-b border-red-500 text-red-600" href="/productos">
+          <Link className="text-xss  lg:text-sm border-b border-[#FF4D00] text-orange" href="/productos">
             VER TODOS
           </Link>
         </p>

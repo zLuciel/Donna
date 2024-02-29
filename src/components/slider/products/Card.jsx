@@ -5,7 +5,7 @@ const Card = ({ image }) => {
   return (
     <div className="relative card-product flex flex-col justify-start ">
       <div className="image-product mb-4">
-        <span className=" rounded-tr-xl left-0 text-xs py-1 rounded-br-xl absolute bg-red-600 text-white font-semibold px-3 left-0"> - 8%</span>
+        <span className=" rounded-tr-xl left-0 text-xs py-1 rounded-br-xl absolute des-gradient text-white font-semibold px-3 left-0"> - 8%</span>
         <Image src={image} sizes="(min-width: 808px) 50vw, 100vw" alt="Donna" />
       </div>
 
@@ -17,14 +17,14 @@ const Card = ({ image }) => {
         </span>
 
         <div className="mb-1">
-          <p className="text-red-600 text-sm/[22px] font-extrabold mb-2">
+          <p className="text-orange text-sm/[22px] font-extrabold mb-2">
             Precio online S/40.00
           </p>
           <p className="text-xs">
             Precio regular <u className="line-through">S/ 80.00</u>
           </p>
         </div>
-        <button className="mt-4 font-bold p-1 bg-red-600 w-full text-white rounded-2xl">
+        <button className="mt-4 font-bold p-1  w-full btn-agre text-white rounded-2xl">
           AGREGAR
         </button>
       </div>

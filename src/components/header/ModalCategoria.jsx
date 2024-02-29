@@ -22,6 +22,7 @@ const data = [
 function ModalCategoria({setView,view}) {
   const [openSub, setOpenSub] = useState(false);
   const contenedorRef = useRef();
+  
   useEffect(() => {
 
     function manejarClicFuera(evento) {
