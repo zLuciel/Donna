@@ -42,7 +42,7 @@ const SliderCard = ({renderjson,idBtnNex,idBtnPre}) => {
       1200: {
         slidesPerView: 5,
         spaceBetween: 10,
-        slidesPerGroup: 4,
+        slidesPerGroup: 5,
       },
     }}
   >

@@ -16,15 +16,8 @@ import Lacteos from "../svgHeader/Lacteos";
 
 const data = [
   { rightSection: <RiArrowDropRightLine />, label: 'Limpieza',icon: Limpieza },
-  {
-    label: 'Carne',
-    rightSection: <RiArrowDropRightLine />,
-    icon: Carne
-  },
-  { rightSection: <RiArrowDropRightLine />, label: 'Panaderia',icon: Panaderia },
   { rightSection: <RiArrowDropRightLine />, label: 'Verduras' ,icon: Verdura},
   { rightSection: <RiArrowDropRightLine />, label: 'Bebidas',icon: MiIconoSVG },
-  { rightSection: <RiArrowDropRightLine />, label: 'Pescados',icon: Pez },
   { rightSection: <RiArrowDropRightLine />, label: 'Licor',icon: Licor },
   { rightSection: <RiArrowDropRightLine />, label: 'Belleza',icon: Belleza },
   { rightSection: <RiArrowDropRightLine />, label: 'Desayuno',icon: Desayuno },

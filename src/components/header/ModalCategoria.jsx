@@ -52,8 +52,8 @@ function ModalCategoria({setView,view}) {
             <CategoriaHeader icon={true} setOpenSub={setOpenSub} />
           </div>
           <div>
-            <SubCategoria openSub={openSub} data={data} text="Activity" />
-            <SubCategoria openSub={openSub} data={data} text="Lavadero" />
+            <SubCategoria openSub={openSub} data={data} text="Panaderia" />
+            <SubCategoria openSub={openSub} data={data} text="Bebidas" />
           </div>
         </div>
       </div>

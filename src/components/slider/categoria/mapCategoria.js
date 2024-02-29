@@ -1,43 +1,27 @@
-import carne from "@/assets/categoria/carne.png"
-import pescado from "@/assets/categoria/pescado.png"
-import pan from "@/assets/categoria/pan.png"
+import carne from "@/assets/categoria/Verdura.png"
+import pescado from "@/assets/categoria/Lacteos.png"
+import pan from "@/assets/categoria/Bebidas.png"
 import vino from "@/assets/categoria/vino.png"
 
 const categoriaMap = [
     {
         image:carne,
-        name:"Carne",
-    },
-    {
-        image:pan,
-        name:"Pan",
-    },
-    {
-        image:pescado,
-        name:"Pescado",
-    },
-    {
-        image:vino,
-        name:"Vino",
-    },
-    {
-        image:vino,
-        name:"Vino",
+        name:"Verdura",
     },
     {
         image:carne,
-        name:"Carne",
-    },
-    {
-        image:vino,
-        name:"Carne",
-    },
-    {
-        image:vino,
-        name:"Vino",
+        name:"Verdura",
     },
  
     {
+        image:pan,
+        name:"Bebidas",
+    },
+    {
+        image:pescado,
+        name:"Lacteos",
+    },
+    {
         image:vino,
         name:"Vino",
     },
@@ -47,11 +31,35 @@ const categoriaMap = [
     },
     {
         image:carne,
-        name:"Carne",
+        name:"Verdura",
     },
     {
         image:vino,
-        name:"Carne",
+        name:"Verdura",
+    },
+    {
+        image:vino,
+        name:"Vino",
+    },
+    {
+        image:pan,
+        name:"Bebidas",
+    },
+    {
+        image:vino,
+        name:"Vino",
+    },
+    {
+        image:vino,
+        name:"Vino",
+    },
+    {
+        image:carne,
+        name:"Verdura",
+    },
+    {
+        image:vino,
+        name:"Verdura",
     },
     {
         image:vino,

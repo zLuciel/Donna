@@ -58,7 +58,7 @@ export default function Home() {
       </section>
       {/* section promociones */}
       <section className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-4">
-        <span className="text-xl font-extrabold flex items-center gap-3">
+        <span className="text-xl font-extrabold flex items-center gap-3 lg:mb-5 mb-0">
           <p className="icon-shadow shadow shadow-2xl text-white p-2 text-sm sm:text-sm md:text-lg lg:text-3xl rounded-2xl">
             <Verdura />
           </p>
@@ -71,21 +71,21 @@ export default function Home() {
 
       {/* seeccion de bebidas */}
       <SectionSlider
-        title="LO MEJOR DE LA BEBIDAS"
+        title="LO MEJOR DE LA ABARROTES"
         pretIcoID={"icoBebidaPreS"}
         nextIcoID={"icoBebidaNextS"}
         renderjson={categoriaMap}
         icon={<MiIconoSVG/>}
       />
       <SectionSlider
-        title="LO MEJOR EN FRESCOS"
+        title="LO MEJOR EN LICORES"
         pretIcoID={"icoFrescosPreS"}
         nextIcoID={"icoFrescosNextS"}
         renderjson={categoriaMap}
         icon={<Pez />}
       />
       <SectionSlider
-        title="LO MEJOR EN LICORES"
+        title="LO MEJOR EN LIMPIEZA"
         pretIcoID={"icoLicoresPreS"}
         nextIcoID={"icoLicoresNextS"}
         renderjson={categoriaMap}
@@ -93,7 +93,7 @@ export default function Home() {
         icon={<Licor />}
       />
       <SectionSlider
-        title="LO MEJOR EN VERDURAS"
+        title="LO MEJOR EN LACTEOS"
         pretIcoID={"icoNuevoPreS"}
         nextIcoID={"icoNuevoNextS"}
         renderjson={categoriaMap}
