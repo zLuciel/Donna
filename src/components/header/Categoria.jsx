@@ -3,20 +3,32 @@ import { RiArrowDropRightLine } from "react-icons/ri";
 import { useState } from 'react';
 
 import { Box, NavLink } from '@mantine/core';
+import Pez from "../svgHeader/Pez";
+import Verdura from "../svgHeader/Verdura";
+import MiIconoSVG from "../svgHeader/MiIconoSVG";
+import Licor from "../svgHeader/Licor";
+import Desayuno from "../svgHeader/Desayuno";
+import Panaderia from "../svgHeader/Panaderia";
+import Belleza from "../svgHeader/Belleza";
+import Limpieza from "../svgHeader/Limpieza";
+import Carne from "../svgHeader/Carne";
+import Lacteos from "../svgHeader/Lacteos";
+
 const data = [
-  { rightSection: <RiArrowDropRightLine />, label: 'Dashboard' },
+  { rightSection: <RiArrowDropRightLine />, label: 'Limpieza',icon: Limpieza },
   {
-    label: 'Security',
+    label: 'Carne',
     rightSection: <RiArrowDropRightLine />,
+    icon: Carne
   },
-  { rightSection: <RiArrowDropRightLine />, label: 'Activity' },
-  { rightSection: <RiArrowDropRightLine />, label: 'Lavadero' },
-  { rightSection: <RiArrowDropRightLine />, label: 'Fierros' },
-  { rightSection: <RiArrowDropRightLine />, label: 'Pescados' },
-  { rightSection: <RiArrowDropRightLine />, label: 'Almuhadas' },
-  { rightSection: <RiArrowDropRightLine />, label: 'Zapatillas' },
-  { rightSection: <RiArrowDropRightLine />, label: 'Roperos' },
-  { rightSection: <RiArrowDropRightLine />, label: 'Mercados' },
+  { rightSection: <RiArrowDropRightLine />, label: 'Panaderia',icon: Panaderia },
+  { rightSection: <RiArrowDropRightLine />, label: 'Verduras' ,icon: Verdura},
+  { rightSection: <RiArrowDropRightLine />, label: 'Bebidas',icon: MiIconoSVG },
+  { rightSection: <RiArrowDropRightLine />, label: 'Pescados',icon: Pez },
+  { rightSection: <RiArrowDropRightLine />, label: 'Licor',icon: Licor },
+  { rightSection: <RiArrowDropRightLine />, label: 'Belleza',icon: Belleza },
+  { rightSection: <RiArrowDropRightLine />, label: 'Desayuno',icon: Desayuno },
+  { rightSection: <RiArrowDropRightLine />, label: 'Lacteos',icon: Lacteos },
 ];
 
 function CategoriaHeader({icon,setOpenSub}) {
@@ -35,6 +47,7 @@ function CategoriaHeader({icon,setOpenSub}) {
       active={index === active}
       label={item.label}
       rightSection={icon && item.rightSection}
+      leftSection={<item.icon size="1rem" stroke={1.5} />}
       onMouseEnter={() => handleActive(index,true,item.label)}
       color="red"
       variant="filled"
