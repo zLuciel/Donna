@@ -11,20 +11,16 @@ import Comercial from "@/assets/comercial.png";
 import HomePortda from "@/components/slider/homePortada/HomePortda";
 import SliderMejor from "@/components/slider/lomejor/SliderMejor";
 import SectionSlider from "@/components/slider/section/SectionSlider";
-/*ICONS */
-import {
-  FaBottleDroplet,
-  FaCalendarCheck,
-  FaFishFins,
-} from "react-icons/fa6";
-import { MdLiquor } from "react-icons/md";
-import { GiBroccoli } from "react-icons/gi";
+
+
 
 import Link from "next/link";
-import MiIconoSVG from "@/components/MiIconoSVG";
-import Pez from "@/components/svg/Pez";
 import Licor from "@/components/svg/Licor";
-import Verdura from "@/components/svg/Verdura";
+import LoMejor from "@/components/svg/LoMejor";
+import Desayuno from "@/components/svg/Desayuno";
+import Lacteos from "@/components/svg/Lacteos";
+import Limpieza from "@/components/svg/Limpieza";
+
 
 
 export default function Home() {
@@ -60,7 +56,7 @@ export default function Home() {
       <section className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-4">
         <span className="text-xl font-extrabold flex items-center gap-3 lg:mb-5 mb-0">
           <p className="icon-shadow shadow shadow-2xl text-white p-2 text-sm sm:text-sm md:text-lg lg:text-3xl rounded-2xl">
-            <Verdura />
+            <LoMejor />
           </p>
           <h2 className="text-sm  sm:text-base md:text-lg lg:text-1xl">LO MEJOR DE LA SEMANA</h2>
         </span>
@@ -75,14 +71,14 @@ export default function Home() {
         pretIcoID={"icoBebidaPreS"}
         nextIcoID={"icoBebidaNextS"}
         renderjson={categoriaMap}
-        icon={<MiIconoSVG/>}
+        icon={<Desayuno/>}
       />
       <SectionSlider
         title="LO MEJOR EN LICORES"
         pretIcoID={"icoFrescosPreS"}
         nextIcoID={"icoFrescosNextS"}
         renderjson={categoriaMap}
-        icon={<Pez />}
+        icon={<Licor />}
       />
       <SectionSlider
         title="LO MEJOR EN LIMPIEZA"
@@ -90,14 +86,14 @@ export default function Home() {
         nextIcoID={"icoLicoresNextS"}
         renderjson={categoriaMap}
         image={Comercial}
-        icon={<Licor />}
+        icon={<Limpieza />}
       />
       <SectionSlider
         title="LO MEJOR EN LACTEOS"
         pretIcoID={"icoNuevoPreS"}
         nextIcoID={"icoNuevoNextS"}
         renderjson={categoriaMap}
-        icon={<Verdura />}
+        icon={<Lacteos />}
       />
     </>
   );
