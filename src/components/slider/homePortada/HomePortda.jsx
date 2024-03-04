@@ -31,7 +31,7 @@ const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
         <SwiperSlide key={i}>
           <div className="slider-img  w-screen">
             <Image src={portada} fill={true}
-          sizes="(min-width: 808px) 50vw, 100vw" alt="dsa"/>
+          sizes="(min-width: 808px) 100vw, 100vw" alt="dsa"/>
       
           </div>
         </SwiperSlide>
