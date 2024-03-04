@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import Image from "next/image";
-import portada from "@/assets/portada_home1.jpg"
+import portada from "@/assets/prueba.webp"
 const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
   return (
     <>
