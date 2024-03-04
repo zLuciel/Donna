@@ -43,11 +43,7 @@ body {
 }
 
 .portada-main {
-  background: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 100%
-    ),
+  background: 
     url(../assets/portada_home.jpg) center center/cover no-repeat;
 }
 

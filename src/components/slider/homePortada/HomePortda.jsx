@@ -27,14 +27,14 @@ const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
       {renderjson?.map((cate, i) => (
         <SwiperSlide key={i}>
           <div className="lg:container mx-auto px-20 flex flex-col justify-center h-screen w-screen">
-            <h1 className="text-6xl ">
+            {/* <h1 className="text-6xl ">
               ¡Merkat es la marca <br /> que merece tu familia!
             </h1>
             <p className="">
               Con una variedad de productos en las categorias más importantes.
               Te ofrecemos calidad superior al precio del mercado. ¡Te invitamos
               a conocer su línea!
-            </p>
+            </p> */}
           </div>
         </SwiperSlide>
       ))}
