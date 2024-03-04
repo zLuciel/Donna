@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import Image from "next/image";
-import portada from "@/assets/prueba.webp"
+import portada from "@/assets/portada_home2.jpg"
 const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
   return (
     <>
@@ -32,7 +32,6 @@ const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
           <div className="slider-img  w-screen">
             <Image src={portada} fill={true}
           sizes="(min-width: 808px) 100vw, 100vw" alt="dsa"/>
-      
           </div>
         </SwiperSlide>
       ))}
