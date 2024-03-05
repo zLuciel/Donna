@@ -87,7 +87,7 @@ body {
 .image-product > img,
 .image-product-Mejor > img {
   width: 100%;
-
+  height: 100%;
   object-fit: contain;
 }
 .image-product {
