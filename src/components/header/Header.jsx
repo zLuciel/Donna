@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMediaQuery } from '@mantine/hooks';
 import Image from "next/image";
 import { IoSearch } from "react-icons/io5";
@@ -14,9 +14,25 @@ import User from "../svg/User";
 import HeaderMovil from "./HeaderMovil";
 const Header = () => {
   const [view, setView] = useState(false);
+  const [isShadow, setIsShadow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const showShadow = window.scrollY > 0;
+      if (showShadow !== isShadow) {
+        setIsShadow(showShadow);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isShadow]);
   const matches = useMediaQuery('(min-width: 917px)');
   return (
-    <header className="w-screen bg-white sticky top-0 z-10 ">
+    <header className={`w-screen bg-white sticky top-0 z-10 ${isShadow ? 'shadow-header' : ''}`}>
       {/* sub cabecera */}
       <div className=" bg-zinc-950 px-10 hidden  lg:block md:block ">
         <div className="lg:container lg:mx-auto flex justify-between text-white  p-2">

@@ -20,7 +20,6 @@ const Categoria = () => {
     }}
     loop
     slidesPerView={2.5}
-    pagination={{ clickable: true }}
     spaceBetween={1}
     slidesPerGroup={3}
     breakpoints={{

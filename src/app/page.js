@@ -1,18 +1,14 @@
 "use client";
 import Categoria from "@/components/slider/categoria/Categoria";
-import Image from "next/image";
 
 import categoriaMap from "@/components/slider/categoria/mapCategoria";
 import mejorSemana from "@/data/semana";
 import homeSlider from "@/data/homeSlider";
-import Cerdo from "@/assets/cerdo.png";
 import Comercial from "@/assets/comercial.png";
 
 import HomePortda from "@/components/slider/homePortada/HomePortda";
 import SliderMejor from "@/components/slider/lomejor/SliderMejor";
 import SectionSlider from "@/components/slider/section/SectionSlider";
-
-
 
 import Link from "next/link";
 import Licor from "@/components/svg/Licor";
@@ -20,8 +16,7 @@ import LoMejor from "@/components/svg/LoMejor";
 import Desayuno from "@/components/svg/Desayuno";
 import Lacteos from "@/components/svg/Lacteos";
 import Limpieza from "@/components/svg/Limpieza";
-
-
+import ComentarioSlider from "@/components/slider/comentario/comentarioSlider";
 
 export default function Home() {
   return (
@@ -58,7 +53,9 @@ export default function Home() {
           <p className="icon-shadow shadow shadow-2xl text-white p-2 text-sm sm:text-sm md:text-lg lg:text-3xl rounded-2xl">
             <LoMejor />
           </p>
-          <h2 className="text-sm  sm:text-base md:text-lg lg:text-1xl">LO MEJOR DE LA SEMANA</h2>
+          <h2 className="text-sm  sm:text-base md:text-lg lg:text-1xl">
+            LO MEJOR DE LA SEMANA
+          </h2>
         </span>
         <div className="relative">
           <SliderMejor renderjson={mejorSemana} viewPagi={true} />
@@ -71,7 +68,7 @@ export default function Home() {
         pretIcoID={"icoBebidaPreS"}
         nextIcoID={"icoBebidaNextS"}
         renderjson={categoriaMap}
-        icon={<Desayuno/>}
+        icon={<Desayuno />}
       />
       <SectionSlider
         title="LO MEJOR EN LICORES"
@@ -95,6 +92,12 @@ export default function Home() {
         renderjson={categoriaMap}
         icon={<Lacteos />}
       />
+
+      {/* <ComentarioSlider
+        renderjson={categoriaMap}
+        idBtnPre={"icoComentarioPreS"}
+        idBtnNex={"icoComentarioNextS"}
+      /> */}
     </>
   );
 }
