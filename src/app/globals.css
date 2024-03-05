@@ -138,8 +138,12 @@ object-fit: cover;
   align-self: center;
 }
 
-
-
+.listados-cat{
+  margin-bottom: 4px;
+}
+.listados-cat:hover{
+  border-left: 3px solid red !important;
+}
 .filter-border {
   border-bottom: 1px solid rgba(172, 172, 172, 0.452);
 }
@@ -204,8 +208,8 @@ object-fit: cover;
   height: 30px;
 }
 .modal-bg {
-  padding: 10px;
-  background: white;
+  padding: 15px;
+  background: rgb(255, 255, 255);
   width: max-content;
   min-height: 100vh;
 }

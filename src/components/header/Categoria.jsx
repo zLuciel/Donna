@@ -35,6 +35,7 @@ function CategoriaHeader({icon,setOpenSub}) {
 
   const items = data.map((item, index) => (
     <NavLink
+    className="listados-cat"
       key={item.label}
       href="#required-for-focus"
       active={index === active}
