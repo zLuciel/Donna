@@ -36,7 +36,7 @@ const Header = () => {
       {/* sub cabecera */}
       <div className=" bg-zinc-950 px-10 hidden  lg:block md:block ">
         <div className="lg:container lg:mx-auto flex justify-between text-white  p-2">
-          <h4 className="leading-5 text-xs">Atenciòn al cliente: (01) 345 - 234</h4>
+          <h4 className="leading-5 text-xs">Atención al cliente: (01) 345 - 234</h4>
           <span>
             <ul className="flex gap-10">
               <li className="leading-5 text-xs">venta telefónica</li>
@@ -49,7 +49,7 @@ const Header = () => {
         </div>
       </div>
        
-      {matches && <div className="lg:container  mx-auto py-1 sm:px-10 md:px-10 lg:px-20 px-5  header-grid ">
+      {matches && <div className="lg:container  mx-auto  sm:px-10 md:px-10 lg:px-20 px-5  header-grid ">
       <Link href="/"><Image className="logo-header" src="/LogoDonna.png" width={90} height={90} alt="Donna" /></Link>
         <div className="categoria">
          <button className="flex gap-2 text-sm justify-cent flex gap-2 items-center" onClick={()=> setView(true)}>Categorias <IoIosArrowDown /></button>

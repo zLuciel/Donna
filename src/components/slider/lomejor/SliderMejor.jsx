@@ -47,7 +47,7 @@ const SliderMejor = ({renderjson,viewPagi}) => {
    >
      {renderjson?.map((cate, i) => (
        <SwiperSlide  key={i}>
-         <LoMejor image={cate.image} />
+         <LoMejor image={cate.image}  />
        </SwiperSlide>
      ))}
    </Swiper>

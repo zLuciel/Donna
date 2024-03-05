@@ -8,7 +8,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { useRouter } from 'next/navigation'
 const Categoria = () => {
+  const router = useRouter()
+  const handleCategoriaPage = ()=>{
+    router.push('/productos')
+  }
   return (
     <>
     <Swiper
@@ -62,7 +67,7 @@ const Categoria = () => {
     >
       {categoriaMap?.map((cate,i) => (
         <SwiperSlide key={i} >
-        <div className="flex flex-col justify-center items-center">
+        <div onClick={handleCategoriaPage} className="cursor-pointer flex flex-col justify-center items-center">
         <span className="circle-cat">
         <Image src={cate.image}  sizes="(min-width: 808px) 50vw, 100vw"
            alt="Donna" />

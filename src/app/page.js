@@ -58,7 +58,7 @@ export default function Home() {
           </h2>
         </span>
         <div className="relative">
-          <SliderMejor renderjson={mejorSemana} viewPagi={true} />
+          <SliderMejor renderjson={mejorSemana}/>
         </div>
       </section>
 

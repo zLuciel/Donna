@@ -4,7 +4,7 @@ import Photo from "@/assets/comentario.webp"
 const CardComentario = () => {
   return (
     <div  className="mx-auto flex items-center justify-center gap-5" >
-        <Image className='rounded-[50px]' src={Photo} width={130} height={130} alt='comentario'  />
+       
        
         <div >
         <h2 className='text-orange text-sm mb-2'>Luis Arcangel Kalifa</h2>
