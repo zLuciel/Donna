@@ -16,7 +16,7 @@ import LoMejor from "@/components/svg/LoMejor";
 import Desayuno from "@/components/svg/Desayuno";
 import Lacteos from "@/components/svg/Lacteos";
 import Limpieza from "@/components/svg/Limpieza";
-import ComentarioSlider from "@/components/slider/comentario/comentarioSlider";
+//import ComentarioSlider from "@/components/slider/comentario/comentarioSlider";
 
 export default function Home() {
   return (
