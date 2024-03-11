@@ -32,7 +32,7 @@ const Header = () => {
   }, [isShadow]);
   const matches = useMediaQuery('(min-width: 917px)');
   return (
-    <header className={`w-screen bg-dark sticky top-0 z-10 ${isShadow ? 'shadow-header' : ''}`}>
+    <header className={`w-screen bg-white sticky top-0 z-10 ${isShadow ? 'shadow-header' : ''}`}>
       {/* sub cabecera */}
       <div className=" bg-zinc-950 px-10 hidden  lg:block md:block ">
         <div className="lg:container lg:mx-auto flex justify-between text-white  p-2">

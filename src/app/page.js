@@ -1,4 +1,4 @@
-"use client";
+
 import Categoria from "@/components/slider/categoria/Categoria";
 
 import categoriaMap from "@/components/slider/categoria/mapCategoria";
@@ -18,7 +18,36 @@ import Lacteos from "@/components/svg/Lacteos";
 import Limpieza from "@/components/svg/Limpieza";
 //import ComentarioSlider from "@/components/slider/comentario/comentarioSlider";
 
-export default function Home() {
+async function getDataCategoria() {
+  const Abarrotes = await fetch("http://localhost:3000/api/woocommerce/products/18");
+  const Bebidas = await fetch("http://localhost:3000/api/woocommerce/products/19");
+  const Lacteos = await fetch("http://localhost:3000/api/woocommerce/products/20");
+  const Limpieza = await fetch("http://localhost:3000/api/woocommerce/products/21");
+  const Cpersonal = await fetch("http://localhost:3000/api/woocommerce/products/22");
+  const Confiteria = await fetch("http://localhost:3000/api/woocommerce/products/23");
+  if (!Abarrotes.ok) {
+    console.log("Failed to fetch data");
+  }
+  const resA = await Abarrotes.json()
+  const resB = await Bebidas.json()
+  const resLa = await Lacteos.json()
+  const resLi = await Limpieza.json()
+  const resCp = await Cpersonal.json()
+  const resCo = await Confiteria.json()
+  return {
+    arrayAbarrotes: resA.products,
+    arrayBebidas: resB.products,
+    arrayLacteos: resLa.products,
+    arrayLimpieza: resLi.products,
+    arrayCpersonal: resCp.products,
+    arrayConfiteria: resCo.products,
+  }
+}
+
+
+export default async function Home() {
+  const data = await getDataCategoria();
+  
   return (
     <>
       <main className="relative portada-main text-white h-screen w-screen">
@@ -67,21 +96,22 @@ export default function Home() {
         title="LO MEJOR DE LA ABARROTES"
         pretIcoID={"icoBebidaPreS"}
         nextIcoID={"icoBebidaNextS"}
-        renderjson={categoriaMap}
+        renderjson={data.arrayAbarrotes}
         icon={<Desayuno />}
       />
       <SectionSlider
-        title="LO MEJOR EN LICORES"
+        title="LO MEJOR EN BEBIDAS"
         pretIcoID={"icoFrescosPreS"}
         nextIcoID={"icoFrescosNextS"}
-        renderjson={categoriaMap}
+        renderjson={data.arrayBebidas}
         icon={<Licor />}
       />
       <SectionSlider
         title="LO MEJOR EN LIMPIEZA"
+
         pretIcoID={"icoLicoresPreS"}
         nextIcoID={"icoLicoresNextS"}
-        renderjson={categoriaMap}
+        renderjson={data.arrayLimpieza}
         image={Comercial}
         icon={<Limpieza />}
       />
@@ -89,7 +119,21 @@ export default function Home() {
         title="LO MEJOR EN LACTEOS"
         pretIcoID={"icoNuevoPreS"}
         nextIcoID={"icoNuevoNextS"}
-        renderjson={categoriaMap}
+        renderjson={data.arrayLacteos}
+        icon={<Lacteos />}
+      />
+      <SectionSlider
+        title="LO MEJOR EN C.PERSONAL"
+        pretIcoID={"icoNuevoPreS"}
+        nextIcoID={"icoNuevoNextS"}
+        renderjson={data.arrayCpersonal}
+        icon={<Lacteos />}
+      />
+      <SectionSlider
+        title="LO MEJOR EN CONFITERIA"
+        pretIcoID={"icoNuevoPreS"}
+        nextIcoID={"icoNuevoNextS"}
+        renderjson={data.arrayConfiteria}
         icon={<Lacteos />}
       />
 

@@ -8,18 +8,16 @@ const api = new WooCommerceRestApi({
   version: "wc/v3",
 });
 
-export async function GET(req) {
+export async function GET(req, { params }) {
   const responseData = {
     success: false,
     products: [],
   };
-  const searchParams = req.nextUrl.searchParams
-  const id_page = searchParams.get('id')
-
+  const categoria = Number(params.id)
   try {
     const { data } = await api.get(`products`, {
-      per_page: id_page,
-      page: 1
+      per_page: 10,
+      category: categoria
     });
     responseData.success = true;
     responseData.products = data;

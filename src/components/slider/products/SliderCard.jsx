@@ -46,9 +46,13 @@ const SliderCard = ({renderjson,idBtnNex,idBtnPre}) => {
       },
     }}
   >
-    {renderjson?.map((cate, i) => (
+    {renderjson?.map((product, i) => (
       <SwiperSlide  key={i}>
-        <Card image={cate.image} />
+        <Card  key={product.id}
+            image={product.images[0]}
+            name={product.name}
+            price={product.price}
+            regular_price={product.regular_price}/>
       </SwiperSlide>
     ))}
   </Swiper>
