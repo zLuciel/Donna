@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Card from "@/components/slider/products/Card";
 import BtnLoadingDinamic from "@/components/cargaDinamica/BtnLoadingDinamic";
+import { dataProduct } from './actions';
 const Estructura = () => {
     const [count,setCount] = useState(20)
     const [data,setData] = useState([])

@@ -1,8 +1,6 @@
 
 import FilterProducto from "@/components/filterProduct/FilterProducto";
-
 import Estructura from "./Estructura";
-
 
 const page =  () => {
  
