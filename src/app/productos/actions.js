@@ -1,7 +1,7 @@
 'use server'
 export async function dataProduct(id) {
     try {
-        const URL = `http://www.doona.com.pe/api/woocommerce/products?id=${id}`
+        const URL = `https://donna-chi.vercel.app/api/woocommerce/products?id=${id}`
         const res = await fetch(URL);
         const response = await res.json()
         return await response.products
