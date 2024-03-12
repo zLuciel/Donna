@@ -47,9 +47,9 @@ export async function GET(req, res) {
     products: [],
   };
   try {
-    const { data } = await api.post(`customers`,dataCliente);
-    responseData.success = true;
-    responseData.products = data;
+    //const { data } = await api.post(`customers`,dataCliente);
+    //responseData.success = true;
+   // responseData.products = data;
     return NextResponse.json(responseData);
   } catch (error) {
     responseData.error = error.message;
