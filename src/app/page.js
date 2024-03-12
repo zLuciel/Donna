@@ -1,7 +1,6 @@
 
 import Categoria from "@/components/slider/categoria/Categoria";
 
-import categoriaMap from "@/components/slider/categoria/mapCategoria";
 import mejorSemana from "@/data/semana";
 import homeSlider from "@/data/homeSlider";
 import Comercial from "@/assets/comercial.png";

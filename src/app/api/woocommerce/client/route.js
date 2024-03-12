@@ -1,4 +1,4 @@
-const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
+/*const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
 import { NextResponse } from "next/server";
 
 const api = new WooCommerceRestApi({
@@ -58,4 +58,4 @@ export async function GET(req, res) {
       error,
     });
   }
-}
+}*/
