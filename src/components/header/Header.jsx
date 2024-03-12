@@ -12,10 +12,11 @@ import Cart from "../svg/Cart";
 import List from "../svg/List";
 import User from "../svg/User";
 import HeaderMovil from "./HeaderMovil";
+import CartView from "./CartView";
 const Header = () => {
   const [view, setView] = useState(false);
   const [isShadow, setIsShadow] = useState(false);
-
+  const [viewCart, setCartView] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       const showShadow = window.scrollY > 0;
@@ -31,8 +32,9 @@ const Header = () => {
     };
   }, [isShadow]);
   const matches = useMediaQuery('(min-width: 917px)');
+
   return (
-    <header className={`w-screen  sticky top-0 z-10 ${isShadow ? 'shadow-header' : ''}`}>
+    <header className={`w-screen bg-white sticky top-0 z-10 ${isShadow ? 'shadow-header' : ''}`}>
       {/* sub cabecera */}
       <div className=" bg-zinc-950 px-10 hidden  lg:block md:block ">
         <div className="lg:container lg:mx-auto flex justify-between text-white  p-2">
@@ -66,7 +68,8 @@ const Header = () => {
         <div className="cuenta-header flex gap-7 items-center ">
         <span className="flex gap-2 flex-col justify-center items-center"><List className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi Lista</p></span>
           <span className="flex gap-2 flex-col justify-center items-center "><User className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi cuenta</p></span>
-          <span className="flex gap-2 flex-col justify-center items-center"><Cart/> <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">S/40.00</p></span>
+          <span onClick={()=> setCartView(true)} className="flex gap-2 flex-col justify-center items-center"><Cart/> <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">S/40.00</p></span>
+          <CartView viewCartw={viewCart} setCartView={setCartView} />
         </div>
       </div>}
       {!matches && <HeaderMovil view={view} setView={setView}/>}
