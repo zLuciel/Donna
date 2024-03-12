@@ -18,12 +18,12 @@ import Limpieza from "@/components/svg/Limpieza";
 //import ComentarioSlider from "@/components/slider/comentario/comentarioSlider";
 
 async function getDataCategoria() {
-  const Abarrotes = await fetch(`https://donna-chi.vercel.app/api/woocommerce/products/18`);
-  const Bebidas = await fetch(`https://donna-chi.vercel.app/api/woocommerce/products/19`);
-  const Lacteos = await fetch(`https://donna-chi.vercel.app/api/woocommerce/products/20`);
-  const Limpieza = await fetch(`https://donna-chi.vercel.app/api/woocommerce/products/21`);
-  const Cpersonal = await fetch(`https://donna-chi.vercel.app/api/woocommerce/products/22`);
-  const Confiteria = await fetch(`https://donna-chi.vercel.app/api/woocommerce/products/23`);
+  const Abarrotes = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/18`);
+  const Bebidas = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/19`);
+  const Lacteos = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/20`);
+  const Limpieza = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/21`);
+  const Cpersonal = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/22`);
+  const Confiteria = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/23`);
   if (!Abarrotes.ok) {
     console.log("Failed to fetch data");
   }
