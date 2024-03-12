@@ -6,6 +6,7 @@ const api = new WooCommerceRestApi({
   consumerKey: process.env.KEY_CLIENT,
   consumerSecret: process.env.KEY_SECRET_CLIENT,
   version: "wc/v3",
+  queryStringAuth: true,
 });
 
 export async function GET(req) {
