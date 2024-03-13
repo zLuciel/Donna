@@ -3,10 +3,9 @@ import { useEffect, useRef} from "react";
 import React from "react";
 import ItemsCart from "./ItemsCart";
 import { IoClose } from "react-icons/io5";
-const CartView = ({ viewCartw, setCartView,getTotalPrice, addedProducts, setAddedProducts}) => {
+const CartView = ({setViewScroll, viewCartw, setCartView,getTotalPrice, addedProducts, setAddedProducts}) => {
   const contenedorRef = useRef();
   
-
   useEffect(() => {
     function manejarClicFuera(evento) {
       if (
@@ -15,6 +14,7 @@ const CartView = ({ viewCartw, setCartView,getTotalPrice, addedProducts, setAdde
       ) {
         if (!evento.target.matches(".modal-cart-bg")) {
           setCartView(false);
+          document.body.classList.replace("notviewScroll","viewScroll") 
         }
       }
     }
@@ -26,6 +26,7 @@ const CartView = ({ viewCartw, setCartView,getTotalPrice, addedProducts, setAdde
     return () => {
       document.removeEventListener("mousedown", manejarClicFuera);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setCartView]);
   
   useEffect(() => {

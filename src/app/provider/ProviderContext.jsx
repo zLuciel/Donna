@@ -1,13 +1,16 @@
 "use client"
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
+
 
 const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
     const [dataProduct, setDataProduct] = useState([]);
+    const [viewScroll, setViewScroll] = useState(false);
+    
 
   return (
-    <ProductContext.Provider value={{ dataProduct, setDataProduct }}>
+    <ProductContext.Provider value={{ dataProduct, setDataProduct,viewScroll,setViewScroll }}>
       {children}
     </ProductContext.Provider>
   );

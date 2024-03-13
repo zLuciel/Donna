@@ -13,7 +13,12 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-
+.notviewScroll{
+ overflow: hidden;
+}
+.viewScroll{
+  display: block;
+}
 /*{
   font-family: "Nunito Sans";
   font-weight: 300;
@@ -292,9 +297,26 @@ body {
   display: grid;
   grid-template-rows: max-content 1fr 250px;
 }
-.scroll-items{
+.scroll-items {
   overflow-y: auto;
-  height:calc(100vh - 350px);
+  height: calc(100vh - 350px);
+
+}
+.scroll-items::-webkit-scrollbar-thumb {
+  background: #ec1c24;
+  border-radius: 4px;
+}
+/* Para navegadores que no admiten las propiedades anteriores, puedes agregar estilos específicos para Webkit */
+.scroll-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-items::-webkit-scrollbar-thumb {
+  background-color: #ff4d00;
+}
+
+.scroll-items::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
 }
 .rest-btn,.mas-btn{
   display: flex;

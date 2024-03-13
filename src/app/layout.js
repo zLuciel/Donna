@@ -7,7 +7,6 @@ import TopScroll from "@/components/TopScroll/TopScroll";
 import { ProductProvider } from "./provider/ProviderContext";
 
 const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
   title: "Donna",
   description: "Tienda de abarrotes",
