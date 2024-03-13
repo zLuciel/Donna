@@ -7,11 +7,12 @@ import Cart from "../svg/Cart";
 import List from "../svg/List";
 import User from "../svg/User";
 import Hamburger from "../svg/Hamburger";
+import CartView from "./CartView";
 
-const HeaderMovil = ({ view, setView }) => {
+const HeaderMovil = ({scrollHiddel, view, setView, setViewScroll, viewCartw, setCartView,getTotalPrice, dataProduct, setDataProduct}) => {
 
   return (
-    <div className="lg:container  mx-auto py-3  px-6  header-movil ">
+    <div className="lg:container mx-auto py-3  px-6  header-movil ">
       <div className="flex justify-between">
         {/* cuenta y categoria */}
         <div className="flex items-center gap-2">
@@ -35,9 +36,17 @@ const HeaderMovil = ({ view, setView }) => {
           />
         </Link>
         {/* lista y cart */}
-        <div className="cuenta-header flex gap-5 items-center ">
+        <div className=" cuenta-header flex gap-5 items-center ">
             <List className="text-xl" />{" "}
-            <Cart />
+            <Cart onClick={scrollHiddel}/>
+            <CartView
+              getTotalPrice={getTotalPrice}
+              addedProducts={dataProduct}
+              setAddedProducts={setDataProduct}
+              viewCartw={viewCartw}
+              setCartView={setCartView}
+              setViewScroll={setViewScroll}
+            />
         </div>
     
       </div>

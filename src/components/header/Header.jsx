@@ -146,7 +146,12 @@ const Header = () => {
           </div>
         </div>
       )}
-      {!matches && <HeaderMovil view={view} setView={setView} />}
+      {!matches && <HeaderMovil scrollHiddel={scrollHiddel} view={view} setView={setView} getTotalPrice={getTotalPrice}
+              dataProduct={dataProduct}
+              setDataProduct={setDataProduct}
+              viewCartw={viewCart}
+              setCartView={setCartView}
+              setViewScroll={setViewScroll}/>}
     </header>
   );
 };
