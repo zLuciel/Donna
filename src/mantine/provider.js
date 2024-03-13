@@ -8,5 +8,6 @@ export function Providers({ children }) {
       <MantineProvider defaultColorScheme='light' withNormalizeCSS>
         {children}
       </MantineProvider>
+
   );
 }

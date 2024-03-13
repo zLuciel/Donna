@@ -4,6 +4,7 @@ import Header from "@/components/header/Header";
 import { Providers } from "@/mantine/provider";
 import Footer from "@/components/footer/Footer";
 import TopScroll from "@/components/TopScroll/TopScroll";
+import { ProductProvider } from "./provider/ProviderContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,12 +17,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ProductProvider>
         <Providers>
           <TopScroll/>
           <Header />
           {children}
           <Footer/>
         </Providers>
+        </ProductProvider>
       </body> 
     </html>
   );

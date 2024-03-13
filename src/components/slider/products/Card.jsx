@@ -1,7 +1,40 @@
+import { useProduct } from "@/app/provider/ProviderContext";
 import Image from "next/image";
-import React from "react";
+import {useContext, useState } from 'react';
 
-const Card = ({ image,name,price,regular_price }) => {
+const Card = ({ image,name,price,regular_price,id }) => {
+  let { setDataProduct } = useProduct();
+  const [addedProducts, setAddedProducts] = useState([]);
+  
+
+    const addToCart = () => {
+
+      const newProduct = {
+        quantity: 1,
+        id,
+        name,
+        price,
+        regular_price,
+        image: image.src,
+      };
+    
+      const existingProducts = JSON.parse(localStorage.getItem('addedProducts')) || [];
+    
+      const existingProductIndex = existingProducts.findIndex(
+        (product) => product.name === newProduct.name
+      );
+    
+      if (existingProductIndex !== -1) {
+        existingProducts[existingProductIndex].quantity += 1;
+      } else {
+        existingProducts.push(newProduct);
+      }
+    
+      localStorage.setItem('addedProducts', JSON.stringify(existingProducts));
+      setDataProduct(existingProducts)
+      setAddedProducts(existingProducts);
+    };
+
   return (
     <div className="relative card-product flex flex-col justify-start ">
       <div className="image-product mb-4 relative">
@@ -26,7 +59,7 @@ const Card = ({ image,name,price,regular_price }) => {
             Precio regular <u className="line-through">S/{regular_price} </u>
           </p>
         </div>
-        <button className="mt-4 font-bold p-1  w-full btn-agre text-white rounded-2xl">
+        <button onClick={addToCart} className="mt-4 font-bold p-1  w-full btn-agre text-white rounded-2xl">
           AGREGAR
         </button>
       </div>

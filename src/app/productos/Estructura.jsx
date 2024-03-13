@@ -6,12 +6,12 @@ import { dataProduct } from './actions';
 const Estructura = () => {
     const [count,setCount] = useState(20)
     const [data,setData] = useState([])
-
+   
     useEffect(() => {
         const getDataProduct = async (id) => {
-          const dataRes = await dataProduct(id)
+          const dataRes = await dataProduct(id);
           console.log(dataRes);
-          setData(dataRes)
+          setData(dataRes);
         }
      
         getDataProduct(count)
@@ -23,6 +23,7 @@ const Estructura = () => {
         {data?.map((product) => (
           <Card
             key={product.id}
+            id={product.id}
             image={product.images[0]}
             name={product.name}
             price={product.price}

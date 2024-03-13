@@ -1,22 +1,24 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useMediaQuery } from '@mantine/hooks';
 import Image from "next/image";
 import { IoSearch } from "react-icons/io5";
-import { FaUser,FaShoppingCart } from "react-icons/fa";
 import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
 import ModalCategoria from "./ModalCategoria";
-import { FaClipboardList } from "react-icons/fa6";
+
 import Cart from "../svg/Cart";
 import List from "../svg/List";
 import User from "../svg/User";
 import HeaderMovil from "./HeaderMovil";
 import CartView from "./CartView";
+import { useProduct } from "@/app/provider/ProviderContext";
 const Header = () => {
   const [view, setView] = useState(false);
   const [isShadow, setIsShadow] = useState(false);
   const [viewCart, setCartView] = useState(false);
+  const {dataProduct, setDataProduct} = useProduct()
+
   useEffect(() => {
     const handleScroll = () => {
       const showShadow = window.scrollY > 0;
@@ -31,6 +33,21 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [isShadow]);
+  
+  
+  const getTotalPrice = () => {
+    let totalPrice = 0;
+    dataProduct.forEach((product) => {
+      const price = parseFloat(product.price) || 0;
+      const quantity = product.quantity || 1;
+      totalPrice += price * quantity;
+    });
+  
+    return   new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'PEN' }).format(
+      totalPrice,
+    );
+  };
+
   const matches = useMediaQuery('(min-width: 917px)');
 
   return (
@@ -68,8 +85,8 @@ const Header = () => {
         <div className="cuenta-header flex gap-7 items-center ">
         <span className="flex gap-2 flex-col justify-center items-center"><List className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi Lista</p></span>
           <span className="flex gap-2 flex-col justify-center items-center "><User className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi cuenta</p></span>
-          <span onClick={()=> setCartView(true)} className="flex gap-2 flex-col justify-center items-center"><Cart/> <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">S/40.00</p></span>
-          <CartView viewCartw={viewCart} setCartView={setCartView} />
+          <span onClick={()=> setCartView(true)} className="flex gap-2 flex-col justify-center items-center"><span className="relative"><b className="absolute count-cart">1</b>  <Cart/></span> <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">S/{getTotalPrice()} </p></span>
+          <CartView getTotalPrice={getTotalPrice} addedProducts={dataProduct} setAddedProducts={setDataProduct} viewCartw={viewCart} setCartView={setCartView} />
         </div>
       </div>}
       {!matches && <HeaderMovil view={view} setView={setView}/>}
