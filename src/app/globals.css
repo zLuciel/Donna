@@ -267,12 +267,14 @@ body {
   width: 30px;
   height: 30px;
 }
+
 .modal-bg {
   padding: 15px;
   background: rgb(255, 255, 255);
   width: max-content;
   min-height: 100vh;
 }
+
 .modal-header {
   background: rgba(0, 0, 0, 0.164);
   backdrop-filter: blur(3px);
@@ -406,5 +408,5 @@ footer {
 }
 .scroll-items{
   overflow-y: auto;
-  height:350px;
+  height:calc(100vh - 300px);
 }

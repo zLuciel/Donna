@@ -68,7 +68,7 @@ const CartView = ({ viewCartw, setCartView,getTotalPrice, addedProducts, setAdde
            
           </div>
 
-          <div className="bg-white flex justify-center flex-col px-6 py-3 box-modal-info">
+          <div className="bg-white flex justify-center flex-col px-10 py-3 box-modal-info">
             <div className="flex gap-3 flex-col">
               <span className="flex justify-between">
                 <p>Subtotal</p>
