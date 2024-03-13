@@ -83,7 +83,7 @@ const ItemsCart = ({
           </div>
         </div>
       </div>
-      <MdDeleteForever className="text-lg"  onClick={()=>deleteLocal(id_product)}/>
+      <MdDeleteForever className="text-lg cursor-pointer"  onClick={()=>deleteLocal(id_product)}/>
     </div>
   );
 };
