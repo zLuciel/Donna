@@ -42,8 +42,8 @@ const Header = () => {
       const quantity = product.quantity || 1;
       totalPrice += price * quantity;
     });
-  
-    return   new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'PEN' }).format(
+    //agregar formato moneada style: 'currency',
+    return   new Intl.NumberFormat('de-DE', { currency: 'PEN' }).format(
       totalPrice,
     );
   };
@@ -85,7 +85,7 @@ const Header = () => {
         <div className="cuenta-header flex gap-7 items-center ">
         <span className="flex gap-2 flex-col justify-center items-center"><List className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi Lista</p></span>
           <span className="flex gap-2 flex-col justify-center items-center "><User className="text-xl" /> <p className="prueba text-xs mt-1 leading-3">Mi cuenta</p></span>
-          <span onClick={()=> setCartView(true)} className="flex gap-2 flex-col justify-center items-center"><span className="relative"><b className="absolute count-cart">1</b>  <Cart/></span> <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">S/{getTotalPrice()} </p></span>
+          <span onClick={()=> setCartView(true)} className="flex gap-2 flex-col justify-center items-center"><span className="relative"><b className="absolute count-cart">{dataProduct.length}</b>  <Cart/></span> <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">S/{getTotalPrice()} </p></span>
           <CartView getTotalPrice={getTotalPrice} addedProducts={dataProduct} setAddedProducts={setDataProduct} viewCartw={viewCart} setCartView={setCartView} />
         </div>
       </div>}
