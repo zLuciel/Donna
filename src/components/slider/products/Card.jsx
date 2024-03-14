@@ -1,13 +1,15 @@
 import { useProduct } from "@/app/provider/ProviderContext";
 import Image from "next/image";
 import {useContext, useState } from 'react';
+import { FaClipboardCheck } from "react-icons/fa6";
 
+import { notifications } from '@mantine/notifications';
 const Card = ({ image,name,price,regular_price,id }) => {
   let { setDataProduct } = useProduct();
   const [addedProducts, setAddedProducts] = useState([]);
   
 
-    const addToCart = () => {
+    const addToCart = (name) => {
 
       const newProduct = {
         quantity: 1,
@@ -17,7 +19,21 @@ const Card = ({ image,name,price,regular_price,id }) => {
         regular_price,
         image: image.src,
       };
-    
+
+      notifications.show({
+        id: 'addCartProduct',
+        withCloseButton: true,
+        autoClose: 20000,
+        radius:"lg",
+        title: name ,
+        message: 'Su producto a sido agregado',
+        color: 'white',
+       // icon:<FaClipboardCheck style={{color:"#ff4d00"}} />,
+        className: 'bg-notifi-addcart',
+        style: { color: 'white' },
+        loading: false,
+      })
+
       const existingProducts = JSON.parse(localStorage.getItem('addedProducts')) || [];
     
       const existingProductIndex = existingProducts.findIndex(
@@ -59,7 +75,7 @@ const Card = ({ image,name,price,regular_price,id }) => {
             Precio regular <u className="line-through">S/{regular_price} </u>
           </p>
         </div>
-        <button onClick={addToCart} className="mt-4 font-bold p-1  w-full btn-agre text-white rounded-2xl">
+        <button onClick={()=> addToCart(name)} className="mt-4 font-bold p-1  w-full btn-agre text-white rounded-2xl">
           AGREGAR
         </button>
       </div>

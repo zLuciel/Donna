@@ -23,7 +23,7 @@ const SectionSlider = ({ renderjson, image , title,icon,pretIcoID,nextIcoID}) =>
           className="w-full mt-4"
           src={image}
           alt="Picture of the author"
-          sizes="(min-width: 808px) 50vw, 100vw"
+          sizes="(min-width: 808px) 100vw, 100vw"
         />
       )}
       <div className="relative">
