@@ -9,7 +9,7 @@ const Card = ({ image,name,price,regular_price,id }) => {
   const [addedProducts, setAddedProducts] = useState([]);
   
 
-    const addToCart = (name) => {
+    const addToCart = (name,id) => {
 
       const newProduct = {
         quantity: 1,
@@ -21,7 +21,7 @@ const Card = ({ image,name,price,regular_price,id }) => {
       };
 
       notifications.show({
-        id: 'addCartProduct',
+        id: `addCart${id}`,
         withCloseButton: true,
         autoClose: 20000,
         radius:"lg",
@@ -75,7 +75,7 @@ const Card = ({ image,name,price,regular_price,id }) => {
             Precio regular <u className="line-through">S/{regular_price} </u>
           </p>
         </div>
-        <button onClick={()=> addToCart(name)} className="mt-4 font-bold p-1  w-full btn-agre text-white rounded-2xl">
+        <button onClick={()=> addToCart(name,id)} className="mt-4 font-bold p-1  w-full btn-agre text-white rounded-2xl">
           AGREGAR
         </button>
       </div>

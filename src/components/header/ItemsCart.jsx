@@ -10,6 +10,7 @@ const ItemsCart = ({
   price,
   price_regular,
   image,
+  shadow
 }) => {
   const local = JSON.parse(localStorage.getItem("addedProducts")) || [];
   const localid = local.find((product) => product.id == id_product);
@@ -44,7 +45,7 @@ const ItemsCart = ({
     if (newQuantity !== 1) setQuantiny(newQuantity - 1);
   }
   return (
-    <div className="flex justify-between items-cart p-4  container-items-cart">
+    <div className={`flex justify-between items-cart p-4 ${!shadow ? "" : "shadow-items-cart"} container-items-cart`}>
       <div className="flex gap-4 justify-start items-center">
         <div style={{ width: "80px", height: "62px" }} className="relative">
           <Image

@@ -3,6 +3,7 @@ import { useEffect, useRef} from "react";
 import React from "react";
 import ItemsCart from "./ItemsCart";
 import { IoClose } from "react-icons/io5";
+import DetalleTotal from "./DetalleTotal";
 const CartView = ({setViewScroll, viewCartw, setCartView,getTotalPrice, addedProducts, setAddedProducts}) => {
   const contenedorRef = useRef();
   
@@ -62,6 +63,7 @@ const CartView = ({setViewScroll, viewCartw, setCartView,getTotalPrice, addedPro
           {addedProducts.map((product) => (
              <ItemsCart setAddedProducts={setAddedProducts} key={product.id} title={product.name}  image={product.image}
              price={product.price}
+             shadow={true}
              quantity={product.quantity}
              id_product={product.id}
              price_regular={product.regular_price} />
@@ -70,20 +72,7 @@ const CartView = ({setViewScroll, viewCartw, setCartView,getTotalPrice, addedPro
           </div>
 
           <div className="bg-white flex justify-center flex-col px-10 py-3 box-modal-info">
-            <div className="flex gap-3 flex-col">
-              <span className="flex justify-between">
-                <p>Subtotal</p>
-                <p>S/{getTotalPrice()}</p>
-              </span>
-              <span className="flex justify-between">
-                <p>Envio</p>
-                <p>S/0.00</p>
-              </span>
-              <span className="flex justify-between">
-                <b>Total</b>
-                <b>S/{getTotalPrice()}</b>
-              </span>
-            </div>
+            <DetalleTotal getTotalPrice={getTotalPrice} />
             <button className="mt-4 font-bold p-1  w-full btn-agre text-white rounded-2xl">
               <b>Comprar</b>
             </button>
