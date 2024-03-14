@@ -17,14 +17,14 @@ const PaymentMethod = () => {
           <div className="checkbox-wrapper-18 mb-4 flex gap-2 items-center">
             <div className="round">
               <input type="checkbox" id="checkbox-18" />
-              <label for="checkbox-18"></label>
+              <label htmlFor ="checkbox-18"></label>
             </div>
             <p>Contra entrega</p>
           </div>
           <div className="checkbox-wrapper-18 flex gap-2 items-center">
             <div className="round">
               <input type="checkbox" id="checkbox-18" />
-              <label for="checkbox-18"></label>
+              <label htmlFor="checkbox-18"></label>
             </div>
             <p>Monedero Digital</p>
           </div>

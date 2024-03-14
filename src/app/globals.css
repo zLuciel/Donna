@@ -537,7 +537,7 @@ footer {
 
   .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label {
     background: linear-gradient(90deg, #ff4d00 0%, #fd1111 100%) ;
-    border-color: #ff4800;
+    border-color: #030303;
   }
 
   .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label:after {

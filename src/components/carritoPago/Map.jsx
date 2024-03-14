@@ -10,7 +10,7 @@ const tiendas = [
      
 ];
 
-const FormPayment = () => {
+const MapCart = () => {
   const [tiendasw,setTiendas] = useState([])
   useEffect(() => {
     const initMap = () => {
@@ -74,77 +74,15 @@ const FormPayment = () => {
       document.head.removeChild(script);
     };
   }, []);
+
   return (
-    <>
-      <h3 className="mb-4">
-        <b>1. Información de Entrega</b>
-      </h3>
-      <form className="flex flex-col gap-3 border-form">
-        <span className="flex gap-3">
-          <div className="relative w-full">
-            <input
-              className="input-cal input-base"
-              id="input"
-              placeholder=""
-              type="text"
-            />
-            <label id="label-input">Name</label>
-          </div>
-          <div className="relative w-full">
-            <input
-              className="input-cal input-base"
-              id="input"
-              placeholder=""
-              type="text"
-            />
-            <label id="label-input">Apellido</label>
-          </div>
-        </span>
-        <div className="relative">
-          <input
-            className="input-cal input-base search-input-map"
-            id="input"
-            placeholder=""
-            type="text"
-          />
-          <label id="label-input">Dirección</label>
-        </div>
-        <div className="relative">
-          <input
-            className="input-cal input-base"
-            id="input"
-            placeholder=""
-            type="text"
-          />
-          <label id="label-input">Referencia</label>
-        </div>
-        <span className="flex gap-3">
-          <div className="relative w-full">
-            <input
-              className="input-cal input-base"
-              id="input"
-              placeholder=""
-              type="text"
-            />
-            <label id="label-input">Celular</label>
-          </div>
-          <div className="relative w-full">
-            <input
-              className="input-cal input-base"
-              id="input"
-              placeholder=""
-              type="text"
-            />
-            <label id="label-input">Correo</label>
-          </div>
-        </span>
-        <label className="flex gap-2 items-center">
-          <input type="checkbox" />
-          <p className="text-sm">Añade mas informacion para tu pedido</p>
-        </label>
-      </form>
-    </>
+    <div>
+      <h1>Encuentra las tiendas más cercanas</h1>
+     
+      <div className='hidden' id="map" style={{ width: '400px', height: '400px' }}></div>
+      <b>{tiendasw.nombre} </b>
+    </div>
   );
 };
 
-export default FormPayment;
+export default MapCart;
