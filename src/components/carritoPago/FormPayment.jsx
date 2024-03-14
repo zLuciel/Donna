@@ -74,8 +74,10 @@ const FormPayment = () => {
       document.head.removeChild(script);
     };
   }, []);
+
   return (
     <>
+     <div className='hidden' id="map" style={{ width: '400px', height: '400px' }}></div>
       <h3 className="mb-4">
         <b>1. Información de Entrega</b>
       </h3>

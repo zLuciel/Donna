@@ -79,7 +79,7 @@ const MapCart = () => {
     <div>
       <h1>Encuentra las tiendas más cercanas</h1>
      
-      <div className='hidden' id="map" style={{ width: '400px', height: '400px' }}></div>
+     
       <b>{tiendasw.nombre} </b>
     </div>
   );

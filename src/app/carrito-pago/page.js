@@ -1,5 +1,5 @@
 import FormPayment from '@/components/carritoPago/FormPayment'
-//import MapCart from '@/components/carritoPago/Map'
+import MapCart from '@/components/carritoPago/MapCart'
 import PaymentMethod from '@/components/carritoPago/PaymentMethod'
 import Resumen from '@/components/carritoPago/Resumen'
 import React from 'react'
@@ -10,7 +10,7 @@ const CarritoPago = () => {
         <div className='self-start'>
             <FormPayment/>
             <PaymentMethod/>
-            {/* <MapCart/> */}
+            
         </div>
         <div>
             <Resumen/>
