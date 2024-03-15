@@ -13,12 +13,13 @@ import User from "../svg/User";
 import HeaderMovil from "./HeaderMovil";
 import CartView from "./CartView";
 import { useProduct } from "@/app/provider/ProviderContext";
+import { usePathname } from "next/navigation";
 const Header = () => {
   const [view, setView] = useState(false);
   const [isShadow, setIsShadow] = useState(false);
   const [viewCart, setCartView] = useState(false);
   const { dataProduct, setDataProduct,viewScroll, setViewScroll } = useProduct();
-
+  const pathname = usePathname()
   useEffect(() => {
     const handleScroll = () => {
       const showShadow = window.scrollY > 0;
@@ -85,7 +86,7 @@ const Header = () => {
       </div>
 
       {matches && (
-        <div className="lg:container  mx-auto  sm:px-10 md:px-10 lg:px-20 px-5  header-grid ">
+        <div className={`lg:container  mx-auto  sm:px-10 md:px-10 lg:px-20 px-5 ${pathname == "/carrito-pago" ? "flex justify-between items-center" : "header-grid" }  `}>
           <Link href="/">
             <Image
               className="logo-header"
@@ -95,6 +96,8 @@ const Header = () => {
               alt="Donna"
             />
           </Link>
+          {pathname == "/carrito-pago" && <h3 className="text-black text-2xl"><b>Finalizar Compra</b></h3>}
+          {pathname !== "/carrito-pago" &&<>
           <div className="categoria">
             <button
               className="flex gap-2 text-sm justify-cent flex gap-2 items-center"
@@ -144,6 +147,7 @@ const Header = () => {
               setViewScroll={setViewScroll}
             />
           </div>
+          </>}
         </div>
       )}
       {!matches && <HeaderMovil scrollHiddel={scrollHiddel} view={view} setView={setView} getTotalPrice={getTotalPrice}

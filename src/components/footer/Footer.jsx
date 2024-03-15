@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import Yape from "@/assets/footer/yape.png"
@@ -5,9 +6,12 @@ import Plin from "@/assets/footer/plin.png"
 import Apple from "@/assets/footer/apple.png"
 import Android from "@/assets/footer/android.png"
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 const Footer = () => {
+  const pathname = usePathname()
   return (
     <footer className="mx-auto ">
+      {pathname !== "/carrito-pago" &&<>
       <div className="lg:container mx-auto py-10 sm:px-10 lg:px-20 px-10   grid gap-12 lg:gap-20 md:grid-cols-3 lg:grid-cols-4 " >
       <div>
         <Image
@@ -89,6 +93,7 @@ const Footer = () => {
         </ul>
       </div>
       </div>
+      </>}
       <span className="bg-black w-full text-white flex justify-center text-xs py-3 px-20">Copyright 2024 - Bill. Todos los derechos reservados.</span>
     </footer>
   );
