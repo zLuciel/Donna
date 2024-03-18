@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import SliderCard from "../products/SliderCard";
 import Image from "next/image";
-const SectionSlider = ({ renderjson, image , title,icon,pretIcoID,nextIcoID}) => {
+const SectionSlider = ({ renderjson, title,icon,pretIcoID,nextIcoID}) => {
   return (
     <section className="lg:container  mx-auto py-5  sm:px-20 md:px-20 lg:px-20 px-2" >
       <div className="flex justify-between items-center pr-8">
@@ -18,14 +18,7 @@ const SectionSlider = ({ renderjson, image , title,icon,pretIcoID,nextIcoID}) =>
           </Link>
         </p>
       </div>
-      {image && (
-        <Image
-          className="w-full mt-4"
-          src={image}
-          alt="Picture of the author"
-          sizes="(min-width: 808px) 100vw, 100vw"
-        />
-      )}
+   
       <div className="relative">
         <SliderCard renderjson={renderjson} idBtnNex={nextIcoID} idBtnPre={pretIcoID}/>
       </div>

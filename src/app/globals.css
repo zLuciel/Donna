@@ -69,11 +69,11 @@ body {
   right: 0;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.295);
   transform: translate(0%,110%);
-  max-width: 400px;
-  min-width: 300px;
+  max-width: 6%;
+  min-width: 350px;
 }
 .container-login > .arrow-login{
-  padding: 30px 20px;
+  padding: 50px 30px;
 }
 .container-login > .arrow-login::before{
   z-index: 2;

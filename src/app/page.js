@@ -98,11 +98,9 @@ export default async function Home() {
       />
       <SectionSlider
         title="LO MEJOR EN LIMPIEZA"
-
         pretIcoID={"icoLicoresPreS"}
         nextIcoID={"icoLicoresNextS"}
         renderjson={data.arrayLimpieza}
-        image={Comercial}
         icon={<Limpieza />}
       />
       <SectionSlider
