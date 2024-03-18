@@ -113,13 +113,13 @@ const Header = () => {
                 </span>
               </span>
               <div className="cuenta-header flex gap-7 items-center ">
-                <span className="flex gap-1 flex-col justify-center items-center">
+                <span className="flex cursor-pointer relative  gap-1 flex-col justify-center items-center">
                   <List className="text-xl" />{" "}
-                  <p className="prueba text-xs mt-1 leading-3">Mi Lista</p>
+                  <p className="text-[#2e2e2e] prueba text-xs mt-1 leading-3">Mi Lista</p>
                 </span>
-                <span onClick={() => setViewLogin(true)} className="relative flex gap-1 flex-col justify-center items-center ">
+                <span onClick={() => setViewLogin(true)} className=" cursor-pointer relative flex gap-1 flex-col justify-center items-center ">
                   <User className="text-xl" />{" "}
-                  <p className="prueba text-xs mt-1 leading-3">Mi cuenta</p>
+                  <p className="text-[#2e2e2e] text-xs mt-1 leading-3">Mi cuenta</p>
                   {viewLogin && <LoginHeader refOpenLogin={loginRef}/>}
                 </span>
                 <span

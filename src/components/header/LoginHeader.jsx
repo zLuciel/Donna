@@ -8,7 +8,7 @@ const LoginHeader = ({refOpenLogin}) => {
         <h3 className="mb-3 text-center text-xl"><b>Iniciar Sesion</b></h3>
         <div className="flex flex-col gap-5">
             <span className="relative">
-               <InputLogin type={"text"} name={"username"} label={"Gmail"}/> 
+               <InputLogin type={"text"} name={"username"} label={"Correo"}/> 
             </span>
             
             <span className="relative">

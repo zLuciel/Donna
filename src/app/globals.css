@@ -353,6 +353,7 @@ body {
 .box-modal-info{
   box-shadow: 0 0 12px rgba(0,0,0,.15) ;
 }
+
 .numberItems {
   width: 50px;
   height: 30px;
@@ -360,13 +361,16 @@ body {
   border: 1px solid #b8b8b8;
   border-radius: 10px;
 }
+
 .items-cart {
   background: white;
   border-radius: 15px;
 }
+
 .shadow-items-cart{
   box-shadow: 0 2px 6px rgb(0 0 0/6%);
 }
+
 .modal-cart {
   background: rgba(0, 0, 0, 0.164);
   backdrop-filter: blur(3px);
@@ -442,10 +446,23 @@ body {
 footer {
   background: #f9f9f9;
 }
-.prueba {
-  color: #2e2e2e;
-  border-bottom: 1px solid #2e2e2e4b;
+
+.hover-border::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 0%;
+  bottom: -3px;
+  height: 1.2px;
+  background: black;
+  transition: width 0.3s ease; 
 }
+
+.hover-border:hover::before {
+  width: 100%; 
+}
+
+
 .btn-agre {
   background: linear-gradient(90deg, #ff4d00 0%, #fd1111 100%) !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -487,8 +504,12 @@ footer {
   opacity: 1;
   pointer-events: none;
 }
+
 .setLabel{
+  color: #542c2c6b !important;
+  left: 10px !important;
   top: 20% !important;
+  transform: scale(.80) !important;
 }
 .input-base {
   border-radius: 10px;
@@ -496,11 +517,11 @@ footer {
 
 #input:focus ~ label#label-input,
 #input:not(:placeholder-shown) ~ #label-input {
-  top: -50% !important;
+  top: -30% !important;
   left: 2px !important;
   transform: scale(0.8);
   background: white;
-  color: black;
+  color: black !important;
   padding: 0 6px;
   opacity: 1;
 }
@@ -514,6 +535,7 @@ footer {
   padding: 17px 10px;
   width: 100%;
 }
+
 .icon-password{
   right: 5%;
   top: 30%;
