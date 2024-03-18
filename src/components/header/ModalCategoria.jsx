@@ -45,7 +45,7 @@ function ModalCategoria({setView,view}) {
   return (
     <>
       <div
-        className={view ? "absolute modal-header" : "hidden"}
+        className={view ? "absolute modal-header z-10" : "hidden"}
       >
         <div ref={contenedorRef} className="modal-bg flex gap-2 relative">
            

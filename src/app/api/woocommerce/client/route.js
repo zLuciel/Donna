@@ -1,4 +1,4 @@
-/*const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
+const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
 import { NextResponse } from "next/server";
 
 const api = new WooCommerceRestApi({
@@ -10,46 +10,86 @@ const api = new WooCommerceRestApi({
 
 export async function GET(req, res) {
 
-    const dataCliente = {
-        email: "john.doe77@example.com",
-        first_name: "Johnq",
-        last_name: "Doeq",
-        password:"madarauchiha",
-        username: "john.doeq",
-        billing: {
-          first_name: "John",
-          last_name: "Doe",
-          company: "",
-          address_1: "969 Market",
-          address_2: "",
-          city: "San Francisco",
-          state: "CA",
-          postcode: "94103",
-          country: "US",
-          email: "john.doe77@example.com",
-          phone: "(555) 555-5555"
-        },
-        shipping: {
-          first_name: "Johnq",
-          last_name: "Doeq",
-          company: "",
-          address_1: "969 Market",
-          address_2: "",
-          city: "San Francisco",
-          state: "CA",
-          postcode: "94103",
-          country: "US"
-        }
-      };
-
+  const dataCliente = {
+    email: "miguel_94_14@outlook.com", // si
+    first_name: "miguel", // si
+    last_name: "ojara", //si
+    password: "madarauchiha18",
+    username: "miguel_94_14@outlook.com",
+    billing: {
+      first_name: "miguel",
+      last_name: "ojara",
+      company: "",
+      address_1: "969 Market",
+      address_2: "",
+      city: "San Francisco",
+      state: "CA",
+      postcode: "94103",
+      country: "US",
+      email: "miguel_94_14@outlook.com",
+      phone: "(555) 555-5555",
+    },
+    // shipping: {
+    //   first_name: "miguel",
+    //   last_name: "ojara",
+    //   company: "",
+    //   address_1: "969 Market",
+    //   address_2: "",
+    //   city: "San Francisco",
+    //   state: "CA",
+    //   postcode: "94103",
+    //   country: "US",
+    // },
+  };
+  const dataorder = {
+    payment_method: "bacs",
+    customer_id: 6,
+    payment_method_title: "Direct Bank Transfer",
+    set_paid: true,
+    billing: {
+      first_name: "miguel",
+      last_name: "ojara",
+      address_1: "969 Market",
+      address_2: "",
+      city: "San Francisco",
+      state: "CA",
+      postcode: "94103",
+      country: "US",
+      email: "miguel_94_14@outlook.com",
+      phone: "(555) 555-5555"
+    },
+    shipping: {
+      first_name: "miguel",
+      last_name: "ojara",
+      address_1: "969 Market",
+      address_2: "",
+      city: "San Francisco",
+      state: "CA",
+      postcode: "94103",
+      country: "US"
+    },
+    line_items: [
+      {
+        product_id: 78,
+        quantity: 3
+      },
+    ],
+    shipping_lines: [
+      {
+        method_id: "flat_rate",
+        method_title: "Flat Rate",
+        total: "50.00"
+      }
+    ]
+  };
   const responseData = {
     success: false,
     products: [],
   };
   try {
-    const { data } = await api.post(`customers`,dataCliente);
+    const { data } = await api.post(`orders`, dataorder);
     responseData.success = true;
-   responseData.products = data;
+    responseData.products = data;
     return NextResponse.json(responseData);
   } catch (error) {
     responseData.error = error.message;
@@ -58,4 +98,4 @@ export async function GET(req, res) {
       error,
     });
   }
-}*/
+}

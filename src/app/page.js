@@ -15,7 +15,6 @@ import LoMejor from "@/components/svg/LoMejor";
 import Desayuno from "@/components/svg/Desayuno";
 import Lacteos from "@/components/svg/Lacteos";
 import Limpieza from "@/components/svg/Limpieza";
-//import ComentarioSlider from "@/components/slider/comentario/comentarioSlider";
 
 async function getDataCategoria() {
   const Abarrotes = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/18`);
@@ -62,14 +61,6 @@ export default async function Home() {
           <h2 className="mb-1 text-sm  sm:text-base md:text-lg lg:text-1xl ">
             ¡ TODO LO ENCUENTRAS EN DOONA !
           </h2>
-          <p className="verCategoria">
-            <Link
-              className="text-xs lg:text-sm border-b border-red-500 text-red-600"
-              href="/productos"
-            >
-              VER TODOS
-            </Link>
-          </p>
         </div>
         <div className="relative">
           <Categoria />

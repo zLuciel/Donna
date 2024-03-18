@@ -17,7 +17,6 @@ const SliderMejor = ({renderjson,viewPagi}) => {
       prevEl: `#icoPromoPreS`,
       nextEl: `#icoPromoNextS`,
     }}
-    loop
     pagination={viewPagi && { clickable: true }}
     spaceBetween={5}
     slidesPerView={1.5}
@@ -51,8 +50,8 @@ const SliderMejor = ({renderjson,viewPagi}) => {
        </SwiperSlide>
      ))}
    </Swiper>
-   <button id="icoPromoPreS" className="cateBtnSwiper flex justify-center items-center" ><FaChevronLeft  className='text-1xl text-red-500'/></button>
-  <button id="icoPromoNextS" className="cateBtnSwiper flex justify-center items-center" ><FaChevronRight  className='text-1xl text-red-500'/></button>
+   {false && <button id="icoPromoPreS" className="cateBtnSwiper flex justify-center items-center" ><FaChevronLeft  className='text-1xl text-red-500'/></button>}
+  {false && <button id="icoPromoNextS" className="cateBtnSwiper flex justify-center items-center" ><FaChevronRight  className='text-1xl text-red-500'/></button>}
    </>
   )
 }

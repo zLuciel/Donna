@@ -65,10 +65,30 @@ body {
     text-wrap: balance;
   }
 }
-
+.container-login{
+  right: 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.295);
+  transform: translate(0%,110%);
+  max-width: 400px;
+  min-width: 300px;
+}
+.container-login > .arrow-login{
+  padding: 30px 20px;
+}
+.container-login > .arrow-login::before{
+  z-index: 2;
+  position: absolute;
+  content: "";
+  background: rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  top: -10px;
+  right: 15px;
+}
 .circle-cat {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -467,14 +487,16 @@ footer {
   opacity: 1;
   pointer-events: none;
 }
-
+.setLabel{
+  top: 20% !important;
+}
 .input-base {
   border-radius: 10px;
 }
 
 #input:focus ~ label#label-input,
 #input:not(:placeholder-shown) ~ #label-input {
-  top: -20% !important;
+  top: -50% !important;
   left: 2px !important;
   transform: scale(0.8);
   background: white;
@@ -489,10 +511,17 @@ footer {
   outline-color: var(--button-text);
   outline: unset;
   border: 1px solid #bbbbbb;
-  padding: 17px 10px 10px 17px;
+  padding: 17px 10px;
   width: 100%;
 }
+.icon-password{
+  right: 5%;
+  top: 30%;
 
+}
+.setInput{
+  padding: 6px 10px !important;
+}
 .errorBorder{
   border: 1px solid #f80000 !important;
 }

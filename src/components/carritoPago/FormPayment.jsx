@@ -94,7 +94,7 @@ const FormPayment = ({ handleChange, formData, errors }) => {
       <h3 className="mb-4">
         <b>1. Información de Entrega</b>
       </h3>
-      <div className="flex flex-col gap-3 border-form">
+      <div className="flex flex-col gap-1 border-form">
         <span className="flex gap-3">
           <div className="w-full">
             <div className="relative">
@@ -125,7 +125,7 @@ const FormPayment = ({ handleChange, formData, errors }) => {
             </p>
           </div>
         </span>
-        <div className="relative">
+        <div className="relative mb-3">
           <InputCart
             errors={errors}
             addClass={"search-input-map"}

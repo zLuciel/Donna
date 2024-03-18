@@ -23,7 +23,6 @@ const Categoria = () => {
       prevEl: `#icoCategoriaPreS`,
       nextEl: `#icoCategoriaNextS`,
     }}
-    loop
     slidesPerView={2.5}
     spaceBetween={1}
     slidesPerGroup={3}
@@ -54,12 +53,12 @@ const Categoria = () => {
         slidesPerGroup: 4,
       },
       1280: {
-        slidesPerView: 6,
+        slidesPerView: 7,
         spaceBetween: 20,
         slidesPerGroup: 4,
       },
       1534: {
-        slidesPerView: 8,
+        slidesPerView: 7,
         spaceBetween: 20,
         slidesPerGroup: 4,
       },
@@ -77,8 +76,8 @@ const Categoria = () => {
         </SwiperSlide>
       ))}
     </Swiper>
-    <button id="icoCategoriaPreS"  className="cateBtnSwiper flex justify-center items-center" ><FaChevronLeft className='text-1xl text-red-500' /></button>
-    <button id="icoCategoriaNextS" className="cateBtnSwiper flex justify-center items-center"  ><FaChevronRight className='text-1xl text-red-500' /></button>
+    {false && <button id="icoCategoriaPreS"  className="cateBtnSwiper flex justify-center items-center" ><FaChevronLeft className='text-1xl text-red-500' /></button>}
+    {false && <button id="icoCategoriaNextS" className="cateBtnSwiper flex justify-center items-center"  ><FaChevronRight className='text-1xl text-red-500' /></button>}
     </>
   );
 };

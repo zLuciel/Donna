@@ -5,21 +5,7 @@ import { useProduct } from '@/app/provider/ProviderContext';
 import DetalleTotal from '../header/DetalleTotal';
 
 const Resumen = () => {
-    const { dataProduct, setDataProduct } = useProduct();
-
-    const getTotalPrice = () => {
-        let totalPrice = 0;
-        dataProduct.forEach((product) => {
-          const price = parseFloat(product.price) || 0;
-          const quantity = product.quantity || 1;
-          totalPrice += price * quantity;
-        });
-        //agregar formato moneada style: 'currency',
-        const formPen = new Intl.NumberFormat("de-DE", { currency: "PEN" }).format(
-          totalPrice
-        );
-        return formPen.replace(".", ",");
-      };
+    const { dataProduct, setDataProduct,price } = useProduct();
 
   return (
     <div>
@@ -36,7 +22,7 @@ const Resumen = () => {
         ))}
         </div>
         <div className="py-4 px-10">
-             <DetalleTotal getTotalPrice={getTotalPrice}/>
+             <DetalleTotal getTotalPrice={price}/>
         </div>
        
         </div>

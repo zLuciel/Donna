@@ -1,5 +1,5 @@
 "use client";
-import React, {  useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
 import { IoSearch } from "react-icons/io5";
@@ -14,46 +14,30 @@ import HeaderMovil from "./HeaderMovil";
 import CartView from "./CartView";
 import { useProduct } from "@/app/provider/ProviderContext";
 import { usePathname } from "next/navigation";
+import useShadowScrollHook from "@/hooks/useShadowScrollHook";
+import LoginHeader from "./LoginHeader";
+import useClickOutside from "@/hooks/useClickOutside";
+
+
 const Header = () => {
   const [view, setView] = useState(false);
-  const [isShadow, setIsShadow] = useState(false);
   const [viewCart, setCartView] = useState(false);
-  const { dataProduct, setDataProduct,viewScroll, setViewScroll } = useProduct();
-  const pathname = usePathname()
-  useEffect(() => {
-    const handleScroll = () => {
-      const showShadow = window.scrollY > 0;
-      if (showShadow !== isShadow) {
-        setIsShadow(showShadow);
-        
-      }
-    };
+  const { isShadow } = useShadowScrollHook(false);
+  const { dataProduct, setDataProduct, price } = useProduct();
+  const pathname = usePathname();
+  const [viewLogin,setViewLogin] = useState(false)
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isShadow]);
-
-  const getTotalPrice = () => {
-    let totalPrice = 0;
-    dataProduct.forEach((product) => {
-      const price = parseFloat(product.price) || 0;
-      const quantity = product.quantity || 1;
-      totalPrice += price * quantity;
-    });
-    //agregar formato moneada style: 'currency',
-    const formPen = new Intl.NumberFormat("de-DE", { currency: "PEN" }).format(
-      totalPrice
-    );
-    return formPen.replace(".", ",");
+  const scrollHiddel = () => {
+    setCartView(true);
+    document.body.classList = "notviewScroll";
   };
-  const scrollHiddel = ()=>{
-    setCartView(true)
-    document.body.classList = "notviewScroll" 
-  }
+  const loginRef = useRef();
+
   const matches = useMediaQuery("(min-width: 917px)");
+  
+  useClickOutside(loginRef, () => {
+    setViewLogin(false);
+  });
 
   return (
     <header
@@ -86,76 +70,94 @@ const Header = () => {
       </div>
 
       {matches && (
-        <div className={`lg:container  mx-auto  sm:px-10 md:px-10 lg:px-20 px-5 ${pathname == "/carrito-pago" ? "flex justify-between items-center" : "header-grid" }  `}>
+        <div
+          className={`lg:container  mx-auto  sm:px-10 md:px-10 lg:px-20 px-5 ${
+            pathname == "/carrito-pago"
+              ? "flex justify-between items-center"
+              : "header-grid"
+          }  `}
+        >
           <Link href="/">
             <Image
               className="logo-header"
-              src="/LogoDonna.png"
+              src="/DonnaMovil.png"
               width={90}
               height={90}
               alt="Donna"
             />
           </Link>
-          {pathname == "/carrito-pago" && <h3 className="text-black text-2xl"><b>Finalizar Compra</b></h3>}
-          {pathname !== "/carrito-pago" &&<>
-          <div className="categoria">
-            <button
-              className="flex gap-2 text-sm justify-cent flex gap-2 items-center"
-              onClick={() => setView(true)}
-            >
-              Categorias <IoIosArrowDown />
-            </button>
-            <ModalCategoria view={view} setView={setView} />
-          </div>
-          <span className="search-header flex w-full  rounded-3xl overflow-hidden">
-            <input
-              className="w-full outline-none px-3 py-2 "
-              type="text"
-              placeholder="Dinos que buscas y te mostraremos las mejores ofertas"
-            />
-            <span className="bg-slate-gray px-4 flex justify-center items-center">
-              <IoSearch />
-            </span>
-          </span>
-          <div className="cuenta-header flex gap-7 items-center ">
-            <span className="flex gap-2 flex-col justify-center items-center">
-              <List className="text-xl" />{" "}
-              <p className="prueba text-xs mt-1 leading-3">Mi Lista</p>
-            </span>
-            <span className="flex gap-2 flex-col justify-center items-center ">
-              <User className="text-xl" />{" "}
-              <p className="prueba text-xs mt-1 leading-3">Mi cuenta</p>
-            </span>
-            <span
-              onClick={scrollHiddel}
-              className="flex cursor-pointer gap-2 flex-col justify-center items-center"
-            >
-              <span className="relative" onClick={()=>setViewScroll(true)}>
-                <b className="absolute count-cart">{dataProduct.length}</b>{" "}
-                <Cart />
-              </span>{" "}
-              <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">
-                S/{getTotalPrice()}.00{" "}
-              </p>
-            </span>
-            <CartView
-              getTotalPrice={getTotalPrice}
-              addedProducts={dataProduct}
-              setAddedProducts={setDataProduct}
-              viewCartw={viewCart}
-              setCartView={setCartView}
-              setViewScroll={setViewScroll}
-            />
-          </div>
-          </>}
+          {pathname == "/carrito-pago" && (
+            <h3 className="text-black text-2xl">
+              <b>Finalizar Compra</b>
+            </h3>
+          )}
+          {pathname !== "/carrito-pago" && (
+            <>
+              <div className="categoria">
+                <button
+                  className="flex gap-2 text-sm justify-cent flex gap-2 items-center"
+                  onClick={() => setView(true)}
+                >
+                  Categorias <IoIosArrowDown />
+                </button>
+                <ModalCategoria view={view} setView={setView} />
+              </div>
+              <span className="search-header flex w-full  rounded-3xl overflow-hidden">
+                <input
+                  className="w-full outline-none px-3 py-2 "
+                  type="text"
+                  placeholder="Dinos que buscas y te mostraremos las mejores ofertas"
+                />
+                <span className="bg-slate-gray px-4 flex justify-center items-center">
+                  <IoSearch />
+                </span>
+              </span>
+              <div className="cuenta-header flex gap-7 items-center ">
+                <span className="flex gap-1 flex-col justify-center items-center">
+                  <List className="text-xl" />{" "}
+                  <p className="prueba text-xs mt-1 leading-3">Mi Lista</p>
+                </span>
+                <span onClick={() => setViewLogin(true)} className="relative flex gap-1 flex-col justify-center items-center ">
+                  <User className="text-xl" />{" "}
+                  <p className="prueba text-xs mt-1 leading-3">Mi cuenta</p>
+                  {viewLogin && <LoginHeader refOpenLogin={loginRef}/>}
+                </span>
+                <span
+                  onClick={scrollHiddel}
+                  className="flex cursor-pointer gap-1 flex-col justify-center items-center"
+                >
+                  <span className="relative">
+                    <b className="absolute count-cart">{dataProduct.length}</b>{" "}
+                    <Cart />
+                  </span>{" "}
+                  <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">
+                    S/{price}.00{" "}
+                  </p>
+                </span>
+                <CartView
+                  getTotalPrice={price}
+                  addedProducts={dataProduct}
+                  setAddedProducts={setDataProduct}
+                  viewCartw={viewCart}
+                  setCartView={setCartView}
+                />
+              </div>
+            </>
+          )}
         </div>
       )}
-      {!matches && <HeaderMovil scrollHiddel={scrollHiddel} view={view} setView={setView} getTotalPrice={getTotalPrice}
-              dataProduct={dataProduct}
-              setDataProduct={setDataProduct}
-              viewCartw={viewCart}
-              setCartView={setCartView}
-              setViewScroll={setViewScroll}/>}
+      {!matches && (
+        <HeaderMovil
+          scrollHiddel={scrollHiddel}
+          view={view}
+          setView={setView}
+          getTotalPrice={price}
+          dataProduct={dataProduct}
+          setDataProduct={setDataProduct}
+          viewCartw={viewCart}
+          setCartView={setCartView}
+        />
+      )}
     </header>
   );
 };

@@ -33,7 +33,7 @@ const PaymentMethod = ({ formData, handleChange,checkCE, setCheckCE }) => {
       {/* termino condiciones */}
       <label className="flex gap-2 items-start justify-start mt-7">
         <p className="text-xs">
-          He leído y acepto los Términos y Condiciones de compra en Wong.pe.
+          He leído y acepto los Términos y Condiciones de compra en Doona.pe.
           Acepto igualmente la Política de Privacidad y Seguridad
         </p>
       </label>
@@ -44,7 +44,7 @@ const PaymentMethod = ({ formData, handleChange,checkCE, setCheckCE }) => {
           <b>PAGAR AHORA</b>
         </button>
         <button
-          className="font-bold p-1 py-2 bg-slate-200 text-black w-full  text-white rounded-3xl"
+          className="font-bold p-1 py-2 bg-slate-200 text-black w-full rounded-3xl"
         >
           <b>SEGUIR COMPRANDO</b>
         </button>

@@ -5,8 +5,8 @@ import ItemsCart from "./ItemsCart";
 import { IoClose } from "react-icons/io5";
 import DetalleTotal from "./DetalleTotal";
 import Link from "next/link";
+import useClickOutside from "@/hooks/useClickOutside";
 const CartView = ({
-  setViewScroll,
   viewCartw,
   setCartView,
   getTotalPrice,
@@ -15,28 +15,10 @@ const CartView = ({
 }) => {
   const contenedorRef = useRef();
 
-  useEffect(() => {
-    function manejarClicFuera(evento) {
-      if (
-        contenedorRef.current &&
-        !contenedorRef.current.contains(evento.target)
-      ) {
-        if (!evento.target.matches(".modal-cart-bg")) {
-          setCartView(false);
-          document.body.classList.replace("notviewScroll", "viewScroll");
-        }
-      }
-    }
-
-    // Agregar el listener de eventos cuando el componente se monta
-    document.addEventListener("mousedown", manejarClicFuera);
-
-    // Limpiar el listener de eventos cuando el componente se desmonta
-    return () => {
-      document.removeEventListener("mousedown", manejarClicFuera);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [setCartView]);
+  useClickOutside(contenedorRef, () => {
+    setCartView(false);
+    document.body.classList.replace('notviewScroll', 'viewScroll');
+  });
 
   useEffect(() => {
     const existingProducts =
@@ -45,6 +27,10 @@ const CartView = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [viewCartw]);
 
+  function handleShoping() {
+    setCartView(false);
+    document.body.classList.replace("notviewScroll", "viewScroll");
+  }
   return (
     <>
       <div className={viewCartw ? "absolute modal-cart " : "hidden"}>
@@ -86,7 +72,10 @@ const CartView = ({
 
           <div className="bg-white flex justify-center flex-col px-10 py-3 box-modal-info">
             <DetalleTotal getTotalPrice={getTotalPrice} />
-            <button onClick={()=>setCartView(false)} className="mt-4  font-bold p-1  w-full btn-agre text-white rounded-2xl">
+            <button
+              onClick={handleShoping}
+              className="mt-4  font-bold p-1  w-full btn-agre text-white rounded-2xl"
+            >
               <Link className="py-2" href="/carrito-pago">
                 <b>Comprar</b>
               </Link>

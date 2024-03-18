@@ -9,7 +9,7 @@ import User from "../svg/User";
 import Hamburger from "../svg/Hamburger";
 import CartView from "./CartView";
 
-const HeaderMovil = ({scrollHiddel, view, setView, setViewScroll, viewCartw, setCartView,getTotalPrice, dataProduct, setDataProduct}) => {
+const HeaderMovil = ({scrollHiddel, view, setView, viewCartw, setCartView,getTotalPrice, dataProduct, setDataProduct}) => {
 
   return (
     <div className="lg:container mx-auto py-3  px-6  header-movil ">
@@ -45,7 +45,6 @@ const HeaderMovil = ({scrollHiddel, view, setView, setViewScroll, viewCartw, set
               setAddedProducts={setDataProduct}
               viewCartw={viewCartw}
               setCartView={setCartView}
-              setViewScroll={setViewScroll}
             />
         </div>
     

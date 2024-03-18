@@ -15,10 +15,6 @@ const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
     className="xd"
     modules={[Autoplay,Navigation, Pagination]}
     loop={true}
-    navigation={{
-      prevEl: `#${idBtnPre}`,
-      nextEl: `#${idBtnNex}`,
-    }}
     pagination={{ clickable: true }}
     spaceBetween={0}
     slidesPerView={1}
@@ -37,8 +33,6 @@ const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
         </SwiperSlide>
       ))}
     </Swiper>
-    <button id={idBtnPre} ><FaChevronLeft  className='text-3xl'/></button>
-    <button id={idBtnNex} ><FaChevronRight  className='text-3xl'/></button>
     </>
   );
 };

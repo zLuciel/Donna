@@ -5,7 +5,7 @@ const DetalleTotal = ({getTotalPrice}) => {
     <div className="flex gap-3 flex-col">
     <span className="flex justify-between">
       <p>Subtotal</p>
-      <p>S/{getTotalPrice()}.00</p>
+      <p>S/{getTotalPrice}.00</p>
     </span>
     <span className="flex justify-between">
       <p>Envio</p>
@@ -13,7 +13,7 @@ const DetalleTotal = ({getTotalPrice}) => {
     </span>
     <span className="flex justify-between">
       <b>Total</b>
-      <b>S/{getTotalPrice()}.00</b>
+      <b>S/{getTotalPrice}.00</b>
     </span>
   </div>
   )
