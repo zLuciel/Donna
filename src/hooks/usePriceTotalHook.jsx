@@ -17,7 +17,8 @@ function usePriceTotalHook(initialValue, dataProduct) {
     // Agregar formato de moneda
     const formattedPrice = new Intl.NumberFormat("de-DE", {currency: "PEN" }).format(totalPrice);
     // Actualizar el estado de price con el precio total calculado
-    setPrice(formattedPrice);
+    const formatDecimal = formattedPrice.replace(".", ",");
+    setPrice(formatDecimal);
   }
 
   return {

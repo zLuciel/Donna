@@ -1,17 +1,32 @@
-import Photo from "@/assets/lomejor.png"
+import Portada1 from "@/assets/portada/portada1.jpg"
+import Portada2 from "@/assets/portada/portada2.jpg"
+import Portada3 from "@/assets/portada/portada3.jpg"
+import Portada4 from "@/assets/portada/portada4.jpg"
+import Portada5 from "@/assets/portada/portada5.jpg"
+import Portada6 from "@/assets/portada/portada6.jpg"
 
 const homeSlider = [
     {
-        image:Photo,
+        image:Portada1,
         name:"Carne",
     },
     {
-        image:Photo,
-        name:"Pan",
+        image:Portada2,
+        name:"Carne",
     },
     {
-        image:Photo,
-        name:"Pescado",
+        image:Portada3,
+        name:"Carne",
+    },
+    {
+        image:Portada4,
+        name:"Carne",
+    }, {
+        image:Portada5,
+        name:"Carne",
+    }, {
+        image:Portada6,
+        name:"Carne",
     },
  
 ]

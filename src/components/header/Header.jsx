@@ -17,6 +17,8 @@ import { usePathname } from "next/navigation";
 import useShadowScrollHook from "@/hooks/useShadowScrollHook";
 import LoginHeader from "./LoginHeader";
 import useClickOutside from "@/hooks/useClickOutside";
+import SubCabezera from "./SubCabezera";
+import Registre from "./Registre";
 
 
 const Header = () => {
@@ -26,6 +28,7 @@ const Header = () => {
   const { dataProduct, setDataProduct, price } = useProduct();
   const pathname = usePathname();
   const [viewLogin,setViewLogin] = useState(false)
+  const [classHidden,setClassHidden] = useState(false)
 
   const scrollHiddel = () => {
     setCartView(true);
@@ -38,6 +41,8 @@ const Header = () => {
   useClickOutside(loginRef, () => {
     setViewLogin(false);
   });
+  
+ 
 
   return (
     <header
@@ -45,30 +50,7 @@ const Header = () => {
         isShadow ? "shadow-header" : ""
       }`}
     >
-      {/* sub cabecera */}
-      <div className=" bg-zinc-950 px-10 hidden  lg:block md:block ">
-        <div className="lg:container lg:mx-auto flex justify-between text-white  p-2">
-          <h4 className="leading-5 text-xs">
-            Atención al cliente: (01) 345 - 234
-          </h4>
-          <span>
-            <ul className="flex gap-10">
-              <li className="leading-5 text-xs">venta telefónica</li>
-              <li className="leading-5 text-xs">
-                <Link href="/productos">productos</Link>
-              </li>
-              <li className="leading-5 text-xs">
-                <Link href="/promociones">promociones</Link>
-              </li>
-              <li className="leading-5 text-xs">
-                <Link href="/tiendas">tiendas</Link>
-              </li>
-              <li className="leading-5 text-xs">centro de ayuda</li>
-            </ul>
-          </span>
-        </div>
-      </div>
-
+      <SubCabezera/>
       {matches && (
         <div
           className={`lg:container  mx-auto  sm:px-10 md:px-10 lg:px-20 px-5 ${
@@ -117,10 +99,11 @@ const Header = () => {
                   <List className="text-xl" />{" "}
                   <p className="text-[#2e2e2e] prueba text-xs mt-1 leading-3">Mi Lista</p>
                 </span>
-                <span onClick={() => setViewLogin(true)} className=" cursor-pointer relative flex gap-1 flex-col justify-center items-center ">
+                <span ref={loginRef} onClick={() => setViewLogin(true)} className=" cursor-pointer relative flex gap-1 flex-col justify-center items-center ">
                   <User className="text-xl" />{" "}
                   <p className="text-[#2e2e2e] text-xs mt-1 leading-3">Mi cuenta</p>
-                  {viewLogin && <LoginHeader refOpenLogin={loginRef}/>}
+                  {viewLogin === !classHidden && <LoginHeader setClassHidden={setClassHidden} />}
+                  {classHidden && <Registre setClassHidden={setClassHidden} />}
                 </span>
                 <span
                   onClick={scrollHiddel}

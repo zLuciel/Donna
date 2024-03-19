@@ -9,7 +9,6 @@ import HomePortda from "@/components/slider/homePortada/HomePortda";
 import SliderMejor from "@/components/slider/lomejor/SliderMejor";
 import SectionSlider from "@/components/slider/section/SectionSlider";
 
-import Link from "next/link";
 import Licor from "@/components/svg/Licor";
 import LoMejor from "@/components/svg/LoMejor";
 import Desayuno from "@/components/svg/Desayuno";
@@ -56,7 +55,7 @@ export default async function Home() {
         />
       </main>
       {/* seccion de categorias flex flex-col justify-center items-center*/}
-      <section className="lg:container mx-auto  py-8 sm:px-10 md:px-10 lg:px-20 px-5">
+      <section className="lg:container mx-auto  mt-16 mb-4 sm:px-10 md:px-10 lg:px-20 px-5">
         <div className="flex justify-between pr-8 ">
           <h2 className="mb-1 text-sm  sm:text-base md:text-lg lg:text-1xl ">
             ¡ TODO LO ENCUENTRAS EN DOONA !
@@ -68,14 +67,14 @@ export default async function Home() {
       </section>
       {/* section promociones */}
       <section className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-4">
-        <span className="text-xl font-extrabold flex items-center gap-3 lg:mb-5 mb-0">
+       {false && <span className="text-xl font-extrabold flex items-center gap-3 lg:mb-5 mb-0">
           <p className="icon-shadow shadow shadow-2xl text-white p-2 text-sm sm:text-sm md:text-lg lg:text-3xl rounded-2xl">
             <LoMejor />
           </p>
           <h2 className="text-sm  sm:text-base md:text-lg lg:text-1xl">
             LO MEJOR DE LA SEMANA
           </h2>
-        </span>
+        </span>}
         <div className="relative">
           <SliderMejor renderjson={mejorSemana}/>
         </div>

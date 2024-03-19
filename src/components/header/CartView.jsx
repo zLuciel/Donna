@@ -6,6 +6,7 @@ import { IoClose } from "react-icons/io5";
 import DetalleTotal from "./DetalleTotal";
 import Link from "next/link";
 import useClickOutside from "@/hooks/useClickOutside";
+import Cart from "../svg/Cart";
 const CartView = ({
   viewCartw,
   setCartView,
@@ -14,7 +15,7 @@ const CartView = ({
   setAddedProducts,
 }) => {
   const contenedorRef = useRef();
-
+  const vacioFlex = addedProducts.length === 0 ? "flex justify-center items-center" : "grid-modal-cart"
   useClickOutside(contenedorRef, () => {
     setCartView(false);
     document.body.classList.replace('notviewScroll', 'viewScroll');
@@ -36,12 +37,19 @@ const CartView = ({
       <div className={viewCartw ? "absolute modal-cart " : "hidden"}>
         <div
           ref={contenedorRef}
-          className="modal-cart-bg bg-[#FBFBFB] grid-modal-cart relative"
+          className={`modal-cart-bg bg-[#FBFBFB] ${vacioFlex}  relative`}
         >
+          {addedProducts.length === 0 &&
+            <div className="flex flex-col items-center gap-3">
+              <Cart />
+              Tu carrito esta vacio.
+            </div>
+          }
+          {addedProducts.length !== 0  && <>
           <div className="py-1">
             <span>
               <button
-                onClick={() => setCartView(false)}
+                onClick={handleShoping}
                 className="text-2xl p-2"
               >
                 <IoClose />
@@ -80,7 +88,8 @@ const CartView = ({
                 <b>Comprar</b>
               </Link>
             </button>
-          </div>
+          </div> 
+          </>}
         </div>
       </div>
     </>

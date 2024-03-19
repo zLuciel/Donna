@@ -5,9 +5,8 @@ import {Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+//import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import Image from "next/image";
-import portada from "@/assets/portada_home2.jpg"
 const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
   return (
     <>
@@ -15,9 +14,10 @@ const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
     className="xd"
     modules={[Autoplay,Navigation, Pagination]}
     loop={true}
+    centeredSlides={true} 
     pagination={{ clickable: true }}
-    spaceBetween={0}
-    slidesPerView={1}
+    spaceBetween={20}
+    slidesPerView={1.2}
     slidesPerGroup={1}
     autoplay={{ 
       delay: 4000, 
@@ -27,7 +27,7 @@ const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
       {renderjson?.map((cate, i) => (
         <SwiperSlide key={i}>
           <div className="slider-img  w-screen">
-            <Image src={portada} fill={true}
+            <Image className="rounded-md" src={cate.image} fill={true}
           sizes="(min-width: 808px) 100vw, 100vw" alt="dsa"/>
           </div>
         </SwiperSlide>
