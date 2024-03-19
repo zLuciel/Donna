@@ -8,17 +8,11 @@ import List from "../svg/List";
 import User from "../svg/User";
 import Hamburger from "../svg/Hamburger";
 import CartView from "./CartView";
-import LoginHeader from "./LoginHeader";
-import Registre from "./Registre";
+
 
 const HeaderMovil = ({
-  viewLogin,
-  setViewLogin,
-  classHidden,
-  setClassHidden,
   scrollHiddel,
   view,
-  loginRef,
   setView,
   viewCartw,
   setCartView,
@@ -49,13 +43,9 @@ const HeaderMovil = ({
         </Link>
         {/* lista y cart */}
         <div className=" cuenta-header flex gap-5 items-center ">
-          <span onClick={() => setViewLogin(true)} ref={loginRef} className="cursor-pointer relative flex gap-2 flex-col justify-center items-center ">
+          <Link href={"/login" }  className="cursor-pointer relative flex gap-2 flex-col justify-center items-center ">
             <User className="text-3xl" />
-            {viewLogin === !classHidden && (
-              <LoginHeader setClassHidden={setClassHidden} />
-            )}
-            {classHidden && <Registre setClassHidden={setClassHidden} />}
-          </span>
+          </Link>
           <Cart onClick={scrollHiddel} />
           <CartView
             getTotalPrice={getTotalPrice}

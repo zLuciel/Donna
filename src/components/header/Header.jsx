@@ -138,11 +138,6 @@ const Header = () => {
       )}
       {!matches && (
         <HeaderMovil
-          viewLogin={viewLogin}
-          classHidden={classHidden}
-          setClassHidden={setClassHidden}
-          setViewLogin={setViewLogin}
-          loginRef={loginRef}
           scrollHiddel={scrollHiddel}
           view={view}
           setView={setView}
