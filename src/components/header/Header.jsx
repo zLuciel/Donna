@@ -20,15 +20,14 @@ import useClickOutside from "@/hooks/useClickOutside";
 import SubCabezera from "./SubCabezera";
 import Registre from "./Registre";
 
-
 const Header = () => {
   const [view, setView] = useState(false);
   const [viewCart, setCartView] = useState(false);
   const { isShadow } = useShadowScrollHook(false);
   const { dataProduct, setDataProduct, price } = useProduct();
   const pathname = usePathname();
-  const [viewLogin,setViewLogin] = useState(false)
-  const [classHidden,setClassHidden] = useState(false)
+  const [viewLogin, setViewLogin] = useState(false);
+  const [classHidden, setClassHidden] = useState(false);
 
   const scrollHiddel = () => {
     setCartView(true);
@@ -37,12 +36,10 @@ const Header = () => {
   const loginRef = useRef();
 
   const matches = useMediaQuery("(min-width: 917px)");
-  
+
   useClickOutside(loginRef, () => {
     setViewLogin(false);
   });
-  
- 
 
   return (
     <header
@@ -50,7 +47,7 @@ const Header = () => {
         isShadow ? "shadow-header" : ""
       }`}
     >
-      <SubCabezera/>
+      <SubCabezera />
       {matches && (
         <div
           className={`lg:container  mx-auto  sm:px-10 md:px-10 lg:px-20 px-5 ${
@@ -97,12 +94,22 @@ const Header = () => {
               <div className="cuenta-header flex gap-7 items-center ">
                 <span className="flex cursor-pointer relative  gap-1 flex-col justify-center items-center">
                   <List className="text-xl" />{" "}
-                  <p className="text-[#2e2e2e] prueba text-xs mt-1 leading-3">Mi Lista</p>
+                  <p className="text-[#2e2e2e] prueba text-xs mt-1 leading-3">
+                    Mi Lista
+                  </p>
                 </span>
-                <span ref={loginRef} onClick={() => setViewLogin(true)} className=" cursor-pointer relative flex gap-1 flex-col justify-center items-center ">
+                <span
+                  ref={loginRef}
+                  onClick={() => setViewLogin(true)}
+                  className=" cursor-pointer relative flex gap-1 flex-col justify-center items-center "
+                >
                   <User className="text-xl" />{" "}
-                  <p className="text-[#2e2e2e] text-xs mt-1 leading-3">Mi cuenta</p>
-                  {viewLogin === !classHidden && <LoginHeader setClassHidden={setClassHidden} />}
+                  <p className="text-[#2e2e2e] text-xs mt-1 leading-3">
+                    Mi cuenta
+                  </p>
+                  {viewLogin === !classHidden && (
+                    <LoginHeader setClassHidden={setClassHidden} />
+                  )}
                   {classHidden && <Registre setClassHidden={setClassHidden} />}
                 </span>
                 <span
@@ -131,6 +138,11 @@ const Header = () => {
       )}
       {!matches && (
         <HeaderMovil
+          viewLogin={viewLogin}
+          classHidden={classHidden}
+          setClassHidden={setClassHidden}
+          setViewLogin={setViewLogin}
+          loginRef={loginRef}
           scrollHiddel={scrollHiddel}
           view={view}
           setView={setView}
