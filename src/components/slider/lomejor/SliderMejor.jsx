@@ -34,11 +34,11 @@ const SliderMejor = ({renderjson,viewPagi}) => {
         spaceBetween: 20,
       },
       1000: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 20,
       },
       1200: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 20,
         slidesPerGroup: 4,
       },

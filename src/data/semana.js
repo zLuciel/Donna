@@ -3,40 +3,19 @@ import Mejor1 from "@/assets/mejorSemana/mejor1.png"
 import Mejor2 from "@/assets/mejorSemana/mejor2.png"
 import Mejor3 from "@/assets/mejorSemana/mejor3.png"
 import Mejor4 from "@/assets/mejorSemana/mejor4.png"
+import ImageDefault from "@/assets/Image.Webp"
 const mejorSemana = [
     {
-        image:Mejor1,
+        image:ImageDefault,
         name:"Carne",
     },
     {
-        image:Mejor2,
+        image:ImageDefault,
         name:"Pan",
     },
     {
-        image:Mejor3,
+        image:ImageDefault,
         name:"Pescado",
     },
-    {
-        image:Mejor4,
-        name:"Vino",
-    },
-    {
-        image:Photo,
-        name:"Carne",
-    },
-    {
-        image:Photo,
-        name:"Pescado",
-    },
-    {
-        image:Photo,
-        name:"Vino",
-    },
-    {
-        image:Photo,
-        name:"Carne",
-    },
- 
- 
 ]
 export default mejorSemana

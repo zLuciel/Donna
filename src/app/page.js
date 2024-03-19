@@ -8,12 +8,13 @@ import Comercial from "@/assets/comercial.png";
 import HomePortda from "@/components/slider/homePortada/HomePortda";
 import SliderMejor from "@/components/slider/lomejor/SliderMejor";
 import SectionSlider from "@/components/slider/section/SectionSlider";
-
+import ImageDefault from "@/assets/Image.webp"
 import Licor from "@/components/svg/Licor";
 import LoMejor from "@/components/svg/LoMejor";
 import Desayuno from "@/components/svg/Desayuno";
 import Lacteos from "@/components/svg/Lacteos";
 import Limpieza from "@/components/svg/Limpieza";
+import Image from "next/image";
 
 async function getDataCategoria() {
   const Abarrotes = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/18`);
@@ -56,6 +57,16 @@ export default async function Home() {
       </main>
       {/* seccion de categorias flex flex-col justify-center items-center*/}
       <section className="lg:container mx-auto  mt-16 mb-4 sm:px-10 md:px-10 lg:px-20 px-5">
+      <div className="w-full relative">
+      <Image
+          className="w-full mb-5"
+          style={{height:"60px !important",objectFit:"cover",borderRadius:"10px"}}
+          src={ImageDefault}
+          alt="Picture of the author"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
+      
         <div className="flex justify-between pr-8 ">
           <h2 className="mb-1 text-sm  sm:text-base md:text-lg lg:text-1xl ">
             ¡ TODO LO ENCUENTRAS EN DOONA !
