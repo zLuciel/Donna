@@ -62,18 +62,18 @@ const Card = ({ image,name,price,regular_price,id }) => {
 
       <div className="px-3">
         <span className="mb-5">
-          <h3 className="mb-6 leading-5  text-sm text-semibold">
+          <h3 className="mb-6  leading-5  text-sm roboto_bold text-[#565656] ">
             {name}
           </h3>
         </span>
 
         <div className="mb-1">
-          <p className="text-orange text-sm/[22px] font-extrabold mb-2">
-            Precio online S/{price}
-          </p>
-          <p className="text-xs">
-            Precio regular <u className="line-through">S/{regular_price} </u>
-          </p>
+          <span className="text-orange text-sm/[22px]  flex justify-between  font-extrabold mb-2">
+           <p>Precio online</p>  <p>S/{price}</p>
+          </span>
+          <span className="text-xs flex roboto_regular text-[#898888] justify-between">
+            <p>Precio regular</p> <u className="line-through">S/{regular_price} </u>
+          </span>
         </div>
         <button onClick={()=> addToCart(name,id)} className="mt-4 font-bold p-1  w-full btn-agre text-white rounded-2xl">
           AGREGAR

@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
 import Card from "./Card";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+
 const SliderCard = ({ renderjson, idBtnNex, idBtnPre }) => {
   return (
     <>
@@ -59,18 +59,6 @@ const SliderCard = ({ renderjson, idBtnNex, idBtnPre }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button
-        id={idBtnPre}
-        className="cateBtnSwiper flex justify-center items-center"
-      >
-        <FaChevronLeft className="text-1xl text-red-500" />
-      </button>
-      <button
-        id={idBtnNex}
-        className="cateBtnSwiper flex justify-center items-center"
-      >
-        <FaChevronRight className="text-1xl text-red-500" />
-      </button>
     </>
   );
 };

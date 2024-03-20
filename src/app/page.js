@@ -68,14 +68,14 @@ export default async function Home() {
         />
       </div>
       
-        <div className="flex justify-between items-center pr-8 mb-4">
-          <h2 className="mb-1 text-sm  sm:text-base md:text-lg lg:text-1xl ">
+        <div className="flex justify-center items-center gap-3 mb-4">
+          <h2 className="mb-1 text-[#111111] text-nowrap text-sm  sm:text-base md:text-lg lg:text-1xl ">
             ¡ TODO LO ENCUENTRAS EN DOONA !
           </h2>
            <span className="barra mx-auto flex items-center justify-center bg-[#cfcfcf] "></span>
            <div className="flex gap-2">
-           {<button id="CateBackBtn"  className="cateBtnSwiper flex justify-center items-center" ><FaChevronLeft className='text-1xl text-red-500' /></button>}
-           {<button id="CateNextBtn" className="cateBtnSwiper flex justify-center items-center"  ><FaChevronRight className='text-1xl text-red-500' /></button>}
+           {<button id="CateBackBtn"  className="cateBtnSwiper flex bg-[#F7F7F7] justify-center items-center" ><FaChevronLeft className='text-sm text-[#ABABAB]' /></button>}
+           {<button id="CateNextBtn" className="cateBtnSwiper flex bg-[#F7F7F7] justify-center items-center"  ><FaChevronRight className='text-sm text-[#ABABAB]' /></button>}
            </div>
            
         </div>

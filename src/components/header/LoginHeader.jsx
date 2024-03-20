@@ -3,7 +3,7 @@ import InputLogin from "./input/InputLogin";
 const LoginHeader = ({ setClassHidden, setViewLogin }) => {
 
   function handleP(){
-
+   
     setViewLogin(false)
   }
 

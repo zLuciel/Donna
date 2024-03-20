@@ -100,13 +100,15 @@ const Header = () => {
                 </span>
                 <span
                   ref={loginRef}
-                  onClick={() => setViewLogin(true)}
+                  
                   className=" cursor-pointer relative flex gap-1 flex-col justify-center items-center "
                 >
-                  <User className="text-xl" />{" "}
-                  <p className="text-[#2e2e2e] text-xs mt-1 leading-3">
+                 <div className="flex gap-1 flex-col justify-center items-center" onClick={() => setViewLogin(true)}>
+                 <User className="text-xl" />{" "}
+                  <p  className="text-[#2e2e2e] text-xs mt-1 leading-3">
                     Mi cuenta
                   </p>
+                 </div>
                   {viewLogin === !classHidden && (
                     <LoginHeader setViewLogin={setViewLogin} setClassHidden={setClassHidden} />
                   )}
