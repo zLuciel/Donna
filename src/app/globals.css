@@ -266,7 +266,10 @@ body {
 [id$="NextSH"] {
   right: 30px;
 }
-
+.barra{
+  height: 1px;
+  width: 60%;
+}
 .swiper-pagination-bullet {
   border-radius: 5px !important;
   width: 15px !important;

@@ -20,8 +20,8 @@ const Categoria = () => {
     style={{padding:"20px 0"}}
     modules={[Navigation, Pagination]}
     navigation={{
-      prevEl: `#icoCategoriaPreS`,
-      nextEl: `#icoCategoriaNextS`,
+      prevEl: `#CateBackBtn`,
+      nextEl: `#CateNextBtn`,
     }}
     slidesPerView={2.5}
     spaceBetween={1}

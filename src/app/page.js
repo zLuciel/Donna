@@ -15,6 +15,7 @@ import Desayuno from "@/components/svg/Desayuno";
 import Lacteos from "@/components/svg/Lacteos";
 import Limpieza from "@/components/svg/Limpieza";
 import Image from "next/image";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 async function getDataCategoria() {
   const Abarrotes = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/18`);
@@ -67,11 +68,18 @@ export default async function Home() {
         />
       </div>
       
-        <div className="flex justify-between pr-8 ">
+        <div className="flex justify-between items-center pr-8 mb-4">
           <h2 className="mb-1 text-sm  sm:text-base md:text-lg lg:text-1xl ">
             ¡ TODO LO ENCUENTRAS EN DOONA !
           </h2>
+           <span className="barra mx-auto flex items-center justify-center bg-[#cfcfcf] "></span>
+           <div className="flex gap-2">
+           {<button id="CateBackBtn"  className="cateBtnSwiper flex justify-center items-center" ><FaChevronLeft className='text-1xl text-red-500' /></button>}
+           {<button id="CateNextBtn" className="cateBtnSwiper flex justify-center items-center"  ><FaChevronRight className='text-1xl text-red-500' /></button>}
+           </div>
+           
         </div>
+
         <div className="relative">
           <Categoria />
         </div>

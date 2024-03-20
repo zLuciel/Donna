@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import CategoriaHeader from "./Categoria";
 import SubCategoria from "./SubCategoria";
 import { IoMdArrowDropright } from "react-icons/io";
-import { NavLink } from '@mantine/core';
+import ModalHeaderMovil from "./ModalHeaderMovil";
 const data = [
   { rightSection: <IoMdArrowDropright />, label: "Dashboard" },
   {
@@ -86,43 +86,7 @@ function ModalCategoria({ setView, view }) {
               </div>
             </>
           )}
-          <div>
-
-         
-       <NavLink
-        href="#required-for-focus"
-        label="First parent link"
-        leftSection={<IoMdArrowDropright size="1rem" stroke={1.5} />}
-        childrenOffset={28}
-      >
-        <NavLink href="#required-for-focus" label="First child link" />
-        <NavLink label="Second child link" href="#required-for-focus" />
-        <NavLink label="Nested parent link" childrenOffset={28} href="#required-for-focus">
-          <NavLink label="First child link" href="#required-for-focus" />
-          <NavLink label="Second child link" href="#required-for-focus" />
-          <NavLink label="Third child link" href="#required-for-focus" />
-        </NavLink>
-      </NavLink>
-
-      <NavLink
-        href="#required-for-focus"
-        label="Second parent link"
-        leftSection={<IoMdArrowDropright size="1rem" stroke={1.5} />}
-        childrenOffset={28}
-        defaultOpened
-      >
-        <NavLink label="First child link" href="#required-for-focus" >
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-        </ul>
-        </NavLink>
-        <NavLink label="Second child link" href="#required-for-focus" />
-        <NavLink label="Third child link" href="#required-for-focus" />
-      </NavLink> </div>
+          <ModalHeaderMovil/>
         </div>
       </div>
     </>

@@ -34,11 +34,11 @@ const Header = () => {
     document.body.classList = "notviewScroll";
   };
   const loginRef = useRef();
-
   const matches = useMediaQuery("(min-width: 917px)");
 
   useClickOutside(loginRef, () => {
     setViewLogin(false);
+    setClassHidden(false);
   });
 
   return (
@@ -108,7 +108,7 @@ const Header = () => {
                     Mi cuenta
                   </p>
                   {viewLogin === !classHidden && (
-                    <LoginHeader setClassHidden={setClassHidden} />
+                    <LoginHeader setViewLogin={setViewLogin} setClassHidden={setClassHidden} />
                   )}
                   {classHidden && <Registre setClassHidden={setClassHidden} />}
                 </span>
