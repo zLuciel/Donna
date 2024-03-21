@@ -25,7 +25,7 @@ async function getDataCategoria() {
   const Cpersonal = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/22`);
   const Confiteria = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/23`);
   if (!Abarrotes.ok) {
-    console.log("Failed to fetch data");
+    console.error("Failed to fetch data");
   }
   const resA = await Abarrotes.json()
   const resB = await Bebidas.json()
@@ -52,20 +52,20 @@ export default async function Home() {
       <main className="relative portada-main text-white h-screen w-screen">
         <HomePortda
           renderjson={homeSlider}
-          idBtnNex={"icoMainNextSH"}
-          idBtnPre={"icoMainPreSH"}
+          idBtnNex={"iicoMainNextSH"}
+          idBtnPre={"iicoMainPreSH"}
         />
       </main>
       {/* seccion de categorias flex flex-col justify-center items-center*/}
-      <section className="lg:container mx-auto  mt-16 mb-4 sm:px-10 md:px-10 lg:px-20 px-5">   
-        <div className="flex justify-center  font-extrabold items-center gap-3 mb-4">
+      <section className="lg:container mx-auto  mt-8 mb-4 sm:px-10 md:px-10 lg:px-20 px-5">   
+        <div className="flex justify-center  font-extrabold items-center gap-3 mb-2">
           <h2 className="mb-1 text-nowrap text-sm  sm:text-base md:text-lg lg:text-1xl ">
-            Todas nuestras categorías 
+            TODAS NUESTRAS CATEGORÍAS  
           </h2>
            <span className="barra mx-auto flex items-center justify-center bg-[#cfcfcf] "></span>
            <div className="flex gap-2">
-           {<button id="CateBackBtn"  className="cateBtnSwiper flex bg-[#F7F7F7] justify-center items-center" ><FaChevronLeft className='text-sm text-[#ABABAB]' /></button>}
-           {<button id="CateNextBtn" className="cateBtnSwiper flex bg-[#F7F7F7] justify-center items-center"  ><FaChevronRight className='text-sm text-[#ABABAB]' /></button>}
+           {<button id="CateBackBtn"  className="cateBtnSwiper flex bg-[#F7F7F7] text-[#ABABAB] justify-center items-center" ><FaChevronLeft className='text-sm' /></button>}
+           {<button id="CateNextBtn" className="cateBtnSwiper flex bg-[#F7F7F7] text-[#ABABAB] justify-center items-center"  ><FaChevronRight className='text-sm' /></button>}
            </div>
            
         </div>
@@ -80,7 +80,7 @@ export default async function Home() {
           <p className="icon-shadow shadow shadow-2xl text-white p-2 text-sm sm:text-sm md:text-lg lg:text-3xl rounded-2xl">
             <LoMejor />
           </p>
-          <h2 className="text-sm  sm:text-base md:text-lg lg:text-1xl">
+          <h2 className="text-sm  sm:text-base md:text-lg lg:text-xl">
             LO MEJOR DE LA SEMANA
           </h2>
         </span>}
@@ -113,22 +113,22 @@ export default async function Home() {
       />
       <SectionSlider
         title="LO MEJOR EN LACTEOS"
-        pretIcoID={"icoNuevoPreS"}
-        nextIcoID={"icoNuevoNextS"}
+        pretIcoID={"icoLacteosPreS"}
+        nextIcoID={"icoLacteosNextS"}
         renderjson={data.arrayLacteos}
         icon={<Lacteos />}
       />
       <SectionSlider
         title="LO MEJOR EN C.PERSONAL"
-        pretIcoID={"icoNuevoPreS"}
-        nextIcoID={"icoNuevoNextS"}
+        pretIcoID={"icoPersonalPreS"}
+        nextIcoID={"icoPersonalNextS"}
         renderjson={data.arrayCpersonal}
         icon={<Lacteos />}
       />
       <SectionSlider
         title="LO MEJOR EN CONFITERIA"
-        pretIcoID={"icoNuevoPreS"}
-        nextIcoID={"icoNuevoNextS"}
+        pretIcoID={"icoConfiteriaPreS"}
+        nextIcoID={"icoConfiteriaNextS"}
         renderjson={data.arrayConfiteria}
         icon={<Lacteos />}
       />

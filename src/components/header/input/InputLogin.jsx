@@ -26,14 +26,14 @@ const InputLogin = ({
       )}
       <input
         name={name}
-        className={`input-cal input-base setInput ${addClass} `}
+        className={`roboto_regular input-cal input-base setInput ${addClass} `}
         id="input"
         placeholder=""
         type={viewPass}
         value={value}
         onChange={handleChange}
       />
-      <label id="label-input" className="setLabel">
+      <label id="label-input" className="roboto_regular setLabel">
         {label}
       </label>
     </>

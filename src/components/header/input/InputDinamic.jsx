@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoEyeSharp } from "react-icons/io5";
 
 const InputDinamic = ({ type, label, children }) => {
-  const [viewPass, setViewPass] = useState(type);
+  
 
   const verifyView = viewPass === "password" ? "text" : "password";
 

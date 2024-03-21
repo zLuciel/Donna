@@ -7,7 +7,13 @@ import { notifications } from '@mantine/notifications';
 const Card = ({ image,name,price,regular_price,id }) => {
   let { setDataProduct } = useProduct();
   const [addedProducts, setAddedProducts] = useState([]);
+  function formatoPrice(price){
+    const formatPrice = new Intl.NumberFormat("de-DE", {currency: "PEN" }).format(price);
+    const formatDecimal = formatPrice.replace(".", ",");
+    return formatDecimal;
+  }
   
+
 
     const addToCart = (name,id) => {
 
@@ -19,7 +25,7 @@ const Card = ({ image,name,price,regular_price,id }) => {
         regular_price,
         image: image.src,
       };
-
+      
       notifications.show({
         id: `addCart${id}`,
         withCloseButton: true,
@@ -69,10 +75,10 @@ const Card = ({ image,name,price,regular_price,id }) => {
 
         <div className="mb-1">
           <span className="text-orange text-sm/[22px]  roboto_Extrabold flex justify-between  mb-2">
-           <p>Precio online</p>  <p>S/{price}</p>
+           <p>Precio online</p>  <p>S/{formatoPrice(price)}.00</p>
           </span>
           <span className="text-xs flex roboto_regular text-[#898888] justify-between">
-            <p>Precio regular</p> <u className="line-through">S/{regular_price} </u>
+            <p>Precio regular</p> <u className="line-through">S/{formatoPrice(regular_price)}.00 </u>
           </span>
         </div>
         <button onClick={()=> addToCart(name,id)} className="mt-4 font-bold p-1  w-full btn-agre text-white rounded-2xl">

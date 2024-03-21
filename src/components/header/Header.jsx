@@ -122,7 +122,7 @@ const Header = () => {
                     <b className="absolute count-cart">{dataProduct.length}</b>{" "}
                     <Cart />
                   </span>{" "}
-                  <p className="text-xs roboto_regular text-[#2E2E2E] mt-1 font-bold leading-3">
+                  <p className="text-xs roboto_bold text-[#2E2E2E] mt-1 leading-3">
                     S/{price}.00{" "}
                   </p>
                 </span>

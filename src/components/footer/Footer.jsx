@@ -23,7 +23,7 @@ const Footer = () => {
           width={130}
           height={130}
         />
-        <p className="leading-7 text-xs roboto_regular">
+        <p className="text-[#6F6F6F] leading-7 text-xs roboto_regular">
           Nuestra tienda online Ripley.com.pe tiene lo que necesitas de tus
           marcas favoritas. Mira todo nuestro catálogo y encuentra lo que te
           hace falta. Llegamos a todo el Perú.

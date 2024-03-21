@@ -18,9 +18,9 @@ const SectionSlider = ({ renderjson, title, icon, pretIcoID, nextIcoID }) => {
               {title}
             </h2>
           </span>
-          <p className="text-/[80px] roboto_regular">
+          <p className=" roboto_regular">
             <Link
-              className="text-nowrap lg:text-xs text-orange"
+              className="link-ver-mas text-nowrap lg:text-xs text-orange"
               href="/productos"
             >
               VER TODOS

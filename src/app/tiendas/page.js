@@ -12,8 +12,8 @@ const page = () => {
       <HomePortda renderjson={homeSlider} idBtnNex={"icoMainTiendaNextSH"} idBtnPre={"icoMainTiendaPreSH"} />
       </main>
       {/* mapa */}
-      <section className="lg:container mx-auto sm:px-10 md:px-10 lg:px-20 px-10 py-10">
-        <h2 className="text-3xl text-red-500 mb-6 font-extrabold">BUSCA TU TIENDA MAS CERQUITA</h2>
+      <section className="lg:container mx-auto sm:px-10 md:px-10 lg:px-20 px-10 py-6">
+        <h2 className="text-xl font-extrabold text-red-500 mb-5 ">BUSCA TU TIENDA MAS CERQUITA</h2>
         <div className="grid lg:grid-cols-[250px_1fr] md:grid-cols-[250px_1fr] sm:grid-cols-[250px_1fr] grid-cols-[1fr] gap-8">
 
           <div className="flex flex-col gap-2">
