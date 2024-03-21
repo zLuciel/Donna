@@ -74,7 +74,7 @@ const Header = () => {
             <>
               <div className="categoria">
                 <button
-                  className="flex gap-2 text-sm justify-cent flex gap-2 items-center"
+                  className="flex  roboto_regular gap-2 text-sm justify-cent flex gap-2 items-center"
                   onClick={() => setView(true)}
                 >
                   Categorias <IoIosArrowDown />
@@ -83,7 +83,7 @@ const Header = () => {
               </div>
               <span className="search-header flex w-full  rounded-3xl overflow-hidden">
                 <input
-                  className="w-full outline-none px-3 py-2 "
+                  className="w-full roboto_regular outline-none px-3 py-2 "
                   type="text"
                   placeholder="Dinos que buscas y te mostraremos las mejores ofertas"
                 />
@@ -94,7 +94,7 @@ const Header = () => {
               <div className="cuenta-header flex gap-7 items-center ">
                 <span className="flex cursor-pointer relative  gap-1 flex-col justify-center items-center">
                   <List className="text-xl" />{" "}
-                  <p className="text-[#2e2e2e] prueba text-xs mt-1 leading-3">
+                  <p className="text-[#2e2e2e] roboto_regular prueba text-xs mt-1 leading-3">
                     Mi Lista
                   </p>
                 </span>
@@ -105,7 +105,7 @@ const Header = () => {
                 >
                  <div className="flex gap-1 flex-col justify-center items-center" onClick={() => setViewLogin(true)}>
                  <User className="text-xl" />{" "}
-                  <p  className="text-[#2e2e2e] text-xs mt-1 leading-3">
+                  <p  className="text-[#2e2e2e] roboto_regular text-xs mt-1 leading-3">
                     Mi cuenta
                   </p>
                  </div>
@@ -122,7 +122,7 @@ const Header = () => {
                     <b className="absolute count-cart">{dataProduct.length}</b>{" "}
                     <Cart />
                   </span>{" "}
-                  <p className="text-xs text-[#2E2E2E] mt-1 font-bold leading-3">
+                  <p className="text-xs roboto_regular text-[#2E2E2E] mt-1 font-bold leading-3">
                     S/{price}.00{" "}
                   </p>
                 </span>

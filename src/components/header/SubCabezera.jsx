@@ -5,7 +5,7 @@ const SubCabezera = () => {
   return (
     <div className=" bg-zinc-950 px-10 hidden  lg:block md:block ">
         <div className="lg:container lg:mx-auto flex justify-between text-white  p-2">
-          <h4 className="leading-5 text-xs">
+          <h4 className="leading-5 text-xs roboto_regular">
             Atención al cliente: (01) 345 - 234
           </h4>
           <span>

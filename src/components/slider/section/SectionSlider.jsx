@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import SliderCard from "../products/SliderCard";
-import Image from "next/image";
+//import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const SectionSlider = ({ renderjson, title, icon, pretIcoID, nextIcoID }) => {
   return (
@@ -14,13 +14,13 @@ const SectionSlider = ({ renderjson, title, icon, pretIcoID, nextIcoID }) => {
                 {icon}
               </p>
             )}
-            <h2 className="text-nowrap text-[#111111] text-sm  sm:text-base md:text-lg lg:text-1xl">
+            <h2 className="text-nowrap  text-sm  sm:text-base md:text-lg lg:text-1xl">
               {title}
             </h2>
           </span>
-          <p className="text-xs">
+          <p className="text-/[80px] roboto_regular">
             <Link
-              className="text-nowrap  lg:text-xs text-orange"
+              className="text-nowrap lg:text-xs text-orange"
               href="/productos"
             >
               VER TODOS

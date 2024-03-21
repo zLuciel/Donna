@@ -57,10 +57,10 @@ const ItemsCart = ({
         </div>
 
         <div>
-          <p className="text-sm mb-1">{title}</p>
+          <p className="text-sm mb-1 roboto_regular">{title}</p>
 
           <div className="flex items-center  gap-2">
-            <span className="numberItems flex justify-center items-center">
+            <span className="numberItems roboto_regular flex justify-center items-center">
               {quantity}
             </span>
             <span className="flex flex-col justify-center gap-1">
@@ -79,7 +79,7 @@ const ItemsCart = ({
             </span>
             <span>
               <h3 style={{ color: "red" }}>S/ {price}</h3>
-              <u className="text-xs line-through">S/ {price_regular} </u>
+              <u className="text-xs line-through roboto_regular">S/ {price_regular} </u>
             </span>
           </div>
         </div>

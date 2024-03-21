@@ -9,7 +9,7 @@ const CategoriasOptions = ({ name }) => {
   return (
     <div className="filter-border">
       <button
-        className="p-2 rounded w-full flex items-center justify-between   border-b-indigo-500"
+        className="p-2 rounded roboto_regular w-full flex items-center justify-between   border-b-indigo-500"
         onClick={() => setIsOpen(!isOpen)}
       >
         {name} <IoMdArrowDropdown />

@@ -57,20 +57,10 @@ export default async function Home() {
         />
       </main>
       {/* seccion de categorias flex flex-col justify-center items-center*/}
-      <section className="lg:container mx-auto  mt-16 mb-4 sm:px-10 md:px-10 lg:px-20 px-5">
-      <div className="w-full relative">
-      <Image
-          className="w-full mb-5"
-          style={{height:"60px !important",objectFit:"cover",borderRadius:"10px"}}
-          src={ImageDefault}
-          alt="Picture of the author"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </div>
-      
-        <div className="flex justify-center items-center gap-3 mb-4">
-          <h2 className="mb-1 text-[#111111] text-nowrap text-sm  sm:text-base md:text-lg lg:text-1xl ">
-            ¡ TODO LO ENCUENTRAS EN DOONA !
+      <section className="lg:container mx-auto  mt-16 mb-4 sm:px-10 md:px-10 lg:px-20 px-5">   
+        <div className="flex justify-center  font-extrabold items-center gap-3 mb-4">
+          <h2 className="mb-1 text-nowrap text-sm  sm:text-base md:text-lg lg:text-1xl ">
+            Todas nuestras categorías 
           </h2>
            <span className="barra mx-auto flex items-center justify-center bg-[#cfcfcf] "></span>
            <div className="flex gap-2">

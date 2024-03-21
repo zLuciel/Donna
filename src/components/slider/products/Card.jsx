@@ -61,14 +61,14 @@ const Card = ({ image,name,price,regular_price,id }) => {
       </div>
 
       <div className="px-3">
-        <span className="mb-5">
-          <h3 className="mb-6  leading-5  text-sm roboto_bold text-[#565656] ">
+        <span className="mb-5 title-card">
+          <h3 className="text-sm roboto_bold text-[#565656] ">
             {name}
           </h3>
         </span>
 
         <div className="mb-1">
-          <span className="text-orange text-sm/[22px]  flex justify-between  font-extrabold mb-2">
+          <span className="text-orange text-sm/[22px]  roboto_Extrabold flex justify-between  mb-2">
            <p>Precio online</p>  <p>S/{price}</p>
           </span>
           <span className="text-xs flex roboto_regular text-[#898888] justify-between">

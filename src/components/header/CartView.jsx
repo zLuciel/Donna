@@ -40,7 +40,7 @@ const CartView = ({
           className={`modal-cart-bg bg-[#FBFBFB] ${vacioFlex}  relative`}
         >
           {addedProducts.length === 0 &&
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex roboto_regular flex-col items-center gap-3">
               <Cart />
               Tu carrito esta vacio.
             </div>
@@ -54,10 +54,10 @@ const CartView = ({
               >
                 <IoClose />
               </button>
-              <h2 className="mb-2 text-2xl text-center">Carrito</h2>
+              <h2 className="mb-2 text-2xl text-center font-extrabold">Carrito</h2>
             </span>
 
-            <p className="text-center mb-2">
+            <p className="roboto_regular text-center mb-2">
               Tines {addedProducts.length} item
             </p>
           </div>
@@ -84,7 +84,7 @@ const CartView = ({
               onClick={handleShoping}
               className="mt-4  font-bold p-1  w-full btn-agre text-white rounded-2xl"
             >
-              <Link className="py-2" href="/carrito-pago">
+              <Link className="py-2 roboto_bold" href="/carrito-pago">
                 <b>Comprar</b>
               </Link>
             </button>

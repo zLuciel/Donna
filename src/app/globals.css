@@ -3,22 +3,48 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Nunitos";
-  src: url("../assets/font/Nunitos/NunitoSans-Black.ttf") format("truetype");
-  font-style: regular;
-  font-weight: 400;
+  font-family: "Nunitos-bold";
+  src: url("../assets/font/Nunitos/NunitoSans-Bold.ttf") format("truetype");
+
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto-regular";
   src: url("../assets/font/Roboto/Roboto-Regular.ttf") format("truetype");
-  font-style: regular;
   font-weight: 100;
 }
-.roboto_regular{
+
+@font-face {
+  font-family: "Roboto-bold";
+  src: url("../assets/font/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Extrabold";
+  src: url("../assets/font/Roboto/Roboto-Black.ttf") format("truetype");
+  font-weight: 100;
+}
+h2{
+  color: #000000f0 !important;
+}
+.Nunito-bold{
+  font-family: "Nunitos-bold";
+}
+
+.roboto_Extrabold{
+  font-family: "Roboto-Extrabold";
+}
+.roboto_bold{
+  font-family: "Roboto-bold";
+  font-style: normal;
+}
+.roboto_regular,li{
   font-family: "Roboto-regular";
   font-weight: 100;
 }
+
+
 :root {
   --foreground-rgb: rgb(0, 0, 0);
   --background-start-rgb: 214, 219, 220;
@@ -34,25 +60,30 @@
   font-family: "Nunito Sans";
   font-weight: 300;
 }*/
+.title-card{
+  display: inline-block;
+  height: 20px;
+}
 iframe,
 .map-render > div {
   width: 100%;
   height: 100%;
 }
 
-h1,
+/*h1,
 h2,
 .font-poet {
   font-weight: 400;
   font-family: "Nunitos";
-}
+}*/
 
-.card-product h3 {
+/*.card-product h3 {
   font-weight: 400;
-}
-.card-product p:first-child {
+}*/
+
+/*.card-product p:first-child {
   font-weight: 800;
-}
+}*/
 
 body {
   overflow-x: hidden;
@@ -72,6 +103,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -10,7 +10,6 @@ const Estructura = () => {
     useEffect(() => {
         const getDataProduct = async (id) => {
           const dataRes = await dataProduct(id);
-          console.log(dataRes);
           setData(dataRes);
         }
      
@@ -32,7 +31,7 @@ const Estructura = () => {
         ))}
       </div>
       <span className="flex justify-center align-center">
-      <BtnLoadingDinamic setCount={setCount} count={count}/>
+      {data.length !== 0 && <BtnLoadingDinamic setCount={setCount} count={count}/>}
       </span>
       </div>
   )
