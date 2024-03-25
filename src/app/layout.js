@@ -19,9 +19,9 @@ export default function RootLayout({ children }) {
         <ProductProvider>
         <Providers>
           <TopScroll/>
-          <Header />
+          {/* <Header /> */}
           {children}
-          <Footer/>
+          {/* <Footer/> */}
         </Providers>
         </ProductProvider>
         

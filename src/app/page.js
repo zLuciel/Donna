@@ -1,54 +1,17 @@
-
-import Categoria from "@/components/slider/categoria/Categoria";
-
-import mejorSemana from "@/data/semana";
-import homeSlider from "@/data/homeSlider";
-import Comercial from "@/assets/comercial.png";
-
+"use client";
+import HeaderLanding from "@/components/lading/header/HeaderLanding";
 import HomePortda from "@/components/slider/homePortada/HomePortda";
-import SliderMejor from "@/components/slider/lomejor/SliderMejor";
-import SectionSlider from "@/components/slider/section/SectionSlider";
-import ImageDefault from "@/assets/Image.webp"
-import Licor from "@/components/svg/Licor";
-import LoMejor from "@/components/svg/LoMejor";
-import Desayuno from "@/components/svg/Desayuno";
-import Lacteos from "@/components/svg/Lacteos";
-import Limpieza from "@/components/svg/Limpieza";
+import homeSlider from "@/data/homeSlider";
+import { rem } from "@mantine/core";
 import Image from "next/image";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
-async function getDataCategoria() {
-  const Abarrotes = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/18`);
-  const Bebidas = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/19`);
-  const Lacteos = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/20`);
-  const Limpieza = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/21`);
-  const Cpersonal = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/22`);
-  const Confiteria = await fetch(`${process.env.URL_WEB}/api/woocommerce/products/23`);
-  if (!Abarrotes.ok) {
-    console.error("Failed to fetch data");
-  }
-  const resA = await Abarrotes.json()
-  const resB = await Bebidas.json()
-  const resLa = await Lacteos.json()
-  const resLi = await Limpieza.json()
-  const resCp = await Cpersonal.json()
-  const resCo = await Confiteria.json()
-  return {
-    arrayAbarrotes: resA.products,
-    arrayBebidas: resB.products,
-    arrayLacteos: resLa.products,
-    arrayLimpieza: resLi.products,
-    arrayCpersonal: resCp.products,
-    arrayConfiteria: resCo.products,
-  }
-}
-
-
-export default async function Home() {
-  const data = await getDataCategoria();
-  
+import React from "react";
+import { RxCodesandboxLogo } from "react-icons/rx";
+import Mockup from "@/assets/macku.png";
+import Categoria from "@/components/slider/categoria/Categoria";
+const page = () => {
   return (
     <>
+      <HeaderLanding />
       <main className="relative portada-main text-white h-screen w-screen">
         <HomePortda
           renderjson={homeSlider}
@@ -56,88 +19,66 @@ export default async function Home() {
           idBtnPre={"iicoMainPreSH"}
         />
       </main>
-      {/* seccion de categorias flex flex-col justify-center items-center*/}
-      <section className="lg:container mx-auto  mt-8 mb-4 sm:px-10 md:px-10 lg:px-20 px-5">   
-        <div className="flex justify-center  font-extrabold items-center gap-3 mb-2">
-          <h2 className="mb-1 text-nowrap text-sm  sm:text-base md:text-lg lg:text-1xl ">
-            TODAS NUESTRAS CATEGORÍAS  
-          </h2>
-           <span className="barra mx-auto flex items-center justify-center bg-[#cfcfcf] "></span>
-           <div className="flex gap-2">
-           {<button id="CateBackBtn"  className="cateBtnSwiper flex bg-[#F7F7F7] text-[#ABABAB] justify-center items-center" ><FaChevronLeft className='text-sm' /></button>}
-           {<button id="CateNextBtn" className="cateBtnSwiper flex bg-[#F7F7F7] text-[#ABABAB] justify-center items-center"  ><FaChevronRight className='text-sm' /></button>}
-           </div>
-           
-        </div>
 
-        <div className="relative">
-          <Categoria />
+      {/* section */}
+      <section className="lg:container mx-auto px-20 py-10">
+        <h2 className="text-3xl roboto_bold mb-5">Todo lo encuentras en Doona</h2>
+        <Categoria/>
+      </section>
+      {/* section 2 */}
+      <section className="lg:container mx-auto px-20 grid grid-cols-2">
+        <div className="flex flex-col gap-8 justify-self-center self-center">
+          <h2 className="text-5xl roboto_bold">
+            <b className="text-gradient">Hasta 60% dscto.</b> en tus marcas
+            favoritas con tu App Doona
+          </h2>
+          <ul className="flex flex-col gap-3">
+            <li className="flex gap-3 items-center">
+              <RxCodesandboxLogo style={{ width: rem(16), height: rem(16) }} />{" "}
+              Beneficios exclusivos en restaurantes, moda, pet shops y más por
+              ser cliente.
+            </li>
+            <li className="flex gap-3 items-center">
+              <RxCodesandboxLogo style={{ width: rem(16), height: rem(16) }} />{" "}
+              Solicita beneficios especializados para tu salud y la de tu
+              familia.
+            </li>
+            <li className="flex gap-3 items-center">
+              <RxCodesandboxLogo style={{ width: rem(16), height: rem(16) }} />{" "}
+              ¡Muchos son ilimitados y sin costo!
+            </li>
+          </ul>
+        </div>
+        <div>
+          <Image src={Mockup} alt="mackup" width={600} height={600} />
         </div>
       </section>
-      {/* section promociones */}
-      <section className="lg:container mx-auto p-2 sm:px-10 lg:px-20 px-4">
-       {false && <span className="text-xl font-extrabold flex items-center gap-3 lg:mb-5 mb-0">
-          <p className="icon-shadow shadow shadow-2xl text-white p-2 text-sm sm:text-sm md:text-lg lg:text-3xl rounded-2xl">
-            <LoMejor />
-          </p>
-          <h2 className="text-sm  sm:text-base md:text-lg lg:text-xl">
-            LO MEJOR DE LA SEMANA
+      {/* section 3 */}
+      <section className="lg:container px-20 grid grid-cols-2">
+        <div>
+          <h2 className="text-3xl roboto_bold mb-5">
+            Beneficios para una vida más fácil
           </h2>
-        </span>}
-        <div className="relative">
-          <SliderMejor renderjson={mejorSemana}/>
+          <ul className="flex flex-col gap-3">
+            <li className="flex gap-3 items-center">
+              <RxCodesandboxLogo style={{ width: rem(16), height: rem(16) }} />{" "}
+              Beneficios exclusivos en restaurantes, moda, pet shops y más por
+              ser cliente.
+            </li>
+            <li className="flex gap-3 items-center">
+              <RxCodesandboxLogo style={{ width: rem(16), height: rem(16) }} />{" "}
+              Solicita beneficios especializados para tu salud y la de tu
+              familia.
+            </li>
+            <li className="flex gap-3 items-center">
+              <RxCodesandboxLogo style={{ width: rem(16), height: rem(16) }} />{" "}
+              ¡Muchos son ilimitados y sin costo!
+            </li>
+          </ul>
         </div>
       </section>
-
-      {/* seeccion de bebidas */}
-      <SectionSlider
-        title="LO MEJOR DE LA ABARROTES"
-        pretIcoID={"icoBebidaPreS"}
-        nextIcoID={"icoBebidaNextS"}
-        renderjson={data.arrayAbarrotes}
-        icon={<Desayuno />}
-      />
-      <SectionSlider
-        title="LO MEJOR EN BEBIDAS"
-        pretIcoID={"icoFrescosPreS"}
-        nextIcoID={"icoFrescosNextS"}
-        renderjson={data.arrayBebidas}
-        icon={<Licor />}
-      />
-      <SectionSlider
-        title="LO MEJOR EN LIMPIEZA"
-        pretIcoID={"icoLicoresPreS"}
-        nextIcoID={"icoLicoresNextS"}
-        renderjson={data.arrayLimpieza}
-        icon={<Limpieza />}
-      />
-      <SectionSlider
-        title="LO MEJOR EN LACTEOS"
-        pretIcoID={"icoLacteosPreS"}
-        nextIcoID={"icoLacteosNextS"}
-        renderjson={data.arrayLacteos}
-        icon={<Lacteos />}
-      />
-      <SectionSlider
-        title="LO MEJOR EN C.PERSONAL"
-        pretIcoID={"icoPersonalPreS"}
-        nextIcoID={"icoPersonalNextS"}
-        renderjson={data.arrayCpersonal}
-        icon={<Lacteos />}
-      />
-      <SectionSlider
-        title="LO MEJOR EN CONFITERIA"
-        pretIcoID={"icoConfiteriaPreS"}
-        nextIcoID={"icoConfiteriaNextS"}
-        renderjson={data.arrayConfiteria}
-        icon={<Lacteos />}
-      />
-
-      {/* <ComentarioSlider
-        renderjson={categoriaMap}
-        idBtnPre={"icoComentarioPreS"}
-        idBtnNex={"icoComentarioNextS"}
-      /> */}
     </>
   );
-}
+};
+
+export default page;

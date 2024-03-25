@@ -27,7 +27,7 @@
 h2{
   color: #000000f0 !important;
 }
-.Nunito-bold{
+.Nunito-bold,p{
   font-family: "Nunitos-bold";
 }
 
@@ -44,6 +44,11 @@ h2{
   font-weight: 100;
 }
 
+.text-gradient{
+  background: linear-gradient(yellow,red);
+  background-clip: text;
+  color: transparent; 
+}
 
 :root {
   --foreground-rgb: rgb(0, 0, 0);
