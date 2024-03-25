@@ -15,9 +15,7 @@ const HeaderLanding = () => {
             <li>Centro ayuda</li>
             <li>Clientes</li>
           </ul>
-          <Button variant="filled" color="#ff4d00">
-            Whatsapp
-          </Button>
+          <button  className="cargar_mas  font-bold px-3 py-1  w-full btn-agre text-white rounded-md">Whatsapp</button>
         </div>
       </div>
     </header>
