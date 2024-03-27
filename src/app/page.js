@@ -12,7 +12,7 @@ import UserSart from "@/components/lading/svg/UserSart";
 import Famili from "@/components/lading/svg/Famili";
 import { useProduct } from "./provider/ProviderContext";
 import Footer from "@/components/lading/footer/Footer";
-
+import gradient from "@/assets/img_gradient.png"
 const Page = () => {
   const { sectionRefs } = useProduct();
   return (
@@ -39,8 +39,18 @@ const Page = () => {
       {/* section 2 */}
       <section
         ref={sectionRefs.tiendas}
-        className="bg-[#E9E9E9] rounded-md lg:container  gap-10 mx-auto px-20 grid grid-cols-2"
+        className="bg-[#E9E9E9] relative rounded-md lg:container  gap-10 mx-auto px-20 grid grid-cols-2"
       >
+      <Image
+          alt="Mountains"
+          src={gradient}
+          fill
+          sizes="(min-width: 808px) 50vw, 100vw"
+          style={{
+            zIndex:"1",
+            objectFit: 'cover', // cover, contain, none
+          }}
+        />
         <div className="flex flex-col gap-8 justify-self-center self-center">
           <h2 className="text-5xl roboto_bold">
             <b className="text-gradient">Hasta 60% dscto.</b> en tus marcas
@@ -63,7 +73,7 @@ const Page = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div style={{ zIndex:"2"}}>
           <Image src={Mockup} alt="mackup" width={600} height={600} />
         </div>
       </section>
