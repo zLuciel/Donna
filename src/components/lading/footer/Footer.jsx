@@ -18,12 +18,11 @@ const Footer = () => {
           <h3 className="roboto_bold mb-1">
             ¿Más barato que el mercado?
           </h3>
-          <h3 className="roboto_Extrabold text-2xl text-[#ff4d00] mb-4">¡CON DOONA <br /> ES POSIBLE!</h3>
           <p className="text-xs">© 2024 Mercado Doona</p>
         </div>
         {/* col -2 */}
         <div className="flex flex-col gap-5">
-          <h3 className="text-lg"><b>SECCIONES</b></h3>
+          <h3 className="text-md"><b>SECCIONES</b></h3>
           <ul className="flex text-md flex-col gap-3">
             <li className="text-[#3b3b3bef]">Producto</li>
             <li className="text-[#3b3b3bef]">Tienda</li>
@@ -32,12 +31,11 @@ const Footer = () => {
         </div>
         {/* col -3 */}
         <div className="flex flex-col gap-4">
-        <h3 className="text-lg"><b>VISITA NUESTRAS REDES</b></h3>
-        <ul className="flex gap-3">
+        <h3 className="text-md"><b>VISITA NUESTRAS REDES</b></h3>
+        <ul className="flex gap-5">
           <li className="text-3xl text-[#3b3b3bef] "><BsInstagram /></li>
           <li className="text-3xl text-[#3b3b3bef]"><FaFacebook /></li>
           <li className="text-3xl text-[#3b3b3bef]"><FaTiktok /></li>
-          <li className="text-3xl text-[#3b3b3bef]"><FaLinkedin /></li>
         </ul>
         </div>
       </div>

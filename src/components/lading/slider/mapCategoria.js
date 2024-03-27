@@ -12,11 +12,11 @@ import lading10 from "@/assets/lading/lading-10.png"
 
 const categoriaMap = [
     {
-        image:lading1,
+        image:lading7,
         name:"Abarrotes",
     },
     {
-        image:lading2,
+        image:lading3,
         name:"Bebidas",
     },
  
@@ -25,32 +25,21 @@ const categoriaMap = [
         name:"Licores",
     },
     {
-        image:lading4,
+        image:lading2,
         name:"Lacteos",
     },
     {
-        image:lading5,
+        image:lading4,
         name:"Limpieza",
     },
     {
-        image:lading6,
+        image:lading5,
         name:"C.personal",
     },
     {
-        image:lading7,
+        image:lading9,
         name:"Confiteria",
     },
-    {
-        image:lading8,
-        name:"Verdura",
-    },
-    {
-        image:lading9,
-        name:"Vino",
-    },
-    {
-        image:lading10,
-        name:"Bebidas",
-    },
+
 ]
 export default categoriaMap
