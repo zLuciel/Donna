@@ -145,7 +145,7 @@ h2,
 .gradient-beneficio{
   width: 100%;
   border-radius: 40px;
-  background: linear-gradient(288.88deg, #00f4e2 3.47%, #ffff96 91.31%);
+  background: linear-gradient(309deg, #f7f7f7 3.47%, #ff4d00 100%)
 }
 body {
   overflow-x: hidden;
