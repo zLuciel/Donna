@@ -31,8 +31,8 @@ const Page = () => {
         ref={sectionRefs.categorias}
         className="lg:container mx-auto px-20 py-10"
       >
-        <h2 className="text-3xl roboto_bold mb-5">
-          Todo lo encuentras en Doona
+        <h2 className="text-5xl roboto_bold mb-5 text-center">
+          Todo lo encuentras en <b className="text-gradient">Doona</b> 
         </h2>
         <CategoriaSlider />
       </section>
@@ -84,22 +84,23 @@ const Page = () => {
           <ul className="flex flex-col gap-5">
             <li className="flex gap-3 items-center text-sm">
               <Descuento />
-              Beneficios exclusivos en restaurantes, moda, pet shops y más por
-              ser cliente.
+              Accede a Clínica Internacional Digital y solicítalo para Medicina
+              General y Pediatría según tu plan.
             </li>
             <li className="flex gap-3 items-center text-sm">
               <Famili />
-              Solicita beneficios especializados para tu salud y la de tu
-              familia.
+              Obtén un chequeo preventivo anual sin costo y mantén tu salud bajo
+              control.
             </li>
             <li className="flex gap-3 items-center text-sm">
               <UserSart />
-              ¡Muchos son ilimitados y sin costo!
+              Recibe atención médica en casa y paga solo la consulta (Lima
+              Metropolitana y Callao).
             </li>
           </ul>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };
