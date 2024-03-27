@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: "Nunitos-bold";
   src: url("../assets/font/Nunitos/NunitoSans-Bold.ttf") format("truetype");
   font-style: normal;
@@ -22,6 +22,28 @@
 @font-face {
   font-family: "Roboto-Extrabold";
   src: url("../assets/font/Roboto/Roboto-Black.ttf") format("truetype");
+  font-weight: 100;
+} */
+@font-face {
+  font-family: "Nunitos-bold";
+  src: url("../assets/font/Nunitos/NunitoSans-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-regular";
+  src: url("../assets/font/Outfit/Outfit-Regular.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Roboto-bold";
+  src: url("../assets/font/Outfit/Outfit-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Extrabold";
+  src: url("../assets/font/Outfit/Outfit-ExtraBold.ttf") format("truetype");
   font-weight: 100;
 }
 h2{
@@ -94,7 +116,37 @@ h2,
 /*.card-product p:first-child {
   font-weight: 800;
 }*/
-
+.container-image-beneficio{
+  left: -10%;
+  top: -80px;
+}
+.button-beneficio{
+  background: black;
+  width: max-content;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 8px;
+}
+.container-image-beneficio::before{
+  z-index: 1;
+  position: absolute;
+  right: 20px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Beneficios";
+  background: black;
+  color: white;
+  padding: 10px;
+}
+.gradient-beneficio{
+  width: 100%;
+  border-radius: 40px;
+  background: linear-gradient(288.88deg, #00f4e2 3.47%, #ffff96 91.31%);
+}
 body {
   overflow-x: hidden;
   color: rgb(var(--foreground-rgb));
