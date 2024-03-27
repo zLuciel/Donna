@@ -156,11 +156,27 @@ body {
   border-radius: 14px;
   /*box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.02);*/
 }
+.circle-cat-lading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+  overflow: hidden;
+  /*border-radius: 150px;*/
+  border-radius: 14px;
+  /*box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.02);*/
+}
 
 .circle-cat img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.circle-cat-lading img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .card-product {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.096),
@@ -221,6 +237,7 @@ body {
   -webkit-transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s;
   transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s;
 }
+
 .hover-enlace:hover::after {
   position: absolute;
   content: "";
@@ -247,23 +264,28 @@ body {
   justify-self: center;
   align-self: center;
 }
+
 .categoria {
   justify-self: center;
   align-self: center;
   grid-area: categoria;
 }
+
 .search-header {
   grid-area: search;
   justify-self: center;
   align-self: center;
   border: 1px solid #e6e6e6;
 }
+
 .bg-slate-gray {
   background: #e6e6e6;
 }
+
 .search-header > input::placeholder {
   font-size: 0.8rem !important;
 }
+
 .cuenta-header {
   grid-area: cuentas;
   justify-self: center;
@@ -272,9 +294,11 @@ body {
 .shadow-header {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 }
+
 .listados-cat {
   margin-bottom: 4px;
 }
+
 .listados-cat:hover {
   border-left: 3px solid #ff4d00 !important;
   font-weight: 700;
@@ -297,6 +321,7 @@ body {
   border-radius: 6px; /* Radio de borde de la thumb */
   border: 3px solid transparent; /* Borde de la thumb (opcional) */
 }
+
 .auto-product-grid {
   display: grid;
   grid-gap: 20px; /* Espacio entre tarjetas */
@@ -315,18 +340,22 @@ body {
 [id$="NextSH"] {
   right: 0px;
 }
+
 .barra{
   height: 0.1px;
   width: 100%;
 }
+
 .swiper-pagination-bullet {
   border-radius: 5px !important;
   width: 15px !important;
   height: 5px !important;
 }
+
 .swiper-pagination-bullet-active {
   background: #ff4d00 !important;
 }
+
 .count-cart{
   font-size: .8rem;
   top: -5px;
@@ -340,6 +369,7 @@ body {
   width: 20px;
   border-radius: 50px;
 }
+
 .topScroll {
   cursor: pointer;
   width: max-content;

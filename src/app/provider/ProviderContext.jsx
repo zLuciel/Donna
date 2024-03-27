@@ -1,13 +1,21 @@
 "use client";
 import usePriceTotalHook from "@/hooks/usePriceTotalHook";
+import useSmoothScroll from "@/hooks/useSmoothScroll";
 import { createContext, useContext, useEffect, useState } from "react";
-
 const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
   const [dataProduct, setDataProduct] = useState([]);
   const { price } = usePriceTotalHook(0, dataProduct);
-  const value = { dataProduct, setDataProduct, price };
+  const { sectionRefs, scrollToSection } = useSmoothScroll();
+
+  const value = {
+    dataProduct,
+    setDataProduct,
+    price,
+    sectionRefs,
+    scrollToSection,
+  };
 
   return (
     <ProductContext.Provider value={value}>{children}</ProductContext.Provider>
