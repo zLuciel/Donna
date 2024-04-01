@@ -145,10 +145,14 @@ h2,
 .gradient-beneficio{
   width: 100%;
   border-radius: 40px;
-  background: linear-gradient(309deg, #f7f7f7 3.47%, #ff4d00 100%)
+  /* background: linear-gradient(310deg, #f7f7f7 20%, #ff8755) */
+}
+.img-gradient{
+  z-index: -1 !important;
+  border-radius: 40px;
 }
 .gradiente-2{
-  background: linear-gradient(309deg, #f7f7f7 3.47%, #ff4d00 100%);
+  background: #ff4d0038;
   border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
 }

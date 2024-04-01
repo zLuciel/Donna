@@ -88,6 +88,17 @@ const Page = () => {
         className="lg:container mx-auto px-60 py-40"
       >
         <div className="gradient-beneficio relative  items-center grid grid-cols-2  flex gap-4 px-10 py-20">
+        <Image
+        className={"img-gradient"}
+          alt="Mountains"
+          src={gradient}
+          fill
+          sizes="(min-width: 808px) 50vw, 100vw"
+          style={{
+            zIndex: "1",
+            objectFit: "cover", // cover, contain, none
+          }}
+        />
           <div className="absolute container-image-beneficio">
             <div className="relative ">
               <Image
