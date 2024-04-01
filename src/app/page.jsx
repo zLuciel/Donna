@@ -111,7 +111,7 @@ const Page = () => {
             </div>
           </div>
           <div></div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 z-[3]">
             <h2 className="text-5xl font-bold roboto_Extrabol mb-3">
               Beneficios para una vida más fácil
             </h2>
