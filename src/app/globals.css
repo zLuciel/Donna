@@ -147,6 +147,11 @@ h2,
   border-radius: 40px;
   background: linear-gradient(309deg, #f7f7f7 3.47%, #ff4d00 100%)
 }
+.gradiente-2{
+  background: linear-gradient(309deg, #f7f7f7 3.47%, #ff4d00 100%);
+  border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
 body {
   overflow-x: hidden;
   color: rgb(var(--foreground-rgb));

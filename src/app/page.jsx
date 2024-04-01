@@ -36,12 +36,14 @@ const Page = () => {
         </h2>
         <CategoriaSlider />
       </section>
+
       {/* section 2 */}
       <section
         ref={sectionRefs.tiendas}
-        className="bg-[#E9E9E9] relative rounded-md lg:container  gap-10 mx-auto px-20 grid grid-cols-2"
+        className=" relative rounded-md lg:container  gap-10 mx-auto px-20 grid grid-cols-2"
       >
-        <Image
+        <div className="absolute  gradiente-2  h-full top-0 right-0 w-2/5"></div>
+        {/* <Image
           alt="Mountains"
           src={gradient}
           fill
@@ -50,7 +52,7 @@ const Page = () => {
             zIndex: "1",
             objectFit: "cover", // cover, contain, none
           }}
-        />
+        /> */}
         <div className="flex flex-col gap-8 justify-self-center self-center">
           <h3 className="text-5xl roboto_bold">
             <b className="text-[#ff4d00] ">Hasta 60% dscto.</b> en tus marcas
