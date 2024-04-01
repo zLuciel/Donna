@@ -40,8 +40,9 @@ const Page = () => {
       {/* section 2 */}
       <section
         ref={sectionRefs.tiendas}
-        className=" relative rounded-md lg:container  gap-10 mx-auto px-20 grid grid-cols-2"
+        className=" relative rounded-md "
       >
+        <div className="lg:container  gap-10 mx-auto px-20 grid grid-cols-2">
         <div className="absolute  gradiente-2  h-full top-0 right-0 w-2/5"></div>
         {/* <Image
           alt="Mountains"
@@ -77,6 +78,7 @@ const Page = () => {
         </div>
         <div style={{ zIndex: "2" }}>
           <Image src={Mockup} alt="mackup" width={600} height={600} />
+        </div>
         </div>
       </section>
 
