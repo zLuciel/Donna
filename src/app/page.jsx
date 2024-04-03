@@ -4,7 +4,7 @@ import HomePortda from "@/components/slider/homePortada/HomePortda";
 import homeSlider from "@/data/homeSlider";
 import Image from "next/image";
 import React from "react";
-import Mockup from "@/assets/macku.png";
+import Mockup from "@/assets/bento.png";
 import Beneficio from "@/assets/img_estar_bien.png";
 import CategoriaSlider from "@/components/lading/slider/CategoriaSlider";
 import Descuento from "@/components/lading/svg/Descuento";
@@ -45,7 +45,7 @@ const Page = () => {
       </section>
 
       {/* section 2 */}
-      <section ref={sectionRefs.tiendas} className=" relative rounded-md ">
+      <section ref={sectionRefs.tiendas} className=" relative rounded-md py-20">
         <div className="lg:container  gap-10 mx-auto px-20 grid grid-cols-2">
           <div className="flex flex-col gap-8 justify-self-center self-center">
             <h3 className="text-5xl roboto_bold">
@@ -101,8 +101,8 @@ const Page = () => {
               </li>
             </ul>
           </div>
-          <div style={{ zIndex: "2" }}>
-            <Image src={Mockup} alt="mackup" width={600} height={600} />
+          <div style={{ zIndex: "2" }} className="justify-self-center self-center">
+            <Image src={Mockup} alt="mackup" width={400} height={400} />
           </div>
         </div>
       </section>
