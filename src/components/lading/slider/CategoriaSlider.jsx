@@ -16,7 +16,7 @@ const CategoriaSlider = () => {
     router.push('/productos')
   }
   return (
-    <>
+    <div className="px-20 relative">
     <Swiper
     style={{padding:"20px 0"}}
     modules={[Navigation, Pagination]}
@@ -24,6 +24,7 @@ const CategoriaSlider = () => {
       prevEl: `#CateBackBtn`,
       nextEl: `#CateNextBtn`,
     }}
+    pagination={{ clickable: true }}
     slidesPerView={2.5}
     spaceBetween={1}
     slidesPerGroup={3}
@@ -77,9 +78,9 @@ const CategoriaSlider = () => {
         </SwiperSlide>
       ))}
     </Swiper>
-    {false && <button id="icoCategoriaPreS"  className="cateBtnSwiper flex justify-center items-center" ><FaChevronLeft className='text-1xl text-red-500' /></button>}
-    {false && <button id="icoCategoriaNextS" className="cateBtnSwiper flex justify-center items-center"  ><FaChevronRight className='text-1xl text-red-500' /></button>}
-    </>
+    {<button id="btn-back"  className="flex justify-center items-center" ><FaChevronLeft className='text-1xl' /></button>}
+    {<button id="btn-skip" className="flex justify-center items-center"  ><FaChevronRight className='text-1xl' /></button>}
+    </div>
   );
 };
 

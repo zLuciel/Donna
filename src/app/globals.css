@@ -26,7 +26,7 @@
 } */
 @font-face {
   font-family: "Nunitos-bold";
-  src: url("../assets/font/Nunitos/NunitoSans-Bold.ttf") format("truetype");
+  src: url("../assets/font/Nunitos/NunitoSans-Regular.ttf") format("truetype");
   font-style: normal;
 }
 
@@ -52,7 +52,10 @@ h2{
 .Nunito-bold,p{
   font-family: "Nunitos-bold";
 }
-
+.vision-text{
+  font-family: none !important;
+  font-weight: 100 !important;
+}
 .roboto_Extrabold{
   font-family: "Roboto-Extrabold";
   line-height: normal;
@@ -127,6 +130,12 @@ h2,
   padding: 12px 15px;
   border-radius: 8px;
 }
+
+.mantine-Tabs-tabLabel{
+  font-size: 1.4rem !important;
+  font-weight: 700;
+}
+
 .container-image-beneficio::before{
   z-index: 1;
   position: absolute;

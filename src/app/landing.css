@@ -1,0 +1,110 @@
+.container-about {
+  margin: 50px 0;
+  background: url(https://w.forfun.com/fetch/06/064aa5962da21818d5505df6b643f3b3.jpeg)
+    center center/cover no-repeat;
+}
+.container-info-about {
+  max-width: 60%;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.container-about h2,
+.container-vision-valor h2 {
+  color: #ff4d00 !important;
+}
+
+.container-about p {
+  font-weight: 100 !important;
+}
+
+.button-about {
+  background: transparent;
+  position: relative;
+  padding: 2px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 15px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(255, 0, 0);
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+ 
+}
+
+.button-about span {
+  margin: 10px;
+}
+
+.button-about::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+.button-about:hover {
+  color: #fff;
+  border: 1px solid rgb(255, 0, 0);
+  z-index: 1;
+}
+
+.button-about:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(255, 0, 0) !important;
+  -webkit-box-shadow: inset 0 0 0 10em rgb(255, 0, 0) !important;
+  -moz-box-shadow: inset 0 0 0 10em rgb(255, 0, 0) !important;
+}
+
+/** CSS VISION Y VALORES*/
+.container-vision-valor {
+  background: rgb(221, 221, 221);
+  padding: 80px 0;
+}
+.container-vision-valor img {
+  border-radius: 50px;
+}
+
+/**Categoria*/
+.title-categoria {
+  position: relative;
+  top: -50px;
+  width: 50%;
+  text-align: end;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#btn-back,#btn-skip{
+  position: absolute;
+  background: #ff4d00;
+  color: white;
+  padding: 5px;
+  border-radius: 15px;
+}
+#btn-back{
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%,-50%);
+}
+#btn-skip{
+  top: 50%;
+  right: 3%;
+  transform: translate(-50%,-50%);
+}

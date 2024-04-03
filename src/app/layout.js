@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./landing.css";
 import Header from "@/components/header/Header";
 import { Providers } from "@/mantine/provider";
 import Footer from "@/components/footer/Footer";
