@@ -34,7 +34,7 @@ const Page = () => {
       {/* section */}
       <section
         ref={sectionRefs.categorias}
-        className="mx-auto   py-5 bg-[#ff4d0038] "
+        className="py-5 bg-[#ff4d0038] "
       >
         <div className=" bg-white py-4 px-3 title-categoria">
           <h2 className="text-3xl roboto_bold">

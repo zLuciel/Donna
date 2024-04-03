@@ -16,7 +16,7 @@ const CategoriaSlider = () => {
     router.push('/productos')
   }
   return (
-    <div className="px-20 relative">
+    <div className="px-20 relative mx-auto lg:container">
     <Swiper
     style={{padding:"20px 0"}}
     modules={[Navigation, Pagination]}

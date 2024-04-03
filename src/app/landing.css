@@ -80,7 +80,9 @@
 .container-vision-valor img {
   border-radius: 50px;
 }
-
+.container-text{
+ max-width: 45%;
+}
 /**Categoria*/
 .title-categoria {
   position: relative;
