@@ -9,12 +9,13 @@ import 'swiper/css';
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const HomePortda = ({renderjson,idBtnNex,idBtnPre}) => {
+const HomePortda = ({renderjson,idBtnNex,idBtnPre,setSwiper}) => {
   const [currentPage,setCurrentPage] = useState(0)
   const [currentPageN,setCurrentPageN] = useState(0)
   return (
     <>
     <Swiper
+    onSwiper={setSwiper}
     className="xd"
     modules={[Autoplay,Navigation, Pagination]}
     loop={true}

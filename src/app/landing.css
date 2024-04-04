@@ -1,5 +1,5 @@
 .container-about {
-  margin: 50px 0;
+  margin: 0px 0;
   background: url("../assets/BANNER-DOONA-2.webp") center center/cover no-repeat;
 }
 .container-info-about {
@@ -116,9 +116,9 @@
  .card-info {
   border-radius: 50px;
   position: absolute;
-  height: 420px;
+  height: 320px;
   max-width: 600px;
-  padding: 60px;
+  padding: 20px 60px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -129,14 +129,6 @@
 }
 
 /**Categoria*/
-/* .title-categoria {
-  position: relative;
-  top: -50px;
-  width: 50%;
-  text-align: end;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-} */
 .title-categoria {
   position: relative;
   top: -50px;

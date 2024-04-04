@@ -3,7 +3,6 @@ import HeaderLanding from "@/components/lading/header/HeaderLanding";
 import HomePortda from "@/components/slider/homePortada/HomePortda";
 import homeSlider from "@/data/homeSlider";
 import Image from "next/image";
-import React from "react";
 import Mockup from "@/assets/bento.png";
 import CategoriaSlider from "@/components/lading/slider/CategoriaSlider";
 import Descuento from "@/components/lading/svg/Descuento";
@@ -13,18 +12,23 @@ import { useProduct } from "./provider/ProviderContext";
 import Footer from "@/components/lading/footer/Footer";
 import About from "@/components/lading/about/About";
 import Visiones from "@/components/lading/visiones/Visiones";
+
+
 const Page = () => {
   const { sectionRefs } = useProduct();
+
   return (
     <>
       <HeaderLanding />
-      <main className="relative portada-main text-white h-screen w-screen">
+      <main className="relative portada-main text-white h-screen w-screen mb-10">
         <HomePortda
           renderjson={homeSlider}
           idBtnNex={"iicoMainNextSH"}
           idBtnPre={"iicoMainPreSH"}
         />
       </main>
+      <div>
+      </div>
       <About />
       <Visiones />
       {/* section */}
