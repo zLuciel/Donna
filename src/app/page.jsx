@@ -5,16 +5,12 @@ import homeSlider from "@/data/homeSlider";
 import Image from "next/image";
 import React from "react";
 import Mockup from "@/assets/bento.png";
-import Beneficio from "@/assets/img_estar_bien.png";
 import CategoriaSlider from "@/components/lading/slider/CategoriaSlider";
 import Descuento from "@/components/lading/svg/Descuento";
 import UserSart from "@/components/lading/svg/UserSart";
 import Famili from "@/components/lading/svg/Famili";
 import { useProduct } from "./provider/ProviderContext";
 import Footer from "@/components/lading/footer/Footer";
-import gradient from "@/assets/img_gradient.png";
-import visionimg from "@/assets/vision.jpg";
-import Vision from "@/components/lading/Vision/Vision";
 import About from "@/components/lading/about/About";
 import Visiones from "@/components/lading/visiones/Visiones";
 const Page = () => {

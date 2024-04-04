@@ -1,7 +1,6 @@
 .container-about {
   margin: 50px 0;
-  background: url(https://w.forfun.com/fetch/06/064aa5962da21818d5505df6b643f3b3.jpeg)
-    center center/cover no-repeat;
+  background: url("../assets/BANNER-DOONA-2.webp") center center/cover no-repeat;
 }
 .container-info-about {
   max-width: 60%;
@@ -21,25 +20,24 @@
 .button-about {
   background: transparent;
   position: relative;
-  padding: 2px 15px;
+  padding: 1px 10px;
   display: flex;
   align-items: center;
-  font-size: 17px;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
   border: 1px solid rgb(255, 0, 0);
-  border-radius: 15px;
+  border-radius: 12px;
   outline: none;
   overflow: hidden;
   color: rgb(255, 0, 0);
   transition: color 0.3s 0.1s ease-out;
   text-align: center;
- 
 }
 
 .button-about span {
-  margin: 10px;
+  margin: 5px;
 }
 
 .button-about::before {
@@ -80,9 +78,17 @@
 .container-vision-valor img {
   border-radius: 50px;
 }
-.container-text{
- max-width: 45%;
+.container-max-width{
+  border: 1px solid red;
+  max-width: 80%;
 }
+.container-text {
+  width: 100%;
+  height: 400px;
+}
+
+
+
 /**Categoria*/
 .title-categoria {
   position: relative;
@@ -93,20 +99,21 @@
   border-bottom-right-radius: 15px;
 }
 
-#btn-back,#btn-skip{
+#btn-back,
+#btn-skip {
   position: absolute;
   background: #ff4d00;
   color: white;
   padding: 5px;
   border-radius: 15px;
 }
-#btn-back{
+#btn-back {
   top: 50%;
   left: 5%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-#btn-skip{
+#btn-skip {
   top: 50%;
   right: 3%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
