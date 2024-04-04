@@ -5,7 +5,7 @@ const About = () => {
     <div className="container-about">
       <div className="bg-white container-info-about flex justify-end py-5">
         <div className="w-4/5 flex flex-col gap-7 p-5">
-          <h3 className="text-5xl roboto_bold">
+          <h3 className="lg:text-5xl sm:text-2xl xs:text-xl md:text-3xl roboto_bold">
             <b className="text-[#ff4d00] ">Doona</b> tiene tus mejoras ofertas
             en nuestras tiendas
           </h3>
