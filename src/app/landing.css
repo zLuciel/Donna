@@ -165,3 +165,14 @@
   right: 3%;
   transform: translate(-50%, -50%);
 }
+
+@media screen and (max-width: 1062px){
+  .container-max-width{
+    width: 800px;
+  }
+  .card-info {
+    height: 300px;
+    max-width: 480px;
+    padding: 20px 30px;
+  }
+}
