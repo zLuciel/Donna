@@ -30,10 +30,16 @@ const Page = () => {
       {/* section */}
       <section
         ref={sectionRefs.categorias}
-        className="py-5 bg-[#ff4d0038] "
+        className="py-5 bg-[#ff4d0038] relative "
       >
-        <div className=" bg-white py-4 px-3 title-categoria">
+        {/* <div className=" bg-white py-4 px-3 title-categoria">
           <h2 className="text-3xl roboto_bold">
+            Nuestras <b className="text-[#ff4d00]"> categorias</b>
+          </h2>
+        </div> */}
+        <div className="title-div"></div>
+        <div className="lg:container py-4 px-20 title-categoria mx-auto">
+          <h2 className="text-3xl roboto_bold ">
             Nuestras <b className="text-[#ff4d00]"> categorias</b>
           </h2>
         </div>
