@@ -59,8 +59,8 @@ const Page = () => {
               <li className="flex gap-4 items-start text-sm">
                 <Descuento />
                 <span className="flex flex-col gap-1">
-                  <h4 className="font-semibold">Equidad y accesibilidad:</h4>
-                  <p className="text-xs">
+                  <h4 className="font-semibold text-xl">Equidad y accesibilidad:</h4>
+                  <p className="text-sm">
                     Creemos en un mundo donde todos tienen derecho a acceder a
                     productos de calidad a precios justos, independientemente de
                     su situación económica.
@@ -72,8 +72,8 @@ const Page = () => {
                   <Famili />
                 </span>
                 <span className="flex flex-col gap-1">
-                  <h4 className="font-semibold">Colaboración y cooperación:</h4>
-                  <p className="text-xs">
+                  <h4 className="font-semibold text-xl">Colaboración y cooperación:</h4>
+                  <p className="text-sm">
                     Nos comprometemos a trabajar en estrecha colaboración con
                     organizaciones sociales y comunitarias para abordar las
                     necesidades más apremiantes de nuestra sociedad.
@@ -86,10 +86,10 @@ const Page = () => {
                 </span>
 
                 <span className="flex flex-col gap-1">
-                  <h4 className="font-semibold">
+                  <h4 className="font-semibold text-xl">
                     Integridad y transparencia:{" "}
                   </h4>
-                  <p className="text-xs">
+                  <p className="text-sm">
                     Actuamos con honestidad y transparencia en todas nuestras
                     operaciones, construyendo relaciones de confianza con
                     nuestros clientes, empleados y socios.
@@ -102,9 +102,9 @@ const Page = () => {
                 </span>
 
                 <span className="flex flex-col gap-1">
-                  <h4 className="font-semibold">Empatía y servicio:</h4>
-                  <p className="text-xs">
-                    : Nos esforzamos por comprender las necesidades y
+                  <h4 className="font-semibold text-xl">Empatía y servicio:</h4>
+                  <p className="text-sm">
+                    Nos esforzamos por comprender las necesidades y
                     preocupaciones de nuestros clientes, brindando un servicio
                     personalizado y atento en todo momento. Buscamos
                     constantemente nuevas formas de servir a nuestra comunidad,
