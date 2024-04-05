@@ -11,21 +11,21 @@ const homeSlider = [
         name:"Carne",
     },
     {
-        image:Portada2,
+        image:Portada1,
         name:"Carne",
     },
     {
-        image:Portada3,
+        image:Portada1,
         name:"Carne",
     },
     {
-        image:Portada4,
+        image:Portada1,
         name:"Carne",
     }, {
-        image:Portada5,
+        image:Portada1,
         name:"Carne",
     }, {
-        image:Portada6,
+        image:Portada1,
         name:"Carne",
     },
  

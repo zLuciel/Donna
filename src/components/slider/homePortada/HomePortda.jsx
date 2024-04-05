@@ -43,7 +43,7 @@ const HomePortda = ({renderjson,idBtnNex,idBtnPre,setSwiper}) => {
       {renderjson?.map((cate, i) => (
         <SwiperSlide key={i}>
           <div className="slider-img  w-screen">
-            <Image className="rounded-md" src={cate.image} fill={true}
+            <Image style={{objectFit:"cover"}} className="rounded-md" src={cate.image} fill={true}
           sizes="(min-width: 808px) 100vw, 100vw" alt="dsa"/>
           </div>
         </SwiperSlide>

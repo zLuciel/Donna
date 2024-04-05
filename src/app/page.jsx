@@ -26,7 +26,6 @@ const Page = () => {
           idBtnPre={"iicoMainPreSH"}
         />
       </main>
-      <div></div>
       <About />
       <Visiones />
       {/* section */}
