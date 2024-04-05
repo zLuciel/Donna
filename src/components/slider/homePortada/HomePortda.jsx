@@ -33,7 +33,7 @@ const HomePortda = ({renderjson,idBtnNex,idBtnPre,setSwiper}) => {
     centeredSlides={true} 
     pagination={{ clickable: true }}
     spaceBetween={20}
-    slidesPerView={1.2}
+    slidesPerView={1}
     slidesPerGroup={1}
     autoplay={{ 
       delay: 4000, 
