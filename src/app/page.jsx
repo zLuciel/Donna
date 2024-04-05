@@ -20,7 +20,7 @@ const Page = () => {
   return (
     <>
       <HeaderLanding />
-      <main className="relative portada-main text-white h-screen w-screen mb-10">
+      <main className="relative portada-main text-white h-screen w-screen">
         <HomePortda
           renderjson={homeSlider}
           idBtnNex={"iicoMainNextSH"}
