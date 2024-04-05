@@ -21,8 +21,8 @@ const CategoriaSlider = () => {
     style={{padding:"20px 0"}}
     modules={[Navigation, Pagination]}
     navigation={{
-      prevEl: `#CateBackBtn`,
-      nextEl: `#CateNextBtn`,
+      prevEl: `#btn-back`,
+      nextEl: `#btn-skip`,
     }}
     pagination={{ clickable: true }}
     slidesPerView={2.5}
@@ -68,7 +68,7 @@ const CategoriaSlider = () => {
     >
       {categoriaMap?.map((cate,i) => (
         <SwiperSlide key={i} >
-        <div onClick={handleCategoriaPage} className="cursor-pointer flex flex-col justify-center items-center">
+        <div  className="cursor-pointer flex flex-col justify-center items-center">
         <span style={{height:"250px"}} className="circle-cat-lading">
         <Image src={cate.image}  sizes="(min-width: 808px) 50vw, 100vw"
            alt="Donna" />

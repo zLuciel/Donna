@@ -28,10 +28,7 @@ const categoriaMap = [
         name:"Bebidas",
     },
  
-    {
-        image:lading3,
-        name:"Licores",
-    },
+
     {
         image:categoria5,
         name:"Lacteos",
