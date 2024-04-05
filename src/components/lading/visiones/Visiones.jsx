@@ -10,7 +10,7 @@ const Visiones = () => {
           <h2 className="text-4xl font-extrabold text-center mb-4">
             Misión
           </h2>
-          <p className="text-center text-sm">
+          <p className="text-center text-md">
             Empoderamos a las comunidade, transformamos vidas a traves del
             acceso a productos eseciales de alta calidad a precios accesibles.
             Nuestra mision es brindar a cada hogar la oportunidad de acceder a
@@ -56,7 +56,7 @@ const Visiones = () => {
           <h2 className="text-4xl font-extrabold text-center mb-4">
             Visión
           </h2>
-          <p className="text-center text-sm">
+          <p className="text-center text-md">
             Empoderamos a las comunidade, transformamos vidas a traves del
             acceso a productos eseciales de alta calidad a precios accesibles.
             Nuestra mision es brindar a cada hogar la oportunidad de acceder a

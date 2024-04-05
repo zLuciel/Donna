@@ -8,7 +8,7 @@ const About = () => {
           <h3 className="lg:text-5xl sm:text-2xl xs:text-xl md:text-3xl roboto_bold">
             <b className="text-[#ff4d00] ">Doona:</b> Innovación social y productos de alta calidad
           </h3>
-          <p className="text-sm w-4/5">
+          <p className="text-md w-4/5">
             Nuestra empresa se erige como un pilar fundamental en la
             construccion de mundo mas justo y solidario, donde el acceso
             equitativo a productos esenciales de alta calidad es una realidad.
