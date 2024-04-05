@@ -40,8 +40,8 @@ const Page = () => {
         </div> */}
         <div className="title-div"></div>
         <div className="lg:container py-4 px-20 title-categoria mx-auto">
-          <h2 className="text-3xl roboto_bold ">
-            Nuestras <b className="text-[#ff4d00]"> categorias</b>
+          <h2 className="h2-formate lg:text-5xl sm:text-2xl  xs:text-xl md:text-3xl roboto_bold">
+            Nuestras categorias
           </h2>
         </div>
         <CategoriaSlider />

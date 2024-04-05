@@ -142,7 +142,7 @@
   position: absolute;
   background: white;
   left: 0px;
-  top: -30px;
+  top: -25px;
   width: 40%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -166,7 +166,9 @@
   right: 3%;
   transform: translate(-50%, -50%);
 }
-
+.h2-formate{
+  color: #ff4d00 !important;
+}
 @media screen and (max-width: 1062px){
   .container-max-width{
     width: 800px;
