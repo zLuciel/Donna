@@ -3,8 +3,13 @@ import SubHeaderLading from "./SubHeaderLading";
 import Image from "next/image";
 import { useProduct } from "@/app/provider/ProviderContext";
 import { IoLogoWhatsapp } from "react-icons/io";
+import Link from "next/link";
+
+
+
 const HeaderLanding = () => {
   const { scrollToSection} = useProduct();
+
   return (
     <header className="header-container bg-white">
       <SubHeaderLading />
@@ -20,9 +25,9 @@ const HeaderLanding = () => {
               Beneficios
             </li>
           </ul>
-          <button className="cargar_mas flex gap-2 items-center text-sm font-bold px-3 py-1  w-full btn-agre text-white rounded-md">
+          <Link href="https://wa.link/njs0op"  target="_blank" className="cargar_mas flex gap-2 items-center text-sm font-bold px-3 py-1  w-full btn-agre text-white rounded-md">
           <IoLogoWhatsapp  className="" />   Whatsapp
-          </button>
+          </Link>
         </div>
       </div>
     </header>
