@@ -26,7 +26,7 @@ const Visiones = () => {
 
 
       {/* responsive card vision */}
-      <div className="mx-auto" style={{width:"80%"}}>
+      {/* <div className="mx-auto" style={{width:"80%"}}>
         <div className="">
           <Image src={vision1} alt="-" width={600} />
         </div>
@@ -44,7 +44,7 @@ const Visiones = () => {
           </p>
         </div>
         
-      </div>
+      </div> */}
 
 
       {/* col 2 */}

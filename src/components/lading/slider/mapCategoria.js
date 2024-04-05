@@ -10,7 +10,48 @@ import lading9 from "@/assets/lading/lading-9.png"
 import lading10 from "@/assets/lading/lading-10.png"
 
 
+
+import categoria1 from "@/assets/lading/categoria/CATEGORIA-ABARROTES.png"
+import categoria2 from "@/assets/lading/categoria/CATEGORIA-BEBIDAS.png"
+import categoria3 from "@/assets/lading/categoria/CATEGORIA-CONFITERIA.png"
+import categoria4 from "@/assets/lading/categoria/CATEGORIA-CUIDADOPERSONAL.png"
+import categoria5 from "@/assets/lading/categoria/CATEGORIA-LACTEOS.png"
+import categoria6 from "@/assets/lading/categoria/CATEGORIA-LIMPIEZA.png"
+
 const categoriaMap = [
+    {
+        image:categoria1,
+        name:"Abarrotes",
+    },
+    {
+        image:categoria2,
+        name:"Bebidas",
+    },
+ 
+    {
+        image:lading3,
+        name:"Licores",
+    },
+    {
+        image:categoria5,
+        name:"Lacteos",
+    },
+    {
+        image:categoria6,
+        name:"Limpieza",
+    },
+    {
+        image:categoria4,
+        name:"C.personal",
+    },
+    {
+        image:categoria3,
+        name:"Confiteria",
+    },
+
+]
+
+const categoriaMap2 = [
     {
         image:lading7,
         name:"Abarrotes",
@@ -42,4 +83,5 @@ const categoriaMap = [
     },
 
 ]
+
 export default categoriaMap
