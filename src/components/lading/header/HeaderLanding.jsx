@@ -6,7 +6,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 const HeaderLanding = () => {
   const { scrollToSection} = useProduct();
   return (
-    <header className="">
+    <header className="header-container bg-white">
       <SubHeaderLading />
       <div className="md:container mx-auto flex justify-between items-center px-20 py-1">
         <Image src={"/DonnaMovil.png"} alt="Donna" width={70} height={70} />

@@ -68,7 +68,11 @@ h2{
   font-family: "Roboto-regular";
   font-weight: 100;
 }
-
+.header-container{
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
 .text-gradient{
   background: linear-gradient(yellow,red);
   background-clip: text;
