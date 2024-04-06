@@ -16,7 +16,7 @@ const CategoriaSlider = () => {
     router.push('/productos')
   }
   return (
-    <div className="px-20 relative mx-auto lg:container">
+    <div className="lg:px-20 px-20 relative mx-auto lg:container">
     <Swiper
     style={{padding:"20px 0"}}
     modules={[Navigation, Pagination]}
@@ -25,32 +25,32 @@ const CategoriaSlider = () => {
       nextEl: `#btn-skip`,
     }}
     pagination={{ clickable: true }}
-    slidesPerView={2.5}
+    slidesPerView={2}
     spaceBetween={1}
     slidesPerGroup={3}
     breakpoints={{
       // cuando el ancho es >= 640px
       449: {
-        slidesPerView: 3.5,
+        slidesPerView: 3,
         spaceBetween: 20,
         slidesPerGroup: 2,
       },
       640: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 20,
         slidesPerGroup: 2,
       },
       // cuando el ancho es >= 768px
-      700: {
-        slidesPerView: 5,
+      800: {
+        slidesPerView: 4,
         spaceBetween: 20,
-      },
-      900: {
-        slidesPerView: 6,
+      },  
+      980: {
+        slidesPerView: 4,
         spaceBetween: 20,
       },
       1054: {
-        slidesPerView: 7,
+        slidesPerView: 5,
         spaceBetween: 20,
         slidesPerGroup: 4,
       },
