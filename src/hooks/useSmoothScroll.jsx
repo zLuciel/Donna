@@ -1,10 +1,12 @@
-import { useEffect, useRef } from 'react';
+
+import { useRef } from 'react';
 
 const useSmoothScroll = () => {
   const sectionRefs = {
     nosotros: useRef(null),
     valores: useRef(null),
     productos: useRef(null),
+    propuestas: useRef(null),
     // Agrega más referencias según sea necesario para cada sección
   };
 

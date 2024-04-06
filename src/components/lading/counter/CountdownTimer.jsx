@@ -1,10 +1,18 @@
+"use client"
 import { Button } from '@mantine/core';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Countdown from 'react-countdown';
 
 const CountdownTimer = () => {
+  const [startCountdown, setStartCountdown] = useState(false);
+
   // Fecha objetivo (25 de abril de 2024)
   const targetDate = new Date('2024-04-30T00:00:00');
+
+  useEffect(() => {
+    // Comienza el contador solo después de que el componente se haya montado
+    setStartCountdown(true);
+  }, []);
 
   // Función para renderizar el componente del contador
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -26,7 +34,7 @@ const CountdownTimer = () => {
 
   return (
     <>
-      <Countdown date={targetDate} renderer={renderer} />
+      {startCountdown && <Countdown date={targetDate} renderer={renderer} />}
     </>
   );
 };

@@ -30,7 +30,7 @@ const Page = () => {
         />
       </main>
       <About section={sectionRefs.nosotros} />
-      <Visiones section={sectionRefs.valores} />
+      <Visiones section={sectionRefs.propuestas} />
       {/* section */}
       <section
         ref={sectionRefs.productos}
@@ -46,7 +46,7 @@ const Page = () => {
       </section>
 
       {/* section 2 */}
-      <section  className=" relative rounded-md py-20">
+      <section  ref={sectionRefs.valores} className=" relative rounded-md py-20">
         <div className="lg:container px-6  gap-10 mx-auto lg:px-20 grid lg:grid-cols-2 grid-cols-1">
           <div className="flex flex-col gap-8 justify-self-center self-center">
             <h3 className="lg:text-5xl sm:text-3xl text-3xl xs:text-3xl md:text-4xl roboto_bold">

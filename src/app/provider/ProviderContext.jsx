@@ -1,7 +1,7 @@
 "use client";
 import usePriceTotalHook from "@/hooks/usePriceTotalHook";
 import useSmoothScroll from "@/hooks/useSmoothScroll";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext,  useState } from "react";
 const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {

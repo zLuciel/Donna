@@ -5,7 +5,7 @@ import { useProduct } from "@/app/provider/ProviderContext";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Link from "next/link";
 import { useDisclosure } from "@mantine/hooks";
-import { Modal, Button, Burger } from "@mantine/core";
+import { Modal,  Burger } from "@mantine/core";
 import SubHeaderLading from "./SubHeaderLading";
 
 const HeaderLandingResponsive = () => {
@@ -47,6 +47,12 @@ const HeaderLandingResponsive = () => {
                   onClick={() => handleDinamic("valores")}
                 >
                   Valores
+                </li>
+                <li
+                  className="cursor-pointer"
+                  onClick={() => handleDinamic("propuestas")}
+                >
+                  Propuesta
                 </li>
                 <li
                   className="cursor-pointer"
