@@ -17,10 +17,10 @@ const HeaderLanding = () => {
         <Image src={"/DonnaMovil.png"} alt="Donna" width={70} height={70} />
         <div className="flex gap-5 items-center">
           <ul className="flex gap-8 text-sm">
-            <li className="cursor-pointer" onClick={() => scrollToSection('categorias')}>Nosotros</li>
-            <li className="cursor-pointer" onClick={() => scrollToSection('tiendas')}>Valores</li>
+            <li className="cursor-pointer" onClick={() => scrollToSection('nosotros')}>Nosotros</li>
+            <li className="cursor-pointer" onClick={() => scrollToSection('valores')}>Valores</li>
             <li className="cursor-pointer"
-              onClick={() => scrollToSection('beneficio')}
+              onClick={() => scrollToSection('productos')}
             >
               Productos
             </li>

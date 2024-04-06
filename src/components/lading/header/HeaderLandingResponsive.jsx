@@ -11,6 +11,13 @@ import SubHeaderLading from "./SubHeaderLading";
 const HeaderLandingResponsive = () => {
   const { scrollToSection } = useProduct();
   const [opened, { open, close }] = useDisclosure(false);
+ 
+  
+  function handleDinamic (section){
+    scrollToSection(section)
+    close()
+  }
+
   return (
     <>
     <SubHeaderLading />
@@ -31,19 +38,19 @@ const HeaderLandingResponsive = () => {
               <ul className="flex gap-8 flex-col text-sm">
                 <li
                   className="cursor-pointer"
-                  onClick={() => scrollToSection("categorias")}
+                  onClick={() =>handleDinamic("nosotros")}
                 >
                   Nosotros
                 </li>
                 <li
                   className="cursor-pointer"
-                  onClick={() => scrollToSection("tiendas")}
+                  onClick={() => handleDinamic("valores")}
                 >
                   Valores
                 </li>
                 <li
                   className="cursor-pointer"
-                  onClick={() => scrollToSection("beneficio")}
+                  onClick={() => handleDinamic("productos")}
                 >
                   Productos
                 </li>

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import vision1 from "@/assets/vision1.jpg";
-const Visiones = () => {
+const Visiones = ({section}) => {
   return (
-    <section className="container-vision-valor  gap-[40px]">
+    <section ref={section} className="container-vision-valor  gap-[40px]">
       <div className="lg:container mx-auto grid lg:grid-cols-2  grid-cols-1 gap-5 lg:px-20 px-6">
         {/* col 1 */}
         <div className="bg-white justify-self-center relative container-max-width">
