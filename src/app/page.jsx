@@ -40,7 +40,7 @@ const Page = () => {
         </div> */}
         <div className="title-div"></div>
         <div className="lg:container py-4 px-20 title-categoria mx-auto">
-          <h2 className="h2-formate lg:text-5xl sm:text-2xl  xs:text-xl md:text-3xl roboto_bold">
+          <h2 className="h2-formate lg:text-5xl sm:text-3xl text-3xl xs:text-3xl md:text-4xl roboto_bold ">
             Nuestras categorias
           </h2>
         </div>
@@ -51,7 +51,7 @@ const Page = () => {
       <section ref={sectionRefs.tiendas} className=" relative rounded-md py-20">
         <div className="lg:container px-6  gap-10 mx-auto lg:px-20 grid lg:grid-cols-2 grid-cols-1">
           <div className="flex flex-col gap-8 justify-self-center self-center">
-            <h3 className="text-5xl md:text-4xl sm:text-4xl roboto_bold">
+            <h3 className="lg:text-5xl sm:text-3xl text-3xl xs:text-3xl md:text-4xl roboto_bold">
               <b className="text-[#ff4d00] ">Doona</b> Creando un impacto
               positivo a través de nuestros valores
             </h3>
