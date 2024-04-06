@@ -34,7 +34,7 @@ const Page = () => {
         className="py-5 bg-[#ff4d0038] relative "
       >
         <div className="title-div"></div>
-        <div className="lg:container py-4 px-20 title-categoria mx-auto">
+        <div className="lg:container py-4 lg:px-20 px-6 title-categoria mx-auto">
           <h2 className="h2-formate lg:text-5xl sm:text-3xl text-3xl xs:text-3xl md:text-4xl roboto_bold ">
             Nuestras categorias
           </h2>
