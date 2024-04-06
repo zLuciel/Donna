@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import vision1 from "@/assets/vision1.jpg";
+import vision1 from "@/assets/TRABAJADOR-DOONA.webp";
 const Visiones = ({section}) => {
   return (
     <section ref={section} className="container-vision-valor  gap-[40px]">
