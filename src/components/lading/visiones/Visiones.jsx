@@ -4,9 +4,9 @@ import vision1 from "@/assets/vision1.jpg";
 const Visiones = () => {
   return (
     <section className="container-vision-valor  gap-[40px]">
-      <div className="lg:container mx-auto grid grid-cols-2 px-20">
+      <div className="lg:container mx-auto grid lg:grid-cols-2  grid-cols-1 gap-5 lg:px-20 px-6">
         {/* col 1 */}
-        <div className="bg-white relative container-max-width">
+        <div className="bg-white justify-self-center relative container-max-width">
           <div className="card-item">
             <Image src={vision1} alt="-" width={600} />
           </div>
@@ -23,7 +23,7 @@ const Visiones = () => {
         </div>
 
         {/* col 2 */}
-        <div className="bg-white relative flex card-info gap-10 flex-col items-center justify-center  container-max-width">
+        <div className="bg-white relative justify-self-center flex card-info gap-10 flex-col items-center justify-center  container-max-width">
           <div className="flex flex-col  ">
             <h2 className="text-4xl roboto_bold  text-center mb-4">MISION</h2>
             <p className="text-md">

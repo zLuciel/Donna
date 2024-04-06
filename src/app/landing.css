@@ -81,6 +81,7 @@
 .card-info{
   padding: 50px 30px;
 }
+
 .container-max-width{
   border-radius: 50px;
   overflow: hidden;
@@ -131,7 +132,7 @@
 .h2-formate{
   color: #ff4d00 !important;
 }
-@media screen and (max-width: 1062px){
+/* @media screen and (max-width: 1062px){
   .container-max-width{
     width: 800px;
   }
@@ -140,4 +141,4 @@
     max-width: 480px;
     padding: 20px 30px;
   }
-}
+} */
