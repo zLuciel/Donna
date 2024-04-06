@@ -188,3 +188,11 @@
     height: 15%;
   } 
 }
+@media screen and (max-width: 466px){
+  footer{
+    gap: 10px !important;
+    flex-direction: column;
+    justify-content: start !important;
+    align-items: start !important;
+  }
+}

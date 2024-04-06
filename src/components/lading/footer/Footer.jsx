@@ -5,7 +5,7 @@ import { FaFacebook, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#e9e9e9] lg:px-20 px-6 flex  py-1 justify-between items-center text-sm">
+    <footer className="bg-[#e9e9e9] lg:px-20 px-6 flex   py-1 justify-between items-center text-sm">
       <div className="flex gap-4 items-center">
         <Image
           src="/DonnaMovil.png"
