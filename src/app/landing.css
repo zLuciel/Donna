@@ -4,6 +4,7 @@
   background: url("../assets/BANNER-DOONA-2.webp") center center/cover no-repeat;
 }
 .container-info-about {
+  justify-content: end;
   max-width: 60%;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
@@ -132,13 +133,12 @@
 .h2-formate{
   color: #ff4d00 !important;
 }
-/* @media screen and (max-width: 1062px){
-  .container-max-width{
-    width: 800px;
+@media screen and (max-width: 757px){
+  .container-info-about {
+    max-width: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    justify-content: start;
+    padding: 0 6px;
   }
-  .card-info {
-    height: 300px;
-    max-width: 480px;
-    padding: 20px 30px;
-  }
-} */
+}

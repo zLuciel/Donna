@@ -17,12 +17,12 @@ const HeaderLanding = () => {
         <Image src={"/DonnaMovil.png"} alt="Donna" width={70} height={70} />
         <div className="flex gap-5 items-center">
           <ul className="flex gap-8 text-sm">
-            <li className="cursor-pointer" onClick={() => scrollToSection('categorias')}>Productos</li>
-            <li className="cursor-pointer" onClick={() => scrollToSection('tiendas')}>Tiendas</li>
+            <li className="cursor-pointer" onClick={() => scrollToSection('categorias')}>Nosotros</li>
+            <li className="cursor-pointer" onClick={() => scrollToSection('tiendas')}>Valores</li>
             <li className="cursor-pointer"
               onClick={() => scrollToSection('beneficio')}
             >
-              Beneficios
+              Productos
             </li>
           </ul>
           <Link href="https://wa.link/njs0op"  target="_blank" className="cargar_mas flex gap-2 items-center text-sm font-bold px-3 py-1  w-full btn-agre text-white rounded-md">
