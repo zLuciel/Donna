@@ -24,7 +24,7 @@ const HeaderLandingResponsive = () => {
           blur: 3,
         }}
       >
-        <header className="flex justify-center items-center h-screen">
+        <header className="flex  justify-center items-center header-responsive">
           <div className="md:container h-full mx-auto flex flex-col gap-4 justify-center items-center px-20 py-1">
             <Image src={"/DonnaMovil.png"} alt="Donna" width={70} height={70} />
             <div className="flex flex-col gap-5 items-center justify-center">
@@ -59,7 +59,11 @@ const HeaderLandingResponsive = () => {
           </div>
         </header>
       </Modal>
-      <Burger size="sm" color="red" onClick={open}  aria-label="Toggle navigation" />
+      <div className=" px-2 flex justify-between items-center">
+        <Image src={"/DonnaMovil.png"} alt="Donna" width={70} height={70} />
+        <Burger  size="sm" color="red" onClick={open}  aria-label="Toggle navigation" />
+      </div>
+      
     </>
   );
 };

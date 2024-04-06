@@ -13,14 +13,15 @@ import Footer from "@/components/lading/footer/Footer";
 import About from "@/components/lading/about/About";
 import Visiones from "@/components/lading/visiones/Visiones";
 import HeaderLandingResponsive from "@/components/lading/header/HeaderLandingResponsive";
+import { useMediaQuery } from "@mantine/hooks";
 
 const Page = () => {
   const { sectionRefs } = useProduct();
-
+  const matches = useMediaQuery('(max-width: 663px)');
   return (
     <>
-     {false && <HeaderLanding />}
-      <HeaderLandingResponsive/>
+     {!matches && <HeaderLanding />}
+      {matches && <HeaderLandingResponsive/>}
       <main className="relative portada-main text-white h-screen w-screen">
         <HomePortda
           renderjson={homeSlider}
