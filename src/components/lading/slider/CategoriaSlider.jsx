@@ -16,7 +16,7 @@ const CategoriaSlider = () => {
     router.push('/productos')
   }
   return (
-    <div className="lg:px-20 px-20 relative mx-auto lg:container">
+    <div className="lg:px-20 px-10 relative mx-auto lg:container">
     <Swiper
     style={{padding:"20px 0"}}
     modules={[Navigation, Pagination]}
@@ -26,7 +26,7 @@ const CategoriaSlider = () => {
     }}
     pagination={{ clickable: true }}
     slidesPerView={2}
-    spaceBetween={1}
+    spaceBetween={10}
     slidesPerGroup={3}
     breakpoints={{
       // cuando el ancho es >= 640px
