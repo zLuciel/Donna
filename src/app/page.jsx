@@ -49,15 +49,18 @@ const Page = () => {
 
       {/* section 2 */}
       <section ref={sectionRefs.tiendas} className=" relative rounded-md py-20">
-        <div className="lg:container  gap-10 mx-auto px-20 grid grid-cols-2">
+        <div className="lg:container  gap-10 mx-auto px-20 grid lg:grid-cols-2 grid-cols-1">
           <div className="flex flex-col gap-8 justify-self-center self-center">
-            <h3 className="text-5xl roboto_bold">
+            <h3 className="text-5xl md:text-4xl sm:text-4xl roboto_bold">
               <b className="text-[#ff4d00] ">Doona</b> Creando un impacto
               positivo a través de nuestros valores
             </h3>
             <ul className="flex flex-col gap-8">
-              <li className="flex gap-4 items-start text-sm">
-                <Descuento />
+              <li className="flex gap-3 items-start text-sm">
+                <span  style={{ width: "max-content" }}>
+                  <Descuento />
+                </span>
+                
                 <span className="flex flex-col gap-1">
                   <h4 className="font-semibold text-xl">Equidad y accesibilidad:</h4>
                   <p className="text-sm">
