@@ -49,7 +49,7 @@ const Page = () => {
 
       {/* section 2 */}
       <section ref={sectionRefs.tiendas} className=" relative rounded-md py-20">
-        <div className="lg:container  gap-10 mx-auto px-20 grid lg:grid-cols-2 grid-cols-1">
+        <div className="lg:container px-6  gap-10 mx-auto lg:px-20 grid lg:grid-cols-2 grid-cols-1">
           <div className="flex flex-col gap-8 justify-self-center self-center">
             <h3 className="text-5xl md:text-4xl sm:text-4xl roboto_bold">
               <b className="text-[#ff4d00] ">Doona</b> Creando un impacto
