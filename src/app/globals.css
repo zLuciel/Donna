@@ -567,6 +567,12 @@ body {
     right: -10px;
   }
 }
+@media (max-width: 1016px) {
+  .portada-main {
+    height: 65vh;
+    width: 100%;
+  }
+}
 
 @media (max-width: 917px) {
   .circle-cat {
@@ -574,6 +580,15 @@ body {
     height: 100px;
   }
 }
+
+
+@media (max-width: 838px) {
+  .portada-main {
+    height: 60vh;
+    width: 100%;
+  }
+}
+
 @media (max-width: 552px) {
   .portada-main {
     height: 50vh;
