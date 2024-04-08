@@ -574,7 +574,12 @@ body {
     height: 100px;
   }
 }
-
+@media (max-width: 552px) {
+  .portada-main {
+    height: 50vh;
+    width: 100%;
+  }
+}
 @media (max-width: 499px) {
   .image-product-Mejor {
     height: auto;
