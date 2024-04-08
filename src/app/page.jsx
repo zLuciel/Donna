@@ -2,6 +2,7 @@
 import HeaderLanding from "@/components/lading/header/HeaderLanding";
 import HomePortda from "@/components/slider/homePortada/HomePortda";
 import homeSlider from "@/data/homeSlider";
+import movilHomeSlider from "@/data/movilHomeSlider";
 import Image from "next/image";
 import Mockup from "@/assets/bento.png";
 import CategoriaSlider from "@/components/lading/slider/CategoriaSlider";
@@ -18,13 +19,14 @@ import { useMediaQuery } from "@mantine/hooks";
 const Page = () => {
   const { sectionRefs } = useProduct();
   const matches = useMediaQuery('(max-width: 663px)');
+  const movil = useMediaQuery('(max-width: 552px)');
   return (
     <>
      {!matches && <HeaderLanding />}
       {matches && <HeaderLandingResponsive/>}
       <main className="relative portada-main text-white h-screen w-screen">
         <HomePortda
-          renderjson={homeSlider}
+          renderjson={movil ? movilHomeSlider :  homeSlider}
           idBtnNex={"iicoMainNextSH"}
           idBtnPre={"iicoMainPreSH"}
         />
