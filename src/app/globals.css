@@ -180,10 +180,8 @@ body {
 }
 
 .portada-main {
-  border: 2px solid red;
   position: relative;
-  /* min-height: auto; */
-  max-height: 80vh;
+  min-height: auto; 
   width: 100%;
 }
 .portada-home{
