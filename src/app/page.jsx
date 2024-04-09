@@ -4,7 +4,7 @@ import HomePortda from "@/components/slider/homePortada/HomePortda";
 import homeSlider from "@/data/homeSlider";
 import movilHomeSlider from "@/data/movilHomeSlider";
 import Image from "next/image";
-import Mockup from "@/assets/bento.png";
+import Bento from "@/assets/bento.png";
 import CategoriaSlider from "@/components/lading/slider/CategoriaSlider";
 import Descuento from "@/components/lading/svg/Descuento";
 import UserSart from "@/components/lading/svg/UserSart";
@@ -122,7 +122,7 @@ const Page = () => {
             style={{ zIndex: "2" }}
             className="justify-self-center self-center"
           >
-            <Image src={Mockup} alt="mackup" width={400} height={400} />
+            <Image src={Bento} alt="mackup" width={400} height={400} />
           </div>
         </div>
       </section>
