@@ -24,7 +24,7 @@ const Page = () => {
     <>
      {!matches && <HeaderLanding />}
       {matches && <HeaderLandingResponsive/>}
-      <main className="relative portada-main text-white h-screen w-screen">
+      <main className="relative portada-main text-white w-screen">
         <HomePortda
           renderjson={movil ? movilHomeSlider :  homeSlider}
           idBtnNex={"iicoMainNextSH"}

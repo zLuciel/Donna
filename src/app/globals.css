@@ -178,12 +178,22 @@ body {
 .swiper {
   height: 100%;
 }
+
 .portada-main {
-  height: 90vh;
+  border: 2px solid red;
+  position: relative;
+  /* min-height: auto; */
+  max-height: 80vh;
   width: 100%;
 }
+.portada-home{
+ height: 100%;
+ width: 100%;
+}
+
 
 .slider-img > img {
+  position: relative !important;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -568,7 +578,7 @@ body {
   }
 }
 @media (max-width: 1016px) {
-  .portada-main {
+  .portada-mainx {
     height: 65vh;
     width: 100%;
   }
@@ -583,14 +593,14 @@ body {
 
 
 @media (max-width: 838px) {
-  .portada-main {
+  .portada-mainx {
     height: 60vh;
     width: 100%;
   }
 }
 
 @media (max-width: 552px) {
-  .portada-main {
+  .portada-mainx {
     height: 50vh;
     width: 100%;
   }

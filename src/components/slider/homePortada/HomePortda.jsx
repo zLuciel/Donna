@@ -16,7 +16,7 @@ const HomePortda = ({renderjson,idBtnNex,idBtnPre,setSwiper}) => {
     <>
     <Swiper
     onSwiper={setSwiper}
-    className="xd"
+    className="portada-home"
     modules={[Autoplay,Navigation, Pagination]}
     loop={true}
     onSlideChange={(swiper) => {
