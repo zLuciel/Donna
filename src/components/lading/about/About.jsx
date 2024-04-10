@@ -3,9 +3,9 @@ import React from "react";
 
 const About = ({section}) => {
   return (
-    <div ref={section} className="container-about">
-      <div className="bg-white container-info-about flex  py-5 h-full">
-        <div className="lg:w-4/5 md:w-4/5 w-full flex flex-col gap-7 p-5  justify-center">
+    <div ref={section} className="container-about grid grid-cols-2">
+      <div className="bg-white container-info-about relative flex  py-5 h-full">
+        <div className="lg:w-4/5 md:w-4/5 w-full flex flex-col gap-7 p-5  justify-center z-[3] ">
           <h3 className="lg:text-5xl sm:text-3xl text-3xl xs:text-3xl md:text-4xl roboto_bold">
             <b className="text-[#ff4d00] ">Doona:</b> Innovación social y
             productos de alta calidad
@@ -28,6 +28,8 @@ const About = ({section}) => {
             </Link>
           </div>
         </div>
+      </div>
+      <div className="cols-2-about relative">
       </div>
     </div>
   );

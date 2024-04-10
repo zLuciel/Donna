@@ -1,15 +1,27 @@
 .container-about {
   margin: 0px 0;
    height: 500px;
-  background: url("../assets/BANNER-DOONA-2.webp") center center/cover no-repeat;
 }
 .container-info-about {
   justify-content: end;
-  max-width: 60%;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
 }
-
+.cols-2-about{
+  background: url("../assets/BANNER-DOONA-2.webp") center center/cover no-repeat;
+}
+.container-info-about::before{
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: white;
+  border-top-right-radius: 27px;
+  border-bottom-right-radius: 27px;
+}
 .container-about h2,
 .container-vision-valor h2 {
   color: #ff4d00 !important;

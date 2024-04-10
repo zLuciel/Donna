@@ -9,18 +9,21 @@ import { ProductProvider } from "./provider/ProviderContext";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
-  title: "Donna",
+  title: "Doona",
   description:"Nuestra empresa se erige como un pilar fundamental en la construccion de mundo mas justo y solidario, donde el acceso equitativo a productos esenciales de alta calidad es una realidad",
-  keywords: "justicia, solidaridad, acceso equitativo, productos esenciales, alta calidad",
-  author: "Donna",
+  keywords: "justicia, solidaridad, acceso equitativo, productos esenciales, alta calidad , abarrotes, doona",
+  author: "Doona",
+  category: 'abarrotes',
   charset: "UTF-8",
+  colorScheme: "light",
+  themeColor: "light",
   viewport: "width=device-width, initial-scale=1",
   canonical: "https://doona.com.pe",
   icons: {
     icon: "/favicon.ico",
   },
   og: {
-    title: "Donna - Construyendo un Mundo Mejor",
+    title: "Doona - Construyendo un Mundo Mejor",
     description: "Nuestra empresa se erige como un pilar fundamental en la construcción de mundo más justo y solidario, donde el acceso equitativo a productos esenciales de alta calidad es una realidad.",
     image: "/DonnaMovil.png",
     url: "https://doona.com.pe",
