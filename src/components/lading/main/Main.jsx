@@ -14,7 +14,7 @@ const Main = () => {
           <h1 className="text-8xl title-nunito text-[#ff4d00] ">
           ! TODO LO QUE NECESITAS ¡
           </h1>
-          <p className="nunito-sub-title text-2xl">Delivery gratis a tu casa</p>
+          <p className="nunito-sub-title sub-title-main text-2xl">Delivery gratis a tu casa</p>
          <div className="flex gap-7">
           <button type="button" className="text-md btn-default text-white bg-[#ff4d00] ">Quiero conocer màs</button>
           <button type="button" style={{border:"1px solid #696969"}} className="text-md btn-default">Quiero conocer màs</button>
