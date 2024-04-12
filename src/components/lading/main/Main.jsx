@@ -16,12 +16,13 @@ const Main = () => {
       <div className="xl:container  lg:px-20 mx-auto  grid main-grid place-self-center items-center h-portada ">
         {/* col 1 */}
         <div className="flex flex-col gap-8 z-[1] ">
-          <h1 className="text-8xl title-nunito text-[#ff4d00] ">
+          <h1 className="text-3xl 2xl:text-8xl lg:text-7xl title-nunito text-[#ff4d00] ">
             ! TODO LO QUE NECESITAS ¡
           </h1>
           <p className="nunito-sub-title sub-title-main text-2xl">
             Delivery gratis a tu casa
           </p>
+          <p className="text-md">Somos tu tienda de confianza, ofreciendo los precios más competitivos y una amplia selección <br /> de productos para tu hogar, siempre a tu alcance</p>
           <div className="flex gap-7">
             <Link
               href="https://wa.link/njs0op"
