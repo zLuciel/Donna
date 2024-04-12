@@ -1,27 +1,28 @@
-.container-about {
-  margin: 0px 0;
-   height: 500px;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.title-nunito{
+  font-family: "Nunito", sans-serif !important;
+  font-style: italic;
+  font-weight: 900;
+}
+.nunito-sub-title{
+font-family: 'Nunito';
+font-style: italic;
+font-weight: 900;
+font-size: 40px;
+line-height: 85px;
+color: #13172C;
 }
 .container-info-about {
   justify-content: end;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
 }
-.cols-2-about{
-  background: url("../assets/BANNER-DOONA-2.webp") center center/cover no-repeat;
+.container-about{
+  grid-template-columns: 1fr 1.5fr;
 }
-.container-info-about::before{
-  content: "";
-  position: absolute;
-  right: -50px;
-  top: 0;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background: white;
-  border-top-right-radius: 27px;
-  border-bottom-right-radius: 27px;
-}
+
+
 .container-about h2,
 .container-vision-valor h2 {
   color: #ff4d00 !important;
@@ -52,6 +53,7 @@
 
 .button-about span {
   margin: 5px;
+  width: 100%;
 }
 
 .button-about::before {
@@ -64,9 +66,9 @@
   content: "";
   border-radius: 50%;
   display: block;
-  width: 20em;
+  width: 100%;
   height: 20em;
-  left: -5em;
+  left: 0em;
   text-align: center;
   transition: box-shadow 0.5s ease-out;
   z-index: -1;
@@ -86,8 +88,7 @@
 
 /** CSS VISION Y VALORES*/
 .container-vision-valor {
-  background: rgb(241, 241, 241);
-  padding: 80px 0;
+  padding: 80px 0 130px 0;
 }
 
 .card-info{
@@ -95,25 +96,32 @@
 }
 
 .container-max-width{
-  border-radius: 50px;
-  overflow: hidden;
-  max-width: 600px;
+  display: flex;
+  justify-self: center !important;
+  align-items: center !important;
+  border-radius: 0px 30px 30px 30px;
+  padding: 0px 20px;
+  height: 100%;
+  box-shadow: 0px 8px 28px rgba(65, 65, 65, 0.16)
 }
-.card-item{
+.gradient-title{
+  width: 50%;
+  background-image: linear-gradient(to right, #FF4D00 0%, #FD1111 100%);
+  padding: 10px 20px;
+  border-radius: 20px 20px 0px 0px;
 }
-
 /**Categoria*/
 .title-categoria {
   position: relative;
   top: -50px;
   z-index: 2;
 }
+
 .title-categoria > h2 {
   z-index: 3;
 }
 .title-div{
   position: absolute;
-  background: white;
   left: 0px;
   top: -25px;
   width: 40%;
@@ -142,8 +150,32 @@
 .h2-formate{
   color: #ff4d00 !important;
 }
+
+.h2-formate-white{
+  color: #FFFBFA !important;
+}
+
 .header-responsive{
   height: calc(100vh - 76px);
+}
+
+.btn-default{
+  width: max-content;
+  padding: 9px 20px;
+  border-radius: 10px;
+  cursor: pointer !important;
+}
+.portada{
+  position: absolute;
+  height: 120% !important;
+  width: 120% !important;
+  left: 50% !important; 
+  top: 40% !important;
+  right: 0;
+  bottom: 0;
+  object-fit: contain !important;
+  color: transparent;
+  transform: translate(-50%, -50%) !important;
 }
 @media screen and (max-width: 1535px){
   .title-div{

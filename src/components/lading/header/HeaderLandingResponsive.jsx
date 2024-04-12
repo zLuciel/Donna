@@ -50,12 +50,6 @@ const HeaderLandingResponsive = () => {
                 </li>
                 <li
                   className="cursor-pointer"
-                  onClick={() => handleDinamic("propuestas")}
-                >
-                  Propuesta
-                </li>
-                <li
-                  className="cursor-pointer"
                   onClick={() => handleDinamic("productos")}
                 >
                   Productos

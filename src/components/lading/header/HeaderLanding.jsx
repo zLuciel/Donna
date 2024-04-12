@@ -30,12 +30,6 @@ const HeaderLanding = () => {
             </li>
             <li
               className="cursor-pointer"
-              onClick={() => scrollToSection("propuestas")}
-            >
-              Propuesta
-            </li>
-            <li
-              className="cursor-pointer"
               onClick={() => scrollToSection("productos")}
             >
               Productos
