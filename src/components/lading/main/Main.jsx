@@ -27,7 +27,7 @@ const Main = () => {
             <Link
               href="https://wa.link/njs0op"
               target="_blank"
-              className="text-md btn-default btn-main text-white bg-[#ff4d00] font-semibold"
+              className="conocer-btn text-md btn-default btn-main  font-semibold"
             >
               Quiero conocer màs
             </Link>

@@ -26,7 +26,7 @@ color: #13172C;
   border-bottom-right-radius: 100px;
 }
 .btn-main{
-padding: 10px  30px!important;
+  padding: 10px  30px!important;
 }
 .container-about{
   grid-template-columns: 1fr 1.5fr;
@@ -114,7 +114,20 @@ padding: 10px  30px!important;
 .card-info{
   padding: 50px 30px;
 }
-
+.conocer-btn{
+  background-color: #ff4d00;
+  color: white;
+  transition: all 0.2s ease-in;
+  filter: blur(0);
+  backdrop-filter: none;
+}
+.conocer-btn:hover{
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in;
+  filter: blur(0);
+  backdrop-filter: none;
+}
+.bt
 .container-max-width{
   display: flex;
   justify-self: center !important;
