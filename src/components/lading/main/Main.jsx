@@ -2,11 +2,15 @@ import React from "react";
 import Image from "next/image";
 import Verdura from "@/assets/VERDURAS.png";
 import Wave from "@/assets/wave.png";
+import WaveTop from "@/assets/wave-top.png";
 const Main = () => {
   return (
     <main className="portada-main py-20 w-screen relative">
       <div className="absolute bottom-0 w-full" style={{height:"300px"}}>
       <Image src={Wave} sizes="100vw" fill alt="wave"/>
+      </div>
+      <div className="absolute top-0 w-full" style={{height:"200px"}}>
+      <Image src={WaveTop} sizes="100vw" fill alt="wave"/>
       </div>
       <div className="xl:container  lg:px-20 mx-auto  grid main-grid place-self-center items-center h-portada ">
         {/* col 1 */}
@@ -16,8 +20,8 @@ const Main = () => {
           </h1>
           <p className="nunito-sub-title sub-title-main text-2xl">Delivery gratis a tu casa</p>
          <div className="flex gap-7">
-          <button type="button" className="text-md btn-default text-white bg-[#ff4d00] ">Quiero conocer màs</button>
-          <button type="button" style={{border:"1px solid #696969"}} className="text-md btn-default">Quiero conocer màs</button>
+          <button type="button" className="text-md btn-default btn-main text-white bg-[#ff4d00] font-semibold">Quiero conocer màs</button>
+          <button type="button" style={{border:"1px solid #696969"}} className="btn-main text-md btn-default font-semibold">Quiero conocer màs</button>
          </div>
         </div>
         {/* col 2 */}

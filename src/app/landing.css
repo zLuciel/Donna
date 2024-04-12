@@ -25,6 +25,9 @@ color: #13172C;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
 }
+.btn-main{
+padding: 10px  30px!important;
+}
 .container-about{
   grid-template-columns: 1fr 1.5fr;
 }
