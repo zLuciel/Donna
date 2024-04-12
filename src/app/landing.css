@@ -13,6 +13,9 @@ font-size: 40px;
 line-height: 85px;
 color: #13172C;
 }
+.main-grid{
+  grid-template-columns: 1.4fr 1fr;
+}
 .container-info-about {
   justify-content: end;
   border-top-right-radius: 100px;
@@ -22,6 +25,16 @@ color: #13172C;
   grid-template-columns: 1fr 1.5fr;
 }
 
+.circle-cat-lading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /*border-radius: 150px;*/
+  border: 3px solid #ffffff;
+  border-radius: 14px;
+  /*box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.02);*/
+}
 
 .container-about h2,
 .container-vision-valor h2 {
