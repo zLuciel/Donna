@@ -8,9 +8,9 @@ const Main = () => {
       <div className="absolute bottom-0 w-full" style={{height:"300px"}}>
       <Image src={Wave} sizes="100vw" fill alt="wave"/>
       </div>
-      <div className="lg:container  lg:px-20 mx-auto  grid main-grid place-self-center items-center h-portada ">
+      <div className="xl:container  lg:px-20 mx-auto  grid main-grid place-self-center items-center h-portada ">
         {/* col 1 */}
-        <div className="flex flex-col gap-5 z-[1] ">
+        <div className="flex flex-col gap-8 z-[1] ">
           <h1 className="text-8xl title-nunito text-[#ff4d00] ">
           ! TODO LO QUE NECESITAS ¡
           </h1>
