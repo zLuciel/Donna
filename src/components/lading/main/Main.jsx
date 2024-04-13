@@ -26,14 +26,12 @@ const Main = () => {
           <div className="flex gap-7">
             <Link
               href="https://wa.link/njs0op"
-              target="_blank"
               className="conocer-btn text-md btn-default btn-main  font-semibold"
             >
               Quiero conocer màs
             </Link>
             <Link
-              href="#"
-              target="_blank"
+              href="/productos"
               type="button"
               style={{ border: "1px solid #696969" }}
               className="btn-main text-md btn-default font-semibold"

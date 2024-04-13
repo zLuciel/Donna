@@ -127,7 +127,28 @@ color: #13172C;
   filter: blur(0);
   backdrop-filter: none;
 }
-
+.grid-card-row{
+  display: grid;
+  grid-template-rows: max-content 1fr;
+} 
+.text-card{
+  display: flex;
+    align-self: end;
+    flex-direction: column;
+    gap: 4px;
+}
+.title-card-landing{
+  margin-bottom: 7px;
+}
+.title-card-landing > h3{
+ min-height: 40px;
+}
+.price-lading-card{
+  display: flex;
+  /* line-height: 3; */
+  height: 25px;
+  align-items: center;
+}
 .container-max-widt{
   display: flex;
   justify-self: center !important;
