@@ -2,12 +2,22 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import Verdura from "@/assets/VERDURAS.png";
-const About = ({section}) => {
+const About = ({ section }) => {
   return (
-    <section ref={section} className="lg:container mx-auto container-about grid  px-20">
-
+    <section
+      ref={section}
+      className="lg:container mx-auto container-about grid  lg:px-6"
+    >
       <div className="relative">
-      <Image src={Verdura} sizes="100vw" fill alt="wave"/>
+        <Image
+          src={Verdura}
+          sizes="100vw"
+          fill
+          alt="wave"
+          style={{
+            objectFit: "contain", // cover, contain, none
+          }}
+        />
       </div>
 
       <div className="container-info-about relative flex  py-5 h-full">
@@ -35,7 +45,6 @@ const About = ({section}) => {
           </div>
         </div>
       </div>
-      
     </section>
   );
 };

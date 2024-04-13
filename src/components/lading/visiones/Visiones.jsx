@@ -4,12 +4,12 @@ import vision1 from "@/assets/TRABAJADOR-DOONA.webp";
 const Visiones = ({ section }) => {
   return (
     <section ref={section} className="container-vision-valor  gap-[40px]">
-      <div className="lg:container mx-auto grid lg:grid-cols-2  grid-cols-1 gap-20 lg:px-20 px-6">
+      <div className="lg:container mx-auto grid lg:grid-cols-2  grid-cols-1 gap-20 lg:px-6 px-6">
         {/* col 1 */}
 
         <div className=" justify-self-center relative ">
           <span className="flex text-1xl title-nunito gradient-title text-white" >Conoce nuestra misión</span>
-          <div className="bg-white container-max-width">
+          <div className="bg-white container-max-widt">
             <p>
               Empoderamos a las comunidades, transformamos vidas a través del
               acceso a productos esenciales de alta calidad a precios
@@ -28,7 +28,7 @@ const Visiones = ({ section }) => {
         {/* col 2 */}
         <div className=" justify-self-center relative">
         <span className="flex text-1xl title-nunito gradient-title text-white" >Conoce nuestra visión</span>
-          <div className="bg-white container-max-width">
+          <div className="bg-white container-max-widt">
            <p>
             Ser el motor del cambio positivo, inspirando a otras empresas a
             adoptar prácticas responsables y solidarias. Aspiramos a ser

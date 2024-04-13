@@ -17,7 +17,9 @@ const Estructura = () => {
       }, [count, setData])
     
   return (
-   <div>
+    <>
+    {data.length === 0 && <h2>cargando</h2>}
+   {data.length !== 0 && <div>
       <div className="mb-2 auto-product-grid ">
         {data?.map((product) => (
           <Card
@@ -31,9 +33,10 @@ const Estructura = () => {
         ))}
       </div>
       <span className="flex justify-center align-center">
-      {data.length !== 0 && <BtnLoadingDinamic setCount={setCount} count={count}/>}
+       <BtnLoadingDinamic setCount={setCount} count={count}/>
       </span>
-      </div>
+      </div>}
+    </>
   )
 }
 

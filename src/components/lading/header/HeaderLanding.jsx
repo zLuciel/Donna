@@ -12,7 +12,7 @@ const HeaderLanding = () => {
   return (
     <header className="header-container bg-white">
       <SubHeaderLading />
-      <div className="md:container mx-auto flex justify-between items-center px-20 py-1">
+      <div className="md:container mx-auto flex justify-between items-center lg:px-6 py-1">
         <Image src={"/DonnaMovil.png"} alt="Donna" width={70} height={70} />
         <div className="flex gap-5 items-center">
           <ul className="flex gap-8 text-sm">

@@ -5,13 +5,15 @@ import { FaFacebook, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#e9e9e9] lg:px-20 px-6 flex   py-1 justify-between items-center text-sm">
+    <footer className="bg-[#e9e9e9] py-1  text-sm">
+      <div className="lg:container mx-auto lg:px-6 flex justify-between items-center">
       <div className="flex gap-4 items-center">
         <Image
           src="/DonnaMovil.png"
           alt="Picture of the author"
           width={70}
           height={10}
+
         />
         <p className="text-xs">Copyright © 2024 Mercado Doona</p>
       </div>
@@ -26,6 +28,7 @@ const Footer = () => {
           <FaTiktok />
         </li>
       </ul>
+      </div>
     </footer>
   );
 };

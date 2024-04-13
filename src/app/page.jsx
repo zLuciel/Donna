@@ -1,11 +1,9 @@
 "use client";
 import HeaderLanding from "@/components/lading/header/HeaderLanding";
-import HomePortda from "@/components/slider/homePortada/HomePortda";
 import homeSlider from "@/data/homeSlider";
 import movilHomeSlider from "@/data/movilHomeSlider";
 import Image from "next/image";
 import Bento from "@/assets/bento.png";
-import CategoriaSlider from "@/components/lading/slider/CategoriaSlider";
 import Descuento from "@/components/lading/svg/Descuento";
 import UserSart from "@/components/lading/svg/UserSart";
 import Famili from "@/components/lading/svg/Famili";
@@ -16,6 +14,7 @@ import Visiones from "@/components/lading/visiones/Visiones";
 import HeaderLandingResponsive from "@/components/lading/header/HeaderLandingResponsive";
 import { useMediaQuery } from "@mantine/hooks";
 import Main from "@/components/lading/main/Main";
+import CategoriaLanding from "@/components/lading/Categoria/Categoria";
 
 const Page = () => {
   const { sectionRefs } = useProduct();
@@ -31,22 +30,11 @@ const Page = () => {
       <Visiones section={sectionRefs.propuestas} />
       </div>
       {/* section */}
-      <section
-        ref={sectionRefs.productos}
-        className="py-5 bg-[#ff4d0038] relative"
-      >
-        <div className="title-div bg-[#FF4D00]"></div>
-        <div className="lg:container py-4 lg:px-20 px-6 title-categoria mx-auto">
-          <h2 className="h2-formate-white  lg:text-5xl sm:text-3xl text-3xl xs:text-3xl md:text-4xl title-nunito ">
-            Nuestras categorías
-          </h2>
-        </div>
-        <CategoriaSlider />
-      </section>
+      <CategoriaLanding section={sectionRefs.productos} />
 
       {/* section 2 */}
       <section  ref={sectionRefs.valores} className=" relative rounded-md py-20">
-        <div className="lg:container px-6  gap-10 mx-auto lg:px-20 grid lg:grid-cols-2 grid-cols-1">
+        <div className="lg:container px-6  gap-10 mx-auto lg:px-6 grid lg:grid-cols-2 grid-cols-1">
           <div className="flex flex-col gap-8 justify-self-center self-center">
             <h3 className="lg:text-5xl sm:text-3xl text-3xl xs:text-3xl md:text-4xl title-nunito">
               <b className="text-[#ff4d00] ">Doona</b> Creando un impacto
