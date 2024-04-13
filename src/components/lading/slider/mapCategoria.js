@@ -17,7 +17,7 @@ import categoria3 from "@/assets/lading/categoria/CATEGORIA-CONFITERIA.png"
 import categoria4 from "@/assets/lading/categoria/CATEGORIA-CUIDADOPERSONAL.png"
 import categoria5 from "@/assets/lading/categoria/CATEGORIA-LACTEOS.png"
 import categoria6 from "@/assets/lading/categoria/CATEGORIA-LIMPIEZA.png"
-
+import categoria7 from "@/assets/lading/categoria/CATEGORIA-EMBUTIDOS.png"
 const categoriaMap = [
     {
         image:categoria1,
@@ -45,7 +45,10 @@ const categoriaMap = [
         image:categoria3,
         name:"Confiteria",
     },
-
+    {
+        image:categoria7,
+        name:"Embutidos",
+    },
 ]
 
 const categoriaMap2 = [

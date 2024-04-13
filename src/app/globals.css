@@ -18,12 +18,14 @@
   font-family: "Roboto-bold";
   src: url("../assets/font/Roboto/Roboto-Bold.ttf") format("truetype");
   font-style: normal;
-}
+}*/
+
 @font-face {
   font-family: "Roboto-Extrabold";
   src: url("../assets/font/Roboto/Roboto-Black.ttf") format("truetype");
   font-weight: 100;
-} */
+} 
+
 @font-face {
   font-family: "Nunitos-bold";
   src: url("../assets/font/Nunitos/NunitoSans-Regular.ttf") format("truetype");
@@ -122,9 +124,9 @@ h2,
   font-weight: 400;
 }*/
 
-/*.card-product p:first-child {
+.card-product p:first-child {
   font-weight: 800;
-}*/
+}
 .container-image-beneficio {
   left: -10%;
   top: -80px;

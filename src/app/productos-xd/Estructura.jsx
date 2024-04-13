@@ -17,7 +17,6 @@ const Estructura = () => {
     getDataProduct(count);
   }, [count, setData]);
 
-  console.log(data);
 
   return (
     <>
