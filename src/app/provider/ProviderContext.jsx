@@ -8,6 +8,9 @@ export const ProductProvider = ({ children }) => {
   const [dataProduct, setDataProduct] = useState([]);
   const { price } = usePriceTotalHook(0, dataProduct);
   const { sectionRefs, scrollToSection } = useSmoothScroll();
+  const [count, setCount] = useState(20);
+  const [filter, setFilter] = useState(false);
+  const [data, setData] = useState([]);
 
   const value = {
     dataProduct,
@@ -15,6 +18,9 @@ export const ProductProvider = ({ children }) => {
     price,
     sectionRefs,
     scrollToSection,
+    count, setCount,
+    data, setData,
+    filter, setFilter
   };
 
   return (

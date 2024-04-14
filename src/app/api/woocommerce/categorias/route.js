@@ -6,28 +6,20 @@ const api = new WooCommerceRestApi({
   consumerKey: process.env.KEY_CLIENT,
   consumerSecret: process.env.KEY_SECRET_CLIENT,
   version: "wc/v3",
+  queryStringAuth: true,
 });
 
-export async function GET(req, { params }) {
-  
-  const searchParams = req.nextUrl.searchParams
-  const categoria = searchParams.get('category')
-
+export async function GET(req) {
   const responseData = {
     success: false,
-    products: [],
+    categorias: [],
   };
 
-  const id_page = Number(params.id)
-  try {
-    const { data } = await api.get(`products`, {
-      per_page: id_page,
-      page: 1,
-      category: categoria
-    });
 
+  try {
+    const { data } = await api.get(`products/categories`);
     responseData.success = true;
-    responseData.products = data;
+    responseData.categorias = data;
 
     return NextResponse.json(responseData);
   } catch (error) {

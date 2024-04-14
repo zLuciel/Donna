@@ -248,6 +248,32 @@ color: #13172C;
     height: 16%;
   } 
 }
+@media screen and (max-width: 1303px){
+  .main-grid {
+    grid-template-columns: 1fr 1fr;
+  } 
+}
+
+@media screen and (max-width: 1021px){
+  .main-grid {
+    grid-template-columns: 1fr 0.8fr;
+  }
+
+}
+
+@media screen and (max-width: 900px){
+  .main-grid {
+    grid-template-columns: 1fr;
+  } 
+  .col-2-main{
+    display: none;
+  }.container-about{
+    grid-template-columns: 1fr 1.5fr;
+  }
+  .h-portada{
+    min-height: 40vh !important;
+  }
+}
 
 @media screen and (max-width: 766px){
   .title-div{
@@ -256,6 +282,10 @@ color: #13172C;
     width: 60%;
     height: 15%;
   } 
+  .container-about{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr ;
+  }
 }
 
 @media screen and (max-width: 757px){

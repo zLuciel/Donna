@@ -4,18 +4,20 @@ import Card from "@/components/slider/products/Card";
 import BtnLoadingDinamic from "@/components/cargaDinamica/BtnLoadingDinamic";
 import { dataProduct } from "./actions";
 import CardProduct from "@/components/lading/CardProduct/CardProduct";
+import { useProduct } from "../provider/ProviderContext";
+
 const Estructura = () => {
-  const [count, setCount] = useState(20);
-  const [data, setData] = useState([]);
+  const { count, setCount, data, setData ,filter } = useProduct();
 
   useEffect(() => {
+
     const getDataProduct = async (id) => {
       const dataRes = await dataProduct(id);
       setData(dataRes);
     };
 
-    getDataProduct(count);
-  }, [count, setData]);
+    if(!filter) getDataProduct(count);
+  }, [count, filter, setData]);
 
 
   return (

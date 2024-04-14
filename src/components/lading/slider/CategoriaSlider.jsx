@@ -9,12 +9,22 @@ import 'swiper/css/pagination';
 import 'swiper/css';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { useRouter } from 'next/navigation'
+import { useProduct } from "@/app/provider/ProviderContext";
+import { dataProduct } from "@/app/productos-xd/actions";
 
 const CategoriaSlider = () => {
   const router = useRouter()
+const { count, setCount, data, setData,setFilter } = useProduct();
+
   const handleCategoriaPage = ()=>{
     router.push('/productos')
   }
+ const handleFilterCategory = async (id)=>{
+  setFilter(true)
+  setCount(20)
+  const dataRes = await dataProduct(count,id);
+  setData(dataRes);
+ }
   return (
     <div className="lg:px-20 px-10 relative mx-auto lg:container">
     <Swiper
@@ -66,9 +76,9 @@ const CategoriaSlider = () => {
       },
     }}
     >
-      {categoriaMap?.map((cate,i) => (
-        <SwiperSlide key={i} >
-        <div  className="cursor-pointer flex flex-col justify-center items-center">
+      {categoriaMap?.map((cate) => (
+        <SwiperSlide key={cate.id} >
+        <div onClick={()=> handleFilterCategory(cate.id)} className="cursor-pointer flex flex-col justify-center items-center">
         <span style={{height:"250px"}} className="circle-cat-lading bg-[#F3F5FD]">
         <Image src={cate.image}  sizes="(min-width: 808px) 50vw, 100vw"
            alt="Donna" />

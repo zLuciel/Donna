@@ -18,32 +18,37 @@ import categoria4 from "@/assets/lading/categoria/CATEGORIA-CUIDADOPERSONAL.png"
 import categoria5 from "@/assets/lading/categoria/CATEGORIA-LACTEOS.png"
 import categoria6 from "@/assets/lading/categoria/CATEGORIA-LIMPIEZA.png"
 import categoria7 from "@/assets/lading/categoria/CATEGORIA-EMBUTIDOS.png"
+
 const categoriaMap = [
     {
         image:categoria1,
         name:"Abarrotes",
+        id:18,
     },
     {
         image:categoria2,
         name:"Bebidas",
+        id:19
     },
- 
-
     {
         image:categoria5,
         name:"Lacteos",
+        id:20
     },
     {
         image:categoria6,
         name:"Limpieza",
+        id:21
     },
     {
         image:categoria4,
         name:"C.personal",
+        id:22
     },
     {
         image:categoria3,
         name:"Confiteria",
+        id:23
     },
     {
         image:categoria7,
@@ -51,37 +56,37 @@ const categoriaMap = [
     },
 ]
 
-const categoriaMap2 = [
-    {
-        image:lading7,
-        name:"Abarrotes",
-    },
-    {
-        image:lading3,
-        name:"Bebidas",
-    },
+// const categoriaMap2 = [
+//     {
+//         image:lading7,
+//         name:"Abarrotes",
+//     },
+//     {
+//         image:lading3,
+//         name:"Bebidas",
+//     },
  
-    {
-        image:lading3,
-        name:"Licores",
-    },
-    {
-        image:lading2,
-        name:"Lacteos",
-    },
-    {
-        image:lading4,
-        name:"Limpieza",
-    },
-    {
-        image:lading5,
-        name:"C.personal",
-    },
-    {
-        image:lading9,
-        name:"Confiteria",
-    },
+//     {
+//         image:lading3,
+//         name:"Licores",
+//     },
+//     {
+//         image:lading2,
+//         name:"Lacteos",
+//     },
+//     {
+//         image:lading4,
+//         name:"Limpieza",
+//     },
+//     {
+//         image:lading5,
+//         name:"C.personal",
+//     },
+//     {
+//         image:lading9,
+//         name:"Confiteria",
+//     },
 
-]
+// ]
 
 export default categoriaMap

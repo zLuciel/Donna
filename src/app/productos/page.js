@@ -16,7 +16,7 @@ const ProductosLanding = () => {
        {!matches && <HeaderLanding />}
        {matches && <HeaderLandingResponsive/>}
        <MainProductos/>
-       <CategoriaLanding section={sectionRefs.productos} />
+       <CategoriaLanding section={sectionRefs.productos}  filter={true} />
        <section className='lg:container mx-auto px-6 py-20'>
        <Estructura/>
        </section>
