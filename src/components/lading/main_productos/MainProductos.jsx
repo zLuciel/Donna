@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Portada from "@/assets/BANNER-PRINCIPAL-DOONA-2.webp"
+import Portada from "@/assets/BANNER-PRINCIPAL-DOONA-5.webp"
 const MainProductos = () => {
   return (
     <main className="relative portada-main text-white w-screen">

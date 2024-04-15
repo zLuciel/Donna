@@ -5,10 +5,11 @@ import Image from "next/image";
 import { useProduct } from "@/app/provider/ProviderContext";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const HeaderLanding = () => {
   const { scrollToSection } = useProduct();
-
+  const router = useRouter()
   return (
     <header className="header-container bg-white">
       <SubHeaderLading />
@@ -30,7 +31,7 @@ const HeaderLanding = () => {
             </li>
             <li
               className="cursor-pointer"
-              onClick={() => scrollToSection("productos")}
+              onClick={() => router.push("/productos")}
             >
               Productos
             </li>
