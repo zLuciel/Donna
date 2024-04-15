@@ -214,6 +214,9 @@ color: #13172C;
 }
 
 .btn-default{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: max-content;
   padding: 9px 20px;
   border-radius: 10px;
@@ -305,6 +308,20 @@ color: #13172C;
     height: 15%;
   } 
 }
+@media screen and (max-width: 568px){
+  .sub-title-main {
+    font-size: 2rem !important;
+    line-height: 1 !important;
+}
+}
+@media screen and (max-width: 488px){
+  .btn-main{
+    padding: 9px 20px !important;
+  } 
+  .container-btn-main{
+   gap:10px !important;
+  }
+}
 @media screen and (max-width: 470px){
   .title-div{
     left: 0px;
@@ -313,6 +330,8 @@ color: #13172C;
     height: 15%;
   } 
 }
+
+
 @media screen and (max-width: 466px){
   footer{
     gap: 10px !important;

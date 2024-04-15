@@ -16,17 +16,17 @@ const Main = () => {
       <div className="xl:container lg:container lg:px-6 px-10 mx-auto  grid gap-10 main-grid place-self-center items-center h-portada ">
         {/* col 1 */}
         <div className="flex flex-col gap-8 z-[1] ">
-          <h1 className="text-5xl 2xl:text-8xl lg:text-6xl title-nunito text-[#ff4d00]  ">
+          <h1 className="text-5xl 2xl:text-8xl lg:text-6xl md:text-6xl xs:text-2xl title-nunito text-[#ff4d00]  ">
             ! TODO LO QUE NECESITAS ¡
           </h1>
           <p className="nunito-sub-title sub-title-main text-base xl:text-2xl lg:text-xl">
             Delivery gratis a tu casa
           </p>
           <p className="text-md">Somos tu tienda de confianza, ofreciendo los precios más competitivos y una amplia selección <br /> de productos para tu hogar, siempre a tu alcance</p>
-          <div className="flex gap-7">
+          <div className="flex gap-7 container-btn-main">
             <Link
               href="https://wa.link/njs0op"
-              className="conocer-btn text-md btn-default btn-main  font-semibold"
+              className="conocer-btn text-sm lg:text-md  md:text-md sm:text-md xl:text-md  btn-default btn-main  font-semibold"
             >
               Quiero conocer màs
             </Link>
@@ -34,7 +34,7 @@ const Main = () => {
               href="/productos"
               type="button"
               style={{ border: "1px solid #696969" }}
-              className="btn-main text-md btn-default font-semibold"
+              className="text-sm lg:text-md  md:text-md sm:text-md xl:text-md btn-main  btn-default font-semibold"
             >
               Ver productos
             </Link>
