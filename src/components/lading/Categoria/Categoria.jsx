@@ -1,7 +1,7 @@
 import React from 'react'
 import CategoriaSlider from '../slider/CategoriaSlider'
 
-const CategoriaLanding = ({section,filter = false}) => {
+const CategoriaLanding = ({section,filter = false,categoria}) => {
   return (
     <section
     ref={section}
@@ -13,7 +13,7 @@ const CategoriaLanding = ({section,filter = false}) => {
         Nuestras categorías
       </h2>
     </div>
-    <CategoriaSlider filter={filter} />
+    <CategoriaSlider categoria={categoria} filter={filter} />
   </section>
   )
 }

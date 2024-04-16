@@ -8,17 +8,21 @@ import { useProduct } from "../provider/ProviderContext";
 
 import CardSkeleton from "@/components/lading/CardSkeleton/CardSkeleton";
 
-const Estructura = () => {
-  const { count, setCount, data, setData, filter } = useProduct();
+const Estructura = ({mostrar,categoria}) => {
+  const { data, setData } = useProduct();
 
   useEffect(() => {
-    const getDataProduct = async (id) => {
-      const dataRes = await dataProduct(id);
+    const getDataProduct = async (paginado,categoria) => {
+      const dataRes = await dataProduct(paginado,categoria);
       setData(dataRes);
     };
 
-    if (!filter) getDataProduct(count);
-  }, [count, filter, setData]);
+    if(categoria){
+      getDataProduct(mostrar,categoria)
+      console.log(categoria);
+    }
+    if (!categoria) getDataProduct(mostrar);
+  }, [categoria, mostrar, setData]);
 
   return (
     <>
@@ -60,7 +64,7 @@ const Estructura = () => {
             ))}
           </div>
           <span className="flex justify-center align-center">
-            <BtnLoadingDinamic setCount={setCount} count={count} />
+            <BtnLoadingDinamic  categoria={categoria} count={mostrar} />
           </span>
         </div>
       )}

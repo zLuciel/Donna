@@ -9,22 +9,22 @@ import 'swiper/css/pagination';
 import 'swiper/css';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { useRouter } from 'next/navigation'
-import { useProduct } from "@/app/provider/ProviderContext";
-import { dataProduct } from "@/app/productos-xd/actions";
+import Link from "next/link";
+//import { useProduct } from "@/app/provider/ProviderContext";
+//import { dataProduct } from "@/app/productos-xd/actions";
 
-const CategoriaSlider = () => {
+const CategoriaSlider = ({categoria}) => {
   const router = useRouter()
-const { count, setCount, data, setData,setFilter } = useProduct();
+//const { setData,setFilter } = useProduct();
 
   const handleCategoriaPage = ()=>{
     router.push('/productos')
   }
- const handleFilterCategory = async (id)=>{
-  setFilter(true)
-  setCount(20)
-  const dataRes = await dataProduct(count,id);
-  setData(dataRes);
- }
+//  const handleFilterCategory = async (id)=>{
+//   setFilter(true)
+//   const dataRes = await dataProduct(20,id);
+//   setData(dataRes);
+//  }
   return (
     <div className="lg:px-20 px-10 relative mx-auto lg:container">
     <Swiper
@@ -78,13 +78,13 @@ const { count, setCount, data, setData,setFilter } = useProduct();
     >
       {categoriaMap?.map((cate) => (
         <SwiperSlide key={cate.id} >
-        <div onClick={()=> handleFilterCategory(cate.id)} className="cursor-pointer flex flex-col justify-center items-center">
+        <Link href={`/productos?categoria=${cate.id}&mostrar=20`} className="cursor-pointer flex flex-col justify-center items-center">
         <span style={{height:"250px"}} className="circle-cat-lading bg-[#F3F5FD]">
         <Image src={cate.image}  sizes="(min-width: 808px) 50vw, 100vw"
            alt="Donna" />
         </span>
           <h5 className="relative bottom-3 btn-agre no-shadow text-white py-1 px-3 rounded-3xl text-center font-poet font-semibold">{cate?.name}</h5>
-        </div>
+        </Link>
         </SwiperSlide>
       ))}
     </Swiper>
