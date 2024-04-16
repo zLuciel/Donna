@@ -53,6 +53,7 @@ const categoriaMap = [
     {
         image:categoria7,
         name:"Embutidos",
+        id:46
     },
 ]
 

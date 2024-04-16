@@ -17,7 +17,9 @@ export async function GET(req) {
 
 
   try {
-    const { data } = await api.get(`products/categories`);
+    const { data } = await api.get(`products/categories`,{
+      page:2
+    });
     responseData.success = true;
     responseData.categorias = data;
 
