@@ -18,7 +18,7 @@ const BtnLoadingDinamic = ({ count, categoria ,loading}) => {
 
   return (
     <>
-    {loading && <Loader color="red" />} 
+    {loading && <Loader color="red" className="mt-8" />} 
    {!loading && <button
       onClick={() => handleLoadingProduct(count,categoria)}
       className="cargar_mas mt-6 font-bold px-3 py-1  w-full btn-agre text-white rounded-2xl"
