@@ -35,7 +35,7 @@ const HeaderLanding = () => {
             </li>
             <li
               className="cursor-pointer"
-              onClick={() => router.push("/productos")}
+              onClick={() => router.push("/productos?mostrar=20")}
             >
               Productos
             </li>

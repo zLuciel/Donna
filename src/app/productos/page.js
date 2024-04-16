@@ -17,9 +17,6 @@ const ProductosLanding = () => {
     const $category = searchParams.get("categoria");
     const $mostrar = searchParams.get("mostrar")
 
-    console.log(Number($category));
-    console.log($mostrar);
-
   return (
     <>
        {!matches && <HeaderLanding />}

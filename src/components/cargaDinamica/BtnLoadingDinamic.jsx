@@ -1,8 +1,8 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React from "react";
-
-const BtnLoadingDinamic = ({ count, categoria }) => {
+import { Loader } from '@mantine/core';
+const BtnLoadingDinamic = ({ count, categoria ,loading}) => {
   const router = useRouter();
 
   function handleLoadingProduct(count,categoria) {
@@ -17,12 +17,15 @@ const BtnLoadingDinamic = ({ count, categoria }) => {
   }
 
   return (
-    <button
+    <>
+    {loading && <Loader color="red" />} 
+   {!loading && <button
       onClick={() => handleLoadingProduct(count,categoria)}
       className="cargar_mas mt-6 font-bold px-3 py-1  w-full btn-agre text-white rounded-2xl"
     >
       Cargar más
-    </button>
+    </button>}
+    </>
   );
 };
 

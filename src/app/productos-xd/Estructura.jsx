@@ -8,34 +8,42 @@ import { useProduct } from "../provider/ProviderContext";
 
 import CardSkeleton from "@/components/lading/CardSkeleton/CardSkeleton";
 
-const Estructura = ({mostrar,categoria}) => {
+const Estructura = ({ mostrar, categoria }) => {
+  const  [loading, setLoading]  = useState(false);
   const { data, setData } = useProduct();
 
   useEffect(() => {
-    const getDataProduct = async (paginado,categoria) => {
-      const dataRes = await dataProduct(paginado,categoria);
+    setLoading(false);
+    const getDataProduct = async (paginado, categoria) => {
+      setLoading(true);
+      const dataRes = await dataProduct(paginado, categoria);
       setData(dataRes);
+      setLoading(false);
     };
 
-    if(categoria){
-      getDataProduct(mostrar,categoria)
-      console.log(categoria);
+    if (categoria) {
+      getDataProduct(mostrar, categoria);
+      setLoading(true);
     }
-    if (!categoria) getDataProduct(mostrar);
+
+    if (!categoria) {
+      getDataProduct(mostrar), setLoading(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoria, mostrar, setData]);
 
   return (
     <>
       {data.length === 0 && (
         <div className="mb-2 auto-product-grid ">
-          <CardSkeleton /> 
-          <CardSkeleton /> 
-          <CardSkeleton /> 
           <CardSkeleton />
           <CardSkeleton />
-          <CardSkeleton /> 
-          <CardSkeleton /> 
-          <CardSkeleton /> 
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
           <CardSkeleton />
           <CardSkeleton />
         </div>
@@ -64,7 +72,11 @@ const Estructura = ({mostrar,categoria}) => {
             ))}
           </div>
           <span className="flex justify-center align-center">
-            <BtnLoadingDinamic  categoria={categoria} count={mostrar} />
+             <BtnLoadingDinamic
+              loading={loading}
+              categoria={categoria}
+              count={mostrar}
+            />
           </span>
         </div>
       )}

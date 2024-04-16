@@ -31,7 +31,7 @@ const Main = () => {
               Quiero conocer màs
             </Link>
             <Link
-              href="/productos"
+              href="/productos?mostrar=20"
               type="button"
               style={{ border: "1px solid #696969" }}
               className="text-sm lg:text-md  md:text-md sm:text-md xl:text-md btn-main  btn-default font-semibold"
