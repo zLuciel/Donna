@@ -1,21 +1,18 @@
-"use client";
+"use client"
 import HeaderLanding from '@/components/lading/header/HeaderLanding'
 import HeaderLandingResponsive from '@/components/lading/header/HeaderLandingResponsive';
 import { useMediaQuery } from '@mantine/hooks';
 import React from 'react'
-import Estructura from '../productos-xd/Estructura';
 import MainProductos from '@/components/lading/main_productos/MainProductos';
-import { useProduct } from '../provider/ProviderContext';
 import CategoriaLanding from '@/components/lading/Categoria/Categoria';
-import {useSearchParams } from 'next/navigation';
 
-const Page= () => {
+import { useProduct } from '@/app/provider/ProviderContext';
+import Estructura from '@/app/productos-xd/Estructura';
+
+const PageProduct = ({$category,$mostrar}) => {
+
     const matches = useMediaQuery('(max-width: 663px)');
     const { sectionRefs } = useProduct();
-    const searchParams = useSearchParams();
-    // get parametros
-    const $category = searchParams.get("categoria");
-    const $mostrar = searchParams.get("mostrar")
 
   return (
     <>
@@ -30,4 +27,4 @@ const Page= () => {
   )
 }
 
-export default Page
+export default PageProduct
