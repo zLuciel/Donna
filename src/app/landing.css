@@ -75,7 +75,9 @@ color: #13172C;
   margin: 5px;
   width: 100%;
 }
-
+.active-filter{
+  border: 2px solid #FF4D00;
+}
 .button-about::before {
   position: absolute;
   top: 0;

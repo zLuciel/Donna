@@ -79,7 +79,7 @@ const CategoriaSlider = ({categoria}) => {
       {categoriaMap?.map((cate) => (
         <SwiperSlide key={cate.id} >
         <Link href={`/productos?categoria=${cate.id}&mostrar=20`} className="cursor-pointer flex flex-col justify-center items-center">
-        <span style={{height:"250px"}} className="circle-cat-lading bg-[#F3F5FD]">
+        <span style={{height:"250px"}} className={`${cate.id == categoria ? "active-filter" : ""}  circle-cat-lading bg-[#F3F5FD]`}>
         <Image src={cate.image}  sizes="(min-width: 808px) 50vw, 100vw"
            alt="Donna" />
         </span>

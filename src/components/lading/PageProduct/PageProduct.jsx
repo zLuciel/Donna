@@ -10,7 +10,6 @@ import { useProduct } from '@/app/provider/ProviderContext';
 import Estructura from '@/app/productos-xd/Estructura';
 
 const PageProduct = ({$category,$mostrar}) => {
-
     const matches = useMediaQuery('(max-width: 663px)');
     const { sectionRefs } = useProduct();
 
