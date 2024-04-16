@@ -10,6 +10,10 @@ import { useRouter } from "next/navigation";
 const HeaderLanding = () => {
   const { scrollToSection } = useProduct();
   const router = useRouter()
+  const handleHash =(section)=>{
+    router.push("/")
+    scrollToSection(section)
+  }
   return (
     <header className="header-container bg-white">
       <SubHeaderLading />
@@ -19,13 +23,13 @@ const HeaderLanding = () => {
           <ul className="flex gap-8 text-sm">
             <li
               className="cursor-pointer"
-              onClick={() => scrollToSection("nosotros")}
+              onClick={() => handleHash("nosotros")}
             >
               Nosotros
             </li>
             <li
               className="cursor-pointer"
-              onClick={() => scrollToSection("valores")}
+              onClick={() => handleHash("valores")}
             >
               Valores
             </li>

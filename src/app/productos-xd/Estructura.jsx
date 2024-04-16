@@ -6,26 +6,39 @@ import { dataProduct } from "./actions";
 import CardProduct from "@/components/lading/CardProduct/CardProduct";
 import { useProduct } from "../provider/ProviderContext";
 
+import CardSkeleton from "@/components/lading/CardSkeleton/CardSkeleton";
+
 const Estructura = () => {
-  const { count, setCount, data, setData ,filter } = useProduct();
+  const { count, setCount, data, setData, filter } = useProduct();
 
   useEffect(() => {
-
     const getDataProduct = async (id) => {
       const dataRes = await dataProduct(id);
       setData(dataRes);
     };
 
-    if(!filter) getDataProduct(count);
+    if (!filter) getDataProduct(count);
   }, [count, filter, setData]);
-
 
   return (
     <>
-      {data.length === 0 && <h2>cargando</h2>}
+      {data.length === 0 && (
+        <div className="mb-2 auto-product-grid ">
+          <CardSkeleton /> 
+          <CardSkeleton /> 
+          <CardSkeleton /> 
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton /> 
+          <CardSkeleton /> 
+          <CardSkeleton /> 
+          <CardSkeleton />
+          <CardSkeleton />
+        </div>
+      )}
       {data.length !== 0 && (
         <div>
-          <div className="mb-2 auto-product-grid ">
+          <div className="mb-2 auto-product-grid">
             {data?.map((product) => (
               // <Card
               //   key={product.id}
