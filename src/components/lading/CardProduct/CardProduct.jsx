@@ -14,7 +14,7 @@ const CardProduct = ({ image,name,price,regular_price,id,categories }) => {
       const pattern = /^0\.\d+$/; // Expresión regular que verifica si el número es 0 seguido de un punto y uno o más dígitos.
       return pattern.test(input.toString()); // Convierte el número a cadena y verifica si cumple con el patrón.
   }
-    console.log(price);
+    
   return (
     <div className="relative card-product grid-card-row ">
     <div className="image-product mb-4 relative">

@@ -9,7 +9,7 @@ import { useProduct } from '../provider/ProviderContext';
 import CategoriaLanding from '@/components/lading/Categoria/Categoria';
 import {useSearchParams } from 'next/navigation';
 
-const ProductosLanding = () => {
+const Page= () => {
     const matches = useMediaQuery('(max-width: 663px)');
     const { sectionRefs } = useProduct();
     const searchParams = useSearchParams();
@@ -30,4 +30,4 @@ const ProductosLanding = () => {
   )
 }
 
-export default ProductosLanding
+export default Page
