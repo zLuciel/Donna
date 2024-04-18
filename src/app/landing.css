@@ -226,10 +226,10 @@ color: #13172C;
 }
 .portada{
   position: absolute;
-  height: 120% !important;
-  width: 120% !important;
+  height: 100% !important;
+  width: 100% !important;
   left: 50% !important; 
-  top: 40% !important;
+  top: 50% !important;
   right: 0;
   bottom: 0;
   object-fit: contain !important;
