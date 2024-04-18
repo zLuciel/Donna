@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import Verdura from "@/assets/VERDURAS.png";
+import Verdura from "@/assets/BOLSA-Y-ABARROTES.png";
 const About = ({ section }) => {
   return (
     <section

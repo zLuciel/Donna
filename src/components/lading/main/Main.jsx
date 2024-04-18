@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Verdura from "@/assets/VERDURAS.png";
+import Verdura from "@/assets/BOLSA-Y-ABARROTES.png";
 import Wave from "@/assets/wave.png";
 import WaveTop from "@/assets/wave-top.png";
 import Link from "next/link";
