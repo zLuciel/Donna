@@ -226,8 +226,8 @@ color: #13172C;
 }
 .portada{
   position: absolute;
-  height: 100% !important;
-  width: 100% !important;
+  height: 130% !important;
+  width: 130% !important;
   left: 50% !important; 
   top: 50% !important;
   right: 0;
@@ -240,8 +240,8 @@ color: #13172C;
 @media screen and (max-width: 1749px){
   .portada{
     position: absolute;
-    height: 100% !important;
-    width: 100% !important;
+    height: 130% !important;
+    width: 130% !important;
     left: 50% !important; 
     top: 50% !important;
     right: 0;
