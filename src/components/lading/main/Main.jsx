@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Verdura from "@/assets/CHICA-DOONA-FRASE.png";
+import Verdura from "@/assets/CHICA-DOONA-FRASE-2.png";
 import Wave from "@/assets/wave.png";
 import WaveTop from "@/assets/wave-top.png";
 import Link from "next/link";
@@ -28,7 +28,7 @@ const Main = () => {
               href="https://wa.link/njs0op"
               className="conocer-btn text-sm lg:text-md  md:text-md sm:text-md xl:text-md  btn-default btn-main  font-semibold"
             >
-              Quiero conocer màs
+              Quiero conocer más
             </Link>
             <Link
               href="/productos?mostrar=20"
