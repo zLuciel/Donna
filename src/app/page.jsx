@@ -3,7 +3,7 @@ import HeaderLanding from "@/components/lading/header/HeaderLanding";
 import homeSlider from "@/data/homeSlider";
 import movilHomeSlider from "@/data/movilHomeSlider";
 import Image from "next/image";
-import Bento from "@/assets/bento.png";
+import Bento from "@/assets/TRABAJADOR-DOONA.webp";
 import Descuento from "@/components/lading/svg/Descuento";
 import UserSart from "@/components/lading/svg/UserSart";
 import Famili from "@/components/lading/svg/Famili";
