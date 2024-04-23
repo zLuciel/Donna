@@ -3,7 +3,7 @@ import HeaderLanding from "@/components/lading/header/HeaderLanding";
 import homeSlider from "@/data/homeSlider";
 import movilHomeSlider from "@/data/movilHomeSlider";
 import Image from "next/image";
-import Bento from "@/assets/TRABAJADOR-DOONA.webp";
+import Bento from "@/assets/TRABAJADOR-DOONA-VERTICAL.png";
 import Descuento from "@/components/lading/svg/Descuento";
 import UserSart from "@/components/lading/svg/UserSart";
 import Famili from "@/components/lading/svg/Famili";
@@ -64,7 +64,7 @@ const Page = () => {
                   <p className="text-sm">
                     Nos comprometemos a trabajar en estrecha colaboración con
                     organizaciones sociales y comunitarias para abordar las
-                    necesidades más apremiantes de nuestra sociedad..
+                    necesidades más apremiantes de nuestra sociedad.
                   </p>
                 </span>
               </li>
@@ -107,7 +107,7 @@ const Page = () => {
             style={{ zIndex: "2" }}
             className="justify-self-center self-center"
           >
-            <Image src={Bento} alt="mackup" width={400} height={400} />
+            <Image className="rounded-3xl" src={Bento} alt="mackup" width={400} height={400} />
           </div>
         </div>
       </section>
