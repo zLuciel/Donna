@@ -64,7 +64,7 @@ const Page = () => {
                   <p className="text-sm">
                     Nos comprometemos a trabajar en estrecha colaboración con
                     organizaciones sociales y comunitarias para abordar las
-                    necesidades más apremiantes de nuestra sociedad.
+                    necesidades más apremiantes de nuestra sociedad..
                   </p>
                 </span>
               </li>
