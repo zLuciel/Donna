@@ -22,7 +22,6 @@ const Page = () => {
   const movil = useMediaQuery('(max-width: 552px)');
   return (
     <>
-    <h1 className="text-prueba">hola como estan</h1>
      {!matches && <HeaderLanding />}
       {matches && <HeaderLandingResponsive/>}
       <Main/>
