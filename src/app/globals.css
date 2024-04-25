@@ -24,7 +24,7 @@
   font-family: "Roboto-Extrabold";
   src: url("../assets/font/Roboto/Roboto-Black.ttf") format("truetype");
   font-weight: 100;
-} 
+}
 
 @font-face {
   font-family: "Nunitos-bold";
@@ -43,18 +43,22 @@
   src: url("../assets/font/Outfit/Outfit-Bold.ttf") format("truetype");
   font-style: normal;
 }
+
+
 @font-face {
   font-family: "Roboto-Extrabold";
   src: url("../assets/font/Outfit/Outfit-ExtraBold.ttf") format("truetype");
   font-weight: 100;
 }
+
 h2 {
   color: #000000f0 !important;
 }
-.Nunito-bold,
-p {
+.Nunito-bold{ 
   font-family: "Nunitos-bold";
 }
+
+
 .vision-text {
   font-family: none !important;
   font-weight: 100 !important;
@@ -248,7 +252,6 @@ body {
   border-radius: 14px;
   /*box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.02);*/
 }
-
 
 .circle-cat img {
   width: 100%;

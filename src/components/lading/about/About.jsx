@@ -26,12 +26,12 @@ const About = ({ section }) => {
             <b className="text-[#ff4d00] ">Doona:</b> Innovación social y
             productos de alta calidad
           </h3>
-          <p className="lg:text-md md:text-sm">
+          <p className="lg:text-md md:text-sm text-prueba">
             Nuestra empresa se erige como un pilar fundamental en la
             construccion de mundo mas justo y solidario, donde el acceso
             equitativo a productos esenciales de alta calidad es una realidad.
           </p>
-          <span className="font-semibold">
+          <span className="font-semibold text-prueba">
             ¡No te pierdas los mejores precios del barrio aqui!
           </span>
           <div>

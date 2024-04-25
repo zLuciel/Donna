@@ -22,6 +22,7 @@ const Page = () => {
   const movil = useMediaQuery('(max-width: 552px)');
   return (
     <>
+    <h1 className="text-prueba">hola como estan</h1>
      {!matches && <HeaderLanding />}
       {matches && <HeaderLandingResponsive/>}
       <Main/>
@@ -48,7 +49,7 @@ const Page = () => {
                 
                 <span className="flex flex-col gap-1">
                   <h4 className="font-semibold text-xl">Equidad y accesibilidad:</h4>
-                  <p className="text-sm">
+                  <p className="text-sm text-prueba">
                     Creemos en un mundo donde todos tienen derecho a acceder a
                     productos de calidad a precios justos, independientemente de
                     su situación económica.

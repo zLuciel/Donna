@@ -1,13 +1,14 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+//import { Inter } from "next/font/google";
 import "./landing.css";
+import "./globals.css";
+
 import Header from "@/components/header/Header";
 import { Providers } from "@/mantine/provider";
 import Footer from "@/components/footer/Footer";
 import TopScroll from "@/components/TopScroll/TopScroll";
 import { ProductProvider } from "./provider/ProviderContext";
 
-const inter = Inter({ subsets: ["latin"] });
+//const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Doona",
   description:"Nuestra empresa se erige como un pilar fundamental en la construccion de mundo mas justo y solidario, donde el acceso equitativo a productos esenciales de alta calidad es una realidad",
@@ -34,7 +35,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
         <ProductProvider>
           <Providers>
             {/* <TopScroll/> */}

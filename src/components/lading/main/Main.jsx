@@ -22,7 +22,7 @@ const Main = () => {
           <p className="nunito-sub-title sub-title-main text-base xl:text-2xl lg:text-xl">
             Delivery gratis a tu casa
           </p>
-          <p className="text-md">Somos tu tienda de confianza, ofreciendo los precios más competitivos y una amplia selección <br /> de productos para tu hogar, siempre a tu alcance</p>
+          <p className="text-md text-prueba">Somos tu tienda de confianza, ofreciendo los precios más competitivos y una amplia selección <br /> de productos para tu hogar, siempre a tu alcance</p>
           <div className="flex gap-7 container-btn-main">
             <Link
               href="https://wa.link/njs0op"
