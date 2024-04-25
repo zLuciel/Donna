@@ -23,7 +23,7 @@ export async function GET(req, { params }) {
     const { data } = await api.get(`products`, {
       per_page: id_page,
       page: 1,
-      category: categoria
+      category: categoria,
     });
 
     responseData.success = true;

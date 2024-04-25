@@ -24,9 +24,9 @@ const CardProduct = ({ image, name, price, regular_price, id, categories }) => {
       </div>
 
       <div className="px-3 text-card">
-        <span className="title-card-landing ">
-          <p className="roboto_bold uppercase text-sm">{categories}</p>
-          <h3 className="text-sm roboto_bold title-product-lading text-[#565656]">
+        <span className="title-card-landing mb-3">
+          <div className="roboto_regular uppercase text-sm mb-2">{categories}</div>
+          <h3 className="text-md roboto_bold title-product-lading text-[#333333]">
             {capitalizeFirstLetter(name)}
           </h3>
         </span>
@@ -34,7 +34,7 @@ const CardProduct = ({ image, name, price, regular_price, id, categories }) => {
         <div className="mb-1 price-lading-card">
           <span className="w-full text-orange text-sm/[22px] flex justify-between  mb-2">
             <p className="roboto_Extrabold">Precio online</p>{" "}
-            <p className="roboto_Extrabold">S/{price}</p>
+            <span className="roboto_Extrabold">S/{price}</span>
           </span>
         </div>
       </div>
