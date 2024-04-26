@@ -7,7 +7,7 @@ const CountdownTimer = () => {
   const [startCountdown, setStartCountdown] = useState(false);
 
   // Fecha objetivo (25 de abril de 2024)
-  const targetDate = new Date('2024-04-30T00:00:00');
+  const targetDate = new Date('2024-05-12T00:00:00');
 
   useEffect(() => {
     // Comienza el contador solo después de que el componente se haya montado

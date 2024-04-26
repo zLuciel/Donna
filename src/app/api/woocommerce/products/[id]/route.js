@@ -19,6 +19,7 @@ export async function GET(req, { params }) {
   };
 
   const id_page = Number(params.id)
+  
   try {
     const { data } = await api.get(`products`, {
       per_page: id_page,
