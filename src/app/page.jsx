@@ -16,30 +16,34 @@ import { useMediaQuery } from "@mantine/hooks";
 import Main from "@/components/lading/main/Main";
 import CategoriaLanding from "@/components/lading/Categoria/Categoria";
 import { IoLogoWhatsapp } from "react-icons/io";
+import Link from "next/link";
 
 const Page = () => {
   const { sectionRefs } = useProduct();
-  const matches = useMediaQuery('(max-width: 663px)');
-  const movil = useMediaQuery('(max-width: 552px)');
+  const matches = useMediaQuery("(max-width: 663px)");
+  const movil = useMediaQuery("(max-width: 552px)");
   return (
     <>
+      <Link
+        href="https://wa.link/njs0op"
+        target="_blank"
+        className="fixed whatsapp z-[3] "
+      >
+        <IoLogoWhatsapp />
+      </Link>
 
-     <div className="fixed whatsapp z-[3] ">
-       <IoLogoWhatsapp />
-     </div>
-
-     {!matches && <HeaderLanding />}
-      {matches && <HeaderLandingResponsive/>}
-      <Main/>
+      {!matches && <HeaderLanding />}
+      {matches && <HeaderLandingResponsive />}
+      <Main />
       <div className="bg-[#F3F5FD] ">
-      <About section={sectionRefs.nosotros} />
-      <Visiones section={sectionRefs.propuestas} />
+        <About section={sectionRefs.nosotros} />
+        <Visiones section={sectionRefs.propuestas} />
       </div>
       {/* section */}
       <CategoriaLanding section={sectionRefs.productos} />
 
       {/* section 2 */}
-      <section  ref={sectionRefs.valores} className=" relative rounded-md py-20">
+      <section ref={sectionRefs.valores} className=" relative rounded-md py-20">
         <div className="lg:container px-6  gap-10 mx-auto lg:px-6 grid lg:grid-cols-2 grid-cols-1">
           <div className="flex flex-col gap-8 justify-self-center self-center">
             <h3 className="lg:text-5xl sm:text-3xl text-3xl xs:text-3xl md:text-4xl title-nunito">
@@ -48,12 +52,14 @@ const Page = () => {
             </h3>
             <ul className="flex flex-col gap-8">
               <li className="flex gap-3 items-start text-sm">
-                <span  style={{ width: "max-content" }}>
+                <span style={{ width: "max-content" }}>
                   <Descuento />
                 </span>
-                
+
                 <span className="flex flex-col gap-1">
-                  <h4 className="font-semibold text-xl">Equidad y accesibilidad:</h4>
+                  <h4 className="font-semibold text-xl">
+                    Equidad y accesibilidad:
+                  </h4>
                   <p className="text-sm text-prueba">
                     Creemos en un mundo donde todos tienen derecho a acceder a
                     productos de calidad a precios justos, independientemente de
@@ -66,7 +72,9 @@ const Page = () => {
                   <Famili />
                 </span>
                 <span className="flex flex-col gap-1">
-                  <h4 className="font-semibold text-xl">Colaboración y cooperación:</h4>
+                  <h4 className="font-semibold text-xl">
+                    Colaboración y cooperación:
+                  </h4>
                   <p className="text-sm">
                     Nos comprometemos a trabajar en estrecha colaboración con
                     organizaciones sociales y comunitarias para abordar las
@@ -113,7 +121,13 @@ const Page = () => {
             style={{ zIndex: "2" }}
             className="justify-self-center self-center"
           >
-            <Image className="rounded-3xl" src={Bento} alt="mackup" width={400} height={400} />
+            <Image
+              className="rounded-3xl"
+              src={Bento}
+              alt="mackup"
+              width={400}
+              height={400}
+            />
           </div>
         </div>
       </section>
