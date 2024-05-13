@@ -7,13 +7,19 @@ import Link from "next/link";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal,  Burger } from "@mantine/core";
 import SubHeaderLading from "./SubHeaderLading";
+import { usePathname, useRouter } from "next/navigation";
+
 
 const HeaderLandingResponsive = () => {
   const { scrollToSection } = useProduct();
   const [opened, { open, close }] = useDisclosure(false);
- 
+  const router = useRouter()
+  const pathname = usePathname()
   
   function handleDinamic (section){
+    if(pathname !== "/" ){
+      router.push("/")
+    }
     scrollToSection(section)
     close()
   }
