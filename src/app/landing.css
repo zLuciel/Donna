@@ -246,6 +246,21 @@ color: #13172C;
   transform: translate(-50%, -50%) !important;
 }
 
+.whatsapp{
+  right: 20px;
+  bottom: 30px;
+  font-size: 3.3rem;
+  color: green;
+  animation: latidos 2.5s infinite ease-in-out;
+	transform-origin: center;
+}
+
+@keyframes latidos {
+  from { transform: none; }
+  50% { transform: scale(1.2); }
+  to { transform: none; }
+}
+
 @media screen and (max-width: 1749px){
   .portada{
     position: absolute;

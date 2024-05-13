@@ -15,6 +15,7 @@ import HeaderLandingResponsive from "@/components/lading/header/HeaderLandingRes
 import { useMediaQuery } from "@mantine/hooks";
 import Main from "@/components/lading/main/Main";
 import CategoriaLanding from "@/components/lading/Categoria/Categoria";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Page = () => {
   const { sectionRefs } = useProduct();
@@ -22,6 +23,11 @@ const Page = () => {
   const movil = useMediaQuery('(max-width: 552px)');
   return (
     <>
+
+     <div className="fixed whatsapp z-[3] ">
+       <IoLogoWhatsapp />
+     </div>
+
      {!matches && <HeaderLanding />}
       {matches && <HeaderLandingResponsive/>}
       <Main/>

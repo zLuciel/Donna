@@ -5,13 +5,17 @@ import Image from "next/image";
 import { useProduct } from "@/app/provider/ProviderContext";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const HeaderLanding = () => {
   const { scrollToSection } = useProduct();
   const router = useRouter()
+  const pathname = usePathname()
+
   const handleHash =(section)=>{
-    router.push("/")
+    if(pathname !== "/" ){
+      router.push("/")
+    }
     scrollToSection(section)
   }
   return (
@@ -35,18 +39,24 @@ const HeaderLanding = () => {
             </li>
             <li
               className="cursor-pointer"
+              onClick={() => handleHash("propuestas")}
+            >
+              Propuesta
+            </li>
+            <li
+              className="cursor-pointer"
               onClick={() => router.push("/productos?categoria=18&mostrar=20")}
             >
               Productos
             </li>
           </ul>
-          <Link
+          {/* <Link
             href="https://wa.link/njs0op"
             target="_blank"
             className="cargar_mas flex gap-2 items-center text-sm font-bold px-3 py-1  w-full btn-agre text-white rounded-md"
           >
             <IoLogoWhatsapp className="" /> Whatsapp
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>

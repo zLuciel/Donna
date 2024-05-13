@@ -25,6 +25,7 @@ export async function GET(req, { params }) {
       per_page: id_page,
       page: 1,
       category: categoria,
+      status:"publish"
     });
 
     responseData.success = true;
