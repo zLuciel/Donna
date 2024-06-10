@@ -27,7 +27,7 @@ const CardProduct = ({ image, name, price, regular_price, id, categories }) => {
         <span className="title-card-landing mb-3">
           <div className="roboto_regular uppercase text-sm mb-2">{categories}</div>
           <h3 className="text-md roboto_bold title-product-lading text-[#333333]">
-            {capitalizeFirstLetter(name)}
+            {name}
           </h3>
         </span>
 
