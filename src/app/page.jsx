@@ -24,13 +24,6 @@ const Page = () => {
   const movil = useMediaQuery("(max-width: 552px)");
   return (
     <>
-      <Link
-        href="https://wa.link/njs0op"
-        target="_blank"
-        className="fixed whatsapp z-[3] "
-      >
-        <IoLogoWhatsapp />
-      </Link>
 
       {!matches && <HeaderLanding />}
       {matches && <HeaderLandingResponsive />}
